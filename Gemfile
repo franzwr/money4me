@@ -12,11 +12,12 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
+gem 'less-rails'
 gem 'turbolinks'
 # Use Bower as front-end package manager
 gem 'bower-rails'
-# Makes working with AngularJS templates easier
+# Makes working with AngularJS templates easier	
 gem 'angular-rails-templates'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

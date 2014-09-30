@@ -743,3 +743,344 @@ Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 16:23:45 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:01:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 145ms (Views: 136.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:01:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:01:15 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:05:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 24ms
+
+LoadError (cannot load such file -- less
+  (in /home/diego/Documents/test/money4me/lib/assets/bower_components/bootstrap/less/bootstrap.less)):
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___3096538367941960399_41551940'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:10:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 267ms
+
+ActionView::Template::Error ('bootstrap/less/responsive.less' wasn't found
+  (in /home/diego/Documents/test/money4me/app/assets/stylesheets/bootstrap.css.less)):
+    2: <html>
+    3: <head>
+    4:   <title>Money4Me</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true%>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___203149705075400810_44139020'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 125ms (Views: 115.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:14:23 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:14:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 777ms (Views: 767.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:14:42 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 109ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:15:44 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 86ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:16:48 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 106ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:08 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-09-30 17:17:25 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:17:46 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 85ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:51:56 -0300
