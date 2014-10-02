@@ -1,6 +1,5 @@
 class API::EmpresaController < ApplicationController
 	respond_to :json
-	skip_before_filter :verify_authenticity_token
 
 	def empresa_params
 		params.require(:empresa).permit(:nombre, :cuenta_banco, :rut_empresa, :activa)
@@ -12,7 +11,11 @@ class API::EmpresaController < ApplicationController
 
 	def show
 		@empresa = Empresa.find_by :id_empresa => params[:id]
-		respond_with @empresa
+		if @empresa
+			render :json => @empresa
+		else
+			render :json => {}, status: :not_found
+		end
 	end
 
 	def create 
@@ -25,7 +28,7 @@ class API::EmpresaController < ApplicationController
 		end
 	end
 
-	def edit
+	def update
 		@empresa = Empresa.find_by :id_empresa => params[:id]
 		@empresa.update(nombre: params[:empresa][:nombre], cuenta_banco: params[:empresa][:cuenta_banco],
 			rut_empresa: params[:empresa][:rut_empresa], activa: params[:empresa][:activa])
@@ -34,9 +37,10 @@ class API::EmpresaController < ApplicationController
 
 	def destroy
 		@empresa = Empresa.find_by :id_empresa => params[:id]
-		if @empresa
-			@empresa.destroy
+		if @empresa.destroy
+			render :json => {}, :status => :ok
+		else
+			render :json => {}, status: :internal_server_error
 		end
-		render :json => {}, :status => :ok
 	end
 end
