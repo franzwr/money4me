@@ -1,26 +1,28 @@
 == README
 
-La aplicación fue desarrollada y testeada en el entorno siguiente:
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Ruby Version: 2.1.2
-Rails Version: 4.1.6
-Angular Version: 1.2.25
-Bootstrap Version: 3.2.0
-MySQL Version: 5.5.38
+Things you may want to cover:
 
-Dependencias:
+* Ruby version
 
-* NodeJS >= 0.10.31
-* Bower >= 1.3.10
-* MySQL Server >= 5.5.38
+* System dependencies
 
 * Configuration
 
-Por defecto, la base de datos local debe estar configurada en el puerto 3306,
-con user: root y password: local. El archivo schema.rb genera solo las tablas 
-correspondientes a esta base de datos, por lo que no intenta modificar la base
-de datos remota. Los valores por defecto pueden cambiarse en config/database.yml. 
+* Database creation
 
-Base de Datos
+* Database initialization
 
-Para crear e inicializar la base de datos se utiliza rake db:setup.
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.
