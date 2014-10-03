@@ -3,4 +3,11 @@ class Usuario < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable, :omniauthable
+
+  validates :rut, uniqueness: true
+
+  # how to do has_many over non-primary key?
+  def cuentas
+    Cuenta.where("rut_cliente == ?", rut)
+  end
 end

@@ -12,6 +12,7 @@ class Pago < RemoteBase
 
   validates_each :cuenta do |record, attr, value|
     # (In controller) Don't allow for paying a receipt more than once
+
     # Don't allow for paying someone else's receipts
     record.errors.add(attr, "pertenece a otro RUT") if value.rut_cliente != rut_cliente
   end
