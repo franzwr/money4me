@@ -19,6 +19,11 @@ class API::PagoController < ApplicationController
 	end
 
 	def create
+    if usuario_signed_in?
+      params[:pago][:rut_cliente] ||= usuario.rut
+      params[:pago][:email]       ||= usuario.email
+    end
+
 		@pago = Pago.new(pago_params)
     @pago.cuenta_ids = JSON.parse params[:pago][:cuenta_ids]
     @pago.fecha_pago = Date.today
@@ -34,14 +39,13 @@ class API::PagoController < ApplicationController
       cuenta_banco = JSON.parse query_result[0..-4]
       sum_monto    = @pago.cuentas.sum(:monto)
 
-      if cuenta_banco.fondo > sum_monto
+      if cuenta_banco[:fondo] > sum_monto
         # 3. Don't allow for paying a receipt more than once
         if @pago.cuentas.any? {|cuenta| cuenta.pagos.count > 0}
           render :json => {}, status: :internal_server_error
 
         elsif @pago.save
           # 4. Transfer the money
-          # TODO Use transactions and shit
           @pago.cuentas.each do |cuenta|
             transferencia_fondos = `curl -w %{http_code} http://204.87.169.110/transfer/#{cuenta_origen}/#{cuenta.empresa.cuenta_banco}/#{cuenta.monto}`
 
