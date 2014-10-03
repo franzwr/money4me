@@ -4,6 +4,7 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
+      t.boolean :admin,                          default: false
 
       ## Recoverable
       t.string   :reset_password_token
@@ -20,9 +21,9 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       ## Confirmable
-      t.string   :confirmation_token
-      t.datetime :confirmed_at
-      t.datetime :confirmation_sent_at
+      # t.string   :confirmation_token
+      # t.datetime :confirmed_at
+      # t.datetime :confirmation_sent_at
       # t.string   :unconfirmed_email # Only if using reconfirmable
 
       ## Lockable
@@ -30,16 +31,13 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      # App specific attributes
-      t.string :rut_cliente, null: false
-      t.integer :cuenta_banco, null: false
 
       t.timestamps
     end
 
     add_index :usuarios, :email,                unique: true
     add_index :usuarios, :reset_password_token, unique: true
-    add_index :usuarios, :confirmation_token,   unique: true
-    add_index :usuarios, :rut_cliente,          unique: true
+    # add_index :usuarios, :confirmation_token,   unique: true
+    # add_index :usuarios, :unlock_token,         unique: true
   end
 end

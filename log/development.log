@@ -5871,3 +5871,2494 @@ Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 02:39:17 -0300
   [1m[36mCuenta Load (5.4ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`[0m
 >>>>>>> f75d5789406b082797e022773226abadb4da2634
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 20:30:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.6) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DropTable (20141002195704)
+  [1m[35m (174.8ms)[0m  DROP TABLE `users`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002195704')
+  [1m[36m (37.5ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsuarios (20141002200510)
+  [1m[35m (67.3ms)[0m  CREATE TABLE `usuarios` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `confirmation_token` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `rut_cliente` varchar(255) NOT NULL, `cuenta_banco` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (201.8ms)[0m  [1mCREATE UNIQUE INDEX `index_usuarios_on_email`  ON `usuarios` (`email`) [0m
+  [1m[35m (167.8ms)[0m  CREATE UNIQUE INDEX `index_usuarios_on_reset_password_token`  ON `usuarios` (`reset_password_token`) 
+  [1m[36m (145.1ms)[0m  [1mCREATE UNIQUE INDEX `index_usuarios_on_confirmation_token`  ON `usuarios` (`confirmation_token`) [0m
+  [1m[35m (136.2ms)[0m  CREATE UNIQUE INDEX `index_usuarios_on_rut_cliente`  ON `usuarios` (`rut_cliente`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002200510')
+  [1m[36m (31.7ms)[0m  [1mCOMMIT[0m
+Migrating to DropUser (20141002231105)
+  [1m[35m (32.8ms)[0m  DROP TABLE `usuarios`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002231105')
+  [1m[36m (31.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 20:31:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1567ms (Views: 1530.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 20:31:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 20:31:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:10 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 20:31:11 -0300
+  [1m[36m (71.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (190.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20140930044226)
+  [1m[35m (68.8ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `nombre` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140930044226')
+  [1m[36m (32.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateClients (20141002053442)
+  [1m[35m (77.4ms)[0m  CREATE TABLE `clients` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002053442')
+  [1m[36m (31.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAdmins (20141002053451)
+  [1m[35m (79.1ms)[0m  CREATE TABLE `admins` (`id` int(11) auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002053451')
+  [1m[36m (31.0ms)[0m  [1mCOMMIT[0m
+Migrating to DropTable (20141002195704)
+  [1m[35m (32.9ms)[0m  DROP TABLE `users`
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002195704')
+  [1m[36m (31.4ms)[0m  [1mCOMMIT[0m
+Migrating to DropUser (20141002231105)
+  [1m[35m (0.6ms)[0m  DROP TABLE `usuarios`
+Mysql2::Error: Unknown table 'usuarios': DROP TABLE `usuarios`
+  [1m[36m (70.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (178.9ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsuarios (20141002234935)
+  [1m[35m (170.7ms)[0m  CREATE TABLE `usuarios` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `admin` tinyint(1) DEFAULT 0, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (178.3ms)[0m  [1mCREATE UNIQUE INDEX `index_usuarios_on_email`  ON `usuarios` (`email`) [0m
+  [1m[35m (147.2ms)[0m  CREATE UNIQUE INDEX `index_usuarios_on_reset_password_token`  ON `usuarios` (`reset_password_token`) 
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141002234935')
+  [1m[36m (34.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mUsuario Load (0.5ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios`[0m
+  [1m[35mRubro Load (19.6ms)[0m  SELECT `Rubro`.* FROM `Rubro`
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:01:23 -0300
+
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0xc526370>):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 272ms (Views: 247.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:35 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:02:36 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-02 21:03:37 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/shared/_links.erb (3.0ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (1174.4ms)
+Completed 200 OK in 1329ms (Views: 1313.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:03:38 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 128.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:04:06 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 231ms (Views: 230.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:05:02 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.7ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 129ms (Views: 128.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:18 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 135ms (Views: 134.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 139ms (Views: 138.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:20 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:21 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:21 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:21 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:21 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:05:21 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 128.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:05:23 -0300
+
+
+Started GET "/ingresar.json" for 127.0.0.1 at 2014-10-02 21:08:05 -0300
+Processing by ApplicationController#index as JSON
+  Parameters: {"path"=>"ingresar"}
+Completed 500 Internal Server Error in 7ms
+
+ActionView::MissingTemplate (Missing template application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/rodrigo/Desktop/cosas/tsc/money4me/app/views"
+  * "/home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views"
+):
+  actionview (4.1.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.6) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.6) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.6) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.6) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1.2ms)
+
+
+Started GET "/ingresar" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"ingresar"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 147ms (Views: 146.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:16 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:08:17 -0300
+
+
+Started GET "/registrarse" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"registrarse"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 116ms (Views: 115.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:08:27 -0300
+
+
+Started GET "/registrarse" for 127.0.0.1 at 2014-10-02 21:09:30 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"registrarse"}
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 139ms (Views: 137.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:09:31 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:09:38 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:12:38 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 128.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 142ms (Views: 141.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:12:39 -0300
+
+
+Started GET "/asd" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"asd"}
+  Rendered application/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 137ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:24:31 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 131ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:32:14 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 139ms (Views: 138.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:36:06 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 129ms (Views: 128.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:37:53 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-02 21:38:10 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.9ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 140ms (Views: 138.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:11 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 160ms (Views: 158.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 129ms (Views: 127.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:38:14 -0300
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.3ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 174ms (Views: 168.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:37 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 158ms (Views: 156.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 136ms (Views: 135.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:40:40 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:40:57 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 147ms (Views: 146.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:40:57 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 130ms (Views: 129.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:40:57 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:40:57 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:57 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:40:58 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:42:16 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 146ms (Views: 144.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:42:17 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 126ms (Views: 125.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:42:26 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 129ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 21:42:39 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 303ms (Views: 302.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:16:31 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:16:32 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 209ms (Views: 207.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:19:16 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 260ms (Views: 259.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:19:24 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 120ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:19:40 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 122ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:19:56 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 184ms (Views: 183.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:19:58 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 198ms (Views: 197.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:20:09 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:44:06 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 212ms (Views: 211.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:44:07 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 136ms (Views: 135.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:47:02 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 135ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:48:07 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:48:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:48:12 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 136ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:48:57 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:49:01 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:49:01 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 206ms (Views: 204.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:50:31 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 132ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:27 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:28 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:51:28 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:51:28 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 139ms (Views: 138.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:52:57 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 143ms (Views: 142.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:57:46 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 139ms (Views: 138.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 22:58:09 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 23:02:35 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 142ms (Views: 141.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 23:02:36 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-02 23:21:10 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 214ms (Views: 212.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
