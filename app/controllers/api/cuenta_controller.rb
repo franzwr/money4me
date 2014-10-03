@@ -1,4 +1,6 @@
 class API::CuentaController < ApplicationController
+  before_action :authenticate_empresa!, only: [:create, :destroy]
+
 	respond_to :json
 
 	def cuenta_params
@@ -7,7 +9,7 @@ class API::CuentaController < ApplicationController
 	end
 
 	def index
-		respond_with Cuenta.all
+    respond_with Cuenta.all
 	end
 
 	def show
@@ -21,6 +23,8 @@ class API::CuentaController < ApplicationController
 
 	def create
 		@cuenta = Cuenta.new(cuenta_params)
+    @cuenta.id_empresa = current_empresa.id
+    @cuenta.fecha_registro = Date.today
 		if @cuenta.save
 			render :json => @cuenta
 		else
@@ -29,18 +33,26 @@ class API::CuentaController < ApplicationController
 	end
 
 	def update
-		@cuenta = Cuenta.find_by :id_cuenta => params[:id]
-		if @cuenta.update(id_empresa: params[:cuenta][:id_empresa], id_propio_empresa: params[:cuenta][:id_propio_empresa],
-			monto: params[:cuenta][:monto], fecha_registro: params[:cuenta][:fecha_registro], 
-			fecha_limite: params[:cuenta][:fecha_limite], rut_cliente: params[:cuenta][:rut_cliente])
-			render :json => @cuenta
-		else
-			render :json => {}, status: :internal_server_error
-		end
+    # Not necessary
+    render :json => {}, status: :internal_server_error
+
+		# @cuenta = Cuenta.find_by :id_cuenta => params[:id]
+		# if @cuenta.update(
+    #     id_propio_empresa: params[:cuenta][:id_propio_empresa],
+    #     monto:             params[:cuenta][:monto],
+    #     fecha_registro:    params[:cuenta][:fecha_registro],
+    #     fecha_limite:      params[:cuenta][:fecha_limite],
+    #     rut_cliente:       params[:cuenta][:rut_cliente])
+		# 	render :json => @cuenta
+		# else
+		# 	render :json => {}, status: :internal_server_error
+		# end
 	end
 
 	def destroy
-		@cuenta = Cuenta.find_by :id_cuenta => params[:id]
+		@cuenta = Cuenta.find_by(id_cuenta:  params[:id],
+                             id_empresa: current_empresa.id)
+
 		if @cuenta.destroy
 			render :json => {}
 		else
