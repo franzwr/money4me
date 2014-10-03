@@ -71,6 +71,7 @@ class API::PagoController < ApplicationController
 
 	def update
     # Shouldn't be possible.
+		render :json => {}, status: :internal_server_error
 
 		# @pago = Pago.find_by :id_pago => params[:id]
     #
@@ -88,11 +89,14 @@ class API::PagoController < ApplicationController
 	end
 
 	def destroy
-		@pago = Pago.find_by :id_pago => params[:id]
-		if @pago.destroy
-			render :json => {}
-		else
-			render :json => {}, status: :internal_server_error
-		end
+    # Impossible
+		render :json => {}, status: :internal_server_error
+
+		# @pago = Pago.find_by :id_pago => params[:id]
+		# if @pago.destroy
+		# 	render :json => {}
+		# else
+		# 	render :json => {}, status: :internal_server_error
+		# end
 	end
 end

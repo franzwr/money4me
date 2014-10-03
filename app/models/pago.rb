@@ -16,5 +16,4 @@ class Pago < RemoteBase
     # Don't allow for paying someone else's receipts
     record.errors.add(attr, "pertenece a otro RUT") if value.rut_cliente != rut_cliente
   end
-  
 end
