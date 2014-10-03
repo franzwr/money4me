@@ -8362,3 +8362,2615 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-02 23:21:11
 
 
 Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-02 23:21:11 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 13:07:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 535ms (Views: 507.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:10 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-03 13:07:11 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:07:16 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.7ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (173.9ms)
+Completed 200 OK in 316ms (Views: 304.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:07:17 -0300
+Mysql2::Error: Table 'local.admins' doesn't exist: SHOW FULL FIELDS FROM `admins`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddRutToUsuario (20141003142953)
+  [1m[35m (195.4ms)[0m  ALTER TABLE `usuarios` ADD `rut` varchar(255)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20141003142953')
+  [1m[36m (39.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mCuenta Load (24.7ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`[0m
+  [1m[35mDetalle Load (20.5ms)[0m  SELECT `Detalle`.* FROM `Detalle`
+  [1m[36mPago Load (48.6ms)[0m  [1mSELECT `Pago`.* FROM `Pago`[0m
+  [1m[35mCuenta Load (21.8ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_cuenta` IS NULL
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:46:45 -0300
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 558ms (Views: 552.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:46:46 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:51:08 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 160ms (Views: 154.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:51:09 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 13:51:27 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asdf@asdf.cl", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.7ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asdf@asdf.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 235ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Usuario:0xd027198>):
+  activemodel (4.1.6) lib/active_model/attribute_methods.rb:435:in `method_missing'
+  activerecord (4.1.6) lib/active_record/attribute_methods.rb:211:in `method_missing'
+  devise (3.2.4) lib/devise/models/confirmable.rb:88:in `confirmed?'
+  devise (3.2.4) lib/devise/models/confirmable.rb:163:in `confirmation_required?'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `block (2 levels) in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `each'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `all?'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:215:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:215:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  activerecord (4.1.6) lib/active_record/callbacks.rb:306:in `_create_record'
+  activerecord (4.1.6) lib/active_record/timestamp.rb:57:in `_create_record'
+  activerecord (4.1.6) lib/active_record/persistence.rb:483:in `create_or_update'
+  activerecord (4.1.6) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  activerecord (4.1.6) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.1.6) lib/active_record/persistence.rb:103:in `save'
+  activerecord (4.1.6) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.1.6) lib/active_record/attribute_methods/dirty.rb:21:in `save'
+  activerecord (4.1.6) lib/active_record/transactions.rb:268:in `block (2 levels) in save'
+  activerecord (4.1.6) lib/active_record/transactions.rb:329:in `block in with_transaction_returning_status'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/database_statements.rb:201:in `block in transaction'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/database_statements.rb:209:in `within_new_transaction'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/database_statements.rb:201:in `transaction'
+  activerecord (4.1.6) lib/active_record/transactions.rb:208:in `transaction'
+  activerecord (4.1.6) lib/active_record/transactions.rb:326:in `with_transaction_returning_status'
+  activerecord (4.1.6) lib/active_record/transactions.rb:268:in `block in save'
+  activerecord (4.1.6) lib/active_record/transactions.rb:283:in `rollback_active_record_state!'
+  activerecord (4.1.6) lib/active_record/transactions.rb:267:in `save'
+  devise (3.2.4) app/controllers/devise/registrations_controller.rb:15:in `create'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/mapper.rb:45:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.7ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 169ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:00 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 172ms (Views: 166.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:53:44 -0300
+  [1m[36mUsuario Load (1.1ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios`[0m
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:58:49 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 214ms (Views: 208.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:58:50 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "user"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 186ms (Views: 160.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:05 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 170ms (Views: 164.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 13:59:56 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "user"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 183ms (Views: 158.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:00:04 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "user"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 179ms (Views: 151.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:38 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 167ms (Views: 165.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:41 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "user"=>{"email"=>"asd@asd.cl", "rut"=>"18038025-3"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 164ms (Views: 155.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:13:47 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:17:24 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms
+
+SyntaxError (/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:12: syntax error, unexpected ':', expecting ']'
+...alue = Devise.friendly_token[0:20]) );@output_buffer.safe_ap...
+...                               ^
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:21: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/devise/registrations/new.html.erb:12: syntax error, unexpected ':', expecting ']'
+  app/views/devise/registrations/new.html.erb:15: syntax error, unexpected keyword_end, expecting ')'
+  app/views/devise/registrations/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/devise/registrations/new.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.8ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:18:11 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 189ms (Views: 187.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:12 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "password"=>"[FILTERED]", "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (2.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.7ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 176ms (Views: 160.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:21 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 177ms (Views: 175.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:41 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:18:47 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 167ms (Views: 156.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:18:48 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:19:43 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:24: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/devise/registrations/new.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+  app/views/devise/registrations/new.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/devise/registrations/new.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:20:17 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:24: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/devise/registrations/new.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+  app/views/devise/registrations/new.html.erb:22: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/devise/registrations/new.html.erb:24: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 161ms (Views: 159.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:43 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:20:50 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (38.9ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (undefined local variable or method `pass' for #<#<Class:0xcb59d28>:0xcd32230>):
+     9:   <div><%= f.label :rut %><br />
+    10:     <%= f.text_field :rut, autocomplete: "off" %></div>
+    11: 
+    12:   <%= hidden_field_tag(:password, value = pass) %>
+    13:   <%= hidden_field_tag(:password_confirmation, value = pass) %>
+    14: 
+    15:   <div><%= f.submit "Sign up" %></div>
+  app/views/devise/registrations/new.html.erb:12:in `block in _app_views_devise_registrations_new_html_erb__45959678_107580030'
+  app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb__45959678_107580030'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 166ms (Views: 164.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:20:58 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (1.6ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 174ms (Views: 161.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:21:06 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 197ms (Views: 196.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:08 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:22:13 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 168ms (Views: 158.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:22:14 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:23:14 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:14: syntax error, unexpected '=', expecting ')'
+...d(resource, :password, :value = pass) );@output_buffer.safe_...
+...                               ^
+/home/rodrigo/Desktop/cosas/tsc/money4me/app/views/devise/registrations/new.html.erb:15: syntax error, unexpected '=', expecting ')'
+...password_confirmation, :value = pass) );@output_buffer.safe_...
+...                               ^):
+  app/views/devise/registrations/new.html.erb:14: syntax error, unexpected '=', expecting ')'
+  app/views/devise/registrations/new.html.erb:15: syntax error, unexpected '=', expecting ')'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.7ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 184ms (Views: 182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:38 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:23:44 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3"}, "#<Usuario:0xc681170>"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 168ms (Views: 158.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:23:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:23:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:23:45 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 167ms (Views: 162.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:24:30 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:24:36 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 147ms
+
+NameError (undefined local variable or method `confirmed_at' for #<Usuario:0xc3b95c8>):
+  activemodel (4.1.6) lib/active_model/attribute_methods.rb:435:in `method_missing'
+  activerecord (4.1.6) lib/active_record/attribute_methods.rb:211:in `method_missing'
+  devise (3.2.4) lib/devise/models/confirmable.rb:88:in `confirmed?'
+  devise (3.2.4) lib/devise/models/confirmable.rb:163:in `confirmation_required?'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `block (2 levels) in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `each'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `all?'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:142:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:215:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:215:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  activerecord (4.1.6) lib/active_record/callbacks.rb:306:in `_create_record'
+  activerecord (4.1.6) lib/active_record/timestamp.rb:57:in `_create_record'
+  activerecord (4.1.6) lib/active_record/persistence.rb:483:in `create_or_update'
+  activerecord (4.1.6) lib/active_record/callbacks.rb:302:in `block in create_or_update'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  activerecord (4.1.6) lib/active_record/callbacks.rb:302:in `create_or_update'
+  activerecord (4.1.6) lib/active_record/persistence.rb:103:in `save'
+  activerecord (4.1.6) lib/active_record/validations.rb:51:in `save'
+  activerecord (4.1.6) lib/active_record/attribute_methods/dirty.rb:21:in `save'
+  activerecord (4.1.6) lib/active_record/transactions.rb:268:in `block (2 levels) in save'
+  activerecord (4.1.6) lib/active_record/transactions.rb:329:in `block in with_transaction_returning_status'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/database_statements.rb:201:in `block in transaction'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/database_statements.rb:209:in `within_new_transaction'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/database_statements.rb:201:in `transaction'
+  activerecord (4.1.6) lib/active_record/transactions.rb:208:in `transaction'
+  activerecord (4.1.6) lib/active_record/transactions.rb:326:in `with_transaction_returning_status'
+  activerecord (4.1.6) lib/active_record/transactions.rb:268:in `block in save'
+  activerecord (4.1.6) lib/active_record/transactions.rb:283:in `rollback_active_record_state!'
+  activerecord (4.1.6) lib/active_record/transactions.rb:267:in `save'
+  devise (3.2.4) app/controllers/devise/registrations_controller.rb:15:in `create'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/mapper.rb:45:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 174ms (Views: 168.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:26:51 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:26:58 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `usuarios` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2014-10-03 17:26:58', 'asd@asd.cl', '$2a$10$qYFaqM9BXQM2z2g7oJ4Gce3mhG0xPXgpg6r7/hEERuZJXC4p538dO', '2014-10-03 17:26:58')
+  [1m[36m (32.3ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 184ms
+
+NameError (undefined local variable or method `locked_at' for #<Usuario:0xd168d04>):
+  activemodel (4.1.6) lib/active_model/attribute_methods.rb:435:in `method_missing'
+  activerecord (4.1.6) lib/active_record/attribute_methods.rb:211:in `method_missing'
+  devise (3.2.4) lib/devise/models/lockable.rb:60:in `access_locked?'
+  devise (3.2.4) lib/devise/models/lockable.rb:80:in `active_for_authentication?'
+  devise (3.2.4) app/controllers/devise/registrations_controller.rb:17:in `create'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:149:in `block in halting_and_conditional'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/mapper.rb:45:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/rodrigo/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/rodrigo/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.4ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 176ms (Views: 170.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:12 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.5ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 325ms (Views: 169.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:20 -0300
+  [1m[36mUsuario Load (0.6ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM `usuarios` WHERE `usuarios`.`id` = 1
+  [1m[36m (34.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 169ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:27:54 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:28:01 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.3ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `usuarios` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2014-10-03 17:28:01', 'asd@asd.cl', '$2a$10$SHXupkzBYi.FgmAr1GSPfOJ8LkaUTKgGowx9TcP8zbPin7r1G3VGi', '2014-10-03 17:28:01')[0m
+  [1m[35m (32.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `usuarios` SET `current_sign_in_at` = '2014-10-03 17:28:01', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_at` = '2014-10-03 17:28:01', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2014-10-03 17:28:01' WHERE `usuarios`.`id` = 2
+  [1m[36m (35.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 243ms (ActiveRecord: 70.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 14:28:01 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 163ms (Views: 162.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-03 14:28:02 -0300
+  [1m[35mUsuario Load (0.7ms)[0m  SELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `usuarios` WHERE `usuarios`.`id` = 2[0m
+  [1m[35m (27.4ms)[0m  COMMIT
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:29:31 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT  `usuarios`.* FROM `usuarios`  WHERE `usuarios`.`id` = 2  ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 179ms (Views: 168.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:32 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:29:37 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: rut
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.5ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` IS NULL LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `usuarios` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2014-10-03 17:29:37', 'asd@asd.cl', '$2a$10$Xp45WAWtgbABmE3Wp2OJA.dZVtWWJJZ8vIQkMgNYkbTBlLU5j9vuu', '2014-10-03 17:29:37')
+  [1m[36m (156.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (74.1ms)[0m  [1mUPDATE `usuarios` SET `current_sign_in_at` = '2014-10-03 17:29:37', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_at` = '2014-10-03 17:29:37', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2014-10-03 17:29:37' WHERE `usuarios`.`id` = 3[0m
+  [1m[35m (55.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 449ms (ActiveRecord: 287.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 14:29:37 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 164ms (Views: 162.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-03 14:29:38 -0300
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 14:31:07 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 157ms (Views: 152.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-03 14:31:08 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios`  WHERE `usuarios`.`id` = 3  ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 157ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-03 14:31:10 -0300
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM `usuarios` WHERE `usuarios`.`id` = 3[0m
+  [1m[35m (26.5ms)[0m  COMMIT
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUsuario Load (5.5ms)[0m  SELECT  `usuarios`.* FROM `usuarios`  WHERE `usuarios`.`id` = 3  ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 173ms (Views: 163.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:27 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:28 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gX/uuXGVpYSKVlmFluZfaEb7izn7ujLAN0lcuEKOLUQ=", "usuario"=>{"email"=>"asd@asd.cl", "rut"=>"18038035-3", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUsuario Exists (0.6ms)[0m  SELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`email` = BINARY 'asd@asd.cl' LIMIT 1
+  [1m[36mUsuario Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM `usuarios`  WHERE `usuarios`.`rut` = BINARY '18038035-3' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `usuarios` (`created_at`, `email`, `encrypted_password`, `rut`, `updated_at`) VALUES ('2014-10-03 17:31:34', 'asd@asd.cl', '$2a$10$kGoVeR5tIeG48BuzuEZD6uvF43lNDgWzIvnC44RHqJsIqkrnSWpia', '18038035-3', '2014-10-03 17:31:34')
+  [1m[36m (25.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `usuarios` SET `current_sign_in_at` = '2014-10-03 17:31:34', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_at` = '2014-10-03 17:31:34', `last_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2014-10-03 17:31:34' WHERE `usuarios`.`id` = 4[0m
+  [1m[35m (27.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms (ActiveRecord: 54.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 161ms (Views: 159.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/ng-rails-csrf.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-10-03 14:31:34 -0300
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT  `usuarios`.* FROM `usuarios`   ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
