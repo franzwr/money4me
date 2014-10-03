@@ -2,7 +2,7 @@ class API::PagoController < ApplicationController
 	respond_to :json
 
 	def pago_params
-		params.require(:pago).permit(:cuenta_banco, :rut_cliente, :email, :detalle, :fecha_pago, :cuenta_ids)
+		params.require(:pago).permit(:cuenta_banco, :rut_cliente, :email, :detalle, :fecha_pago, :cuenta_ids, :id_propio_empresas)
 	end
 
 	def index
@@ -25,7 +25,9 @@ class API::PagoController < ApplicationController
     end
 
 		@pago = Pago.new(pago_params)
-    @pago.cuenta_ids = JSON.parse params[:pago][:cuenta_ids]
+    # Bill to pay IDs are found using id_propio_empresa
+    @pago.cuentas = Cuenta.where("id_propio_empresa IN (?)",
+                                 JSON.parse(params[:pago][:id_propio_empresas]))
     @pago.fecha_pago = Date.today
 
     # TODO Mailer
