@@ -1,5 +1,6 @@
 class API::EmpresaController < ApplicationController
   before_action :authenticate_admin!, only: [:update, :destroy]
+  before_action :authenticate_empresa!, only: [:clientes_morosos, :clientes_con_cuentas_acumuladas, :clientes_preventivos]
 
 	respond_to :json
 
@@ -52,4 +53,31 @@ class API::EmpresaController < ApplicationController
 		end
 	end
 
+  # ---
+  def clientes_morosos
+    rut_impagos = current_empresa.cuentas.impagas.select(:rut_cliente)
+
+    render json: {
+      rut_clientes_impagos: rut_impagos,
+      clientes_impagos:     Usuario.where(rut_cliente: rut_impagos),
+    }
+  end
+
+  def clientes_con_cuentas_acumuladas
+    rut_acumulados = current_empresa.cuentas.pagadas.joins(:pagos).where("pagos.fecha_pago > cuentas.fecha_limite").select(:rut_cliente)
+
+    render json: {
+      rut_clientes_acumulados: rut_acumulados,
+      clientes_acumulados:     Usuario.where(rut_cliente: rut_acumulados),
+    }
+  end
+
+  def clientes_preventivos
+    rut_preventivos = current_empresa.cuentas.pagadas.joins(:pagos).where("pagos.fecha_pago < cuentas.fecha_limite").select(:rut_cliente)
+
+    render json: {
+      rut_clientes_preventivos: rut_preventivos,
+      clientes_preventivos:     Usuario.where(rut_cliente: rut_preventivos),
+    }
+  end
 end

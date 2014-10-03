@@ -23,4 +23,9 @@ class Cuenta < RemoteBase
     # http://stackoverflow.com/a/23389130/3741258
     where(id_cuenta: Pago.select(:id_cuenta).uniq)
   end
+
+  def cercanas_a_vencer
+    # Will this work? Date difference
+    impagas.where("fecha_limite - ? <= ?", Date.today, 2.days)
+  end
 end
