@@ -18,6 +18,7 @@ class API::EmpresaController < ApplicationController
 		end
 	end
 
+  # TODO Devise
 	def create
 		@empresa = Empresa.new(empresa_params)
 		@empresa.activa = false
