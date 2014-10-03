@@ -38,7 +38,7 @@ class API::EmpresaController < ApplicationController
         cuenta_banco:  params[:empresa][:cuenta_banco],
         rut_empresa:   params[:empresa][:rut_empresa],
         activa:        params[:empresa][:activa],
-        rubros:        JSON.parse(params[:empresa][:rubro_ids]),
+        rubro_ids:     JSON.parse(params[:empresa][:rubro_ids]),
       }.reject {|k,v| v.nil?} )
       render :json => @empresa
     end
