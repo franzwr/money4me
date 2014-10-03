@@ -18,7 +18,7 @@ class API::EmpresaController < ApplicationController
 		end
 	end
 
-	def create 
+	def create
 		@empresa = Empresa.new(empresa_params)
 		@empresa.activa = false
 		if @empresa.save
@@ -29,10 +29,19 @@ class API::EmpresaController < ApplicationController
 	end
 
 	def update
-		@empresa = Empresa.find_by :id_empresa => params[:id]
-		@empresa.update(nombre: params[:empresa][:nombre], cuenta_banco: params[:empresa][:cuenta_banco],
-			rut_empresa: params[:empresa][:rut_empresa], activa: params[:empresa][:activa])
-		render :json => @empresa
+    if !admin_signed_in and !params[:empresa][:activa].nil?
+			render :json => {}, :status => :internal_server_error
+    else
+      @empresa = Empresa.find_by :id_empresa => params[:id]
+      @empresa.update({
+        nombre:        params[:empresa][:nombre],
+        cuenta_banco:  params[:empresa][:cuenta_banco],
+        rut_empresa:   params[:empresa][:rut_empresa],
+        activa:        params[:empresa][:activa],
+        rubro_ids:     JSON.parse(params[:empresa][:rubro_ids]),
+      }.reject {|k,v| v.nil?} )
+      render :json => @empresa
+    end
 	end
 
 	def destroy
@@ -43,4 +52,5 @@ class API::EmpresaController < ApplicationController
 			render :json => {}, status: :internal_server_error
 		end
 	end
+
 end
