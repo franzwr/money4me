@@ -1,4 +1,5 @@
 class API::RubroController < ApplicationController
+  before_action :authenticate_admin!, only: [:create, :update, :destroy]
 	respond_to :json
 
 	def rubro_params
