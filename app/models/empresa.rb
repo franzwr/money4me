@@ -4,4 +4,6 @@ class Empresa < RemoteBase
 	has_many :empresarubros, foreign_key: "id_empresa"
 	has_many :rubros, through: :empresarubros
 	has_many :cuentas, foreign_key: "id_empresa"
+
+  validates :rubros, presence: true, allow_blank: true
 end
