@@ -10,8 +10,8 @@
 				</div>
 				<div class="panel-body" style="height:200px;">
 					<div style="margin-top:30px;">
-						<p><center>Ingresa tu RUT con puntos y guión.</center></p>
-						<input style="margin-top:50px;" class="form-control input-md" type="text" model="payment.rut" placeholder=" Ej: 12.345.678-9">
+						<p><center>Ingresa tu RUT sin puntos ni guión.</center></p>
+						<input style="margin-top:50px;" class="form-control input-md" type="text" ng-model="payment.rut" placeholder=" Ej: 123456789">
 					</div>
 				</div>
 			</div>
@@ -24,7 +24,7 @@
 				<div class="panel-body" style="height:200px;">
 					<div style="margin-top:30px;">
 						<p><center>Ingresa el ID de la cuenta. Por lo general es el número de boleta o folio. Si tiene dudas consulte con la empresa correspondiente.</center></p>
-						<input class="form-control input-md" type="text" model="payment.rut" placeholder=" Ej: 123456789">
+						<input class="form-control input-md" type="text" ng-model="payment.bill" placeholder=" Ej: 987654321">
 					</div>
 				</div>
 			</div>
@@ -35,7 +35,12 @@
 					<h3 class="panel-title"> Paso 3: Pagar </h3>
 				</div>
 				<div class="panel-body" style="height:200px;">
-
+					<div ng-if="fetched">
+						
+					</div>
+					<div ng-if="!fetched" style="margin-top:60px; margin-left:50px; width:70%;">
+						<button ng-click="fetch(payment)" type="button" class="btn btn-success btn-block">Consultar</button>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -16646,3 +16646,1723 @@ Started GET "/api/cuenta" for 127.0.0.1 at 2014-11-07 14:03:16 -0300
 Processing by API::CuentaController#index as JSON
   [1m[35mCuenta Load (22.6ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`
 Completed 200 OK in 175ms (Views: 121.7ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/api/cuenta/" for 127.0.0.1 at 2014-11-07 14:20:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by API::CuentaController#index as JSON
+  [1m[35mCuenta Load (21.6ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`
+Completed 200 OK in 206ms (Views: 145.9ms | ActiveRecord: 41.8ms)
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 205ms (Views: 204.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:21:10 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 7ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 119ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:21:40 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 3ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 134ms (Views: 133.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:23:56 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:23:57 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 112ms (Views: 112.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:25:20 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 110ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:26:07 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 164ms (Views: 163.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:26:18 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:26:23 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 122ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:23 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:26:24 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 139ms (Views: 138.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:26:33 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 124ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:26:45 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 121ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:27:00 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:27:32 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 141ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:27:33 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:28:14 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:28:15 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 172ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:28:21 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 115ms (Views: 114.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:31:59 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 2ms
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:32:06 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:32:06 -0300
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 112ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:32:48 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:32:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:32:51 -0300
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 139ms (Views: 138.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:33:27 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:33:30 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:33:30 -0300
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:33:44 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 109ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:33:45 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 140ms (Views: 140.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:34:46 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:34:47 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=4228392201" for 127.0.0.1 at 2014-11-07 14:39:44 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"4228392201"}
+Completed 401 Unauthorized in 32337ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=4228392201" for 127.0.0.1 at 2014-11-07 14:40:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"4228392201"}
+  [1m[35mCuenta Load (22.9ms)[0m  SELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '4228392201' LIMIT 1
+Completed 200 OK in 205ms (Views: 0.5ms | ActiveRecord: 63.1ms)
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 160ms (Views: 159.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:41:33 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 5ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=4228392201" for 127.0.0.1 at 2014-11-07 14:41:54 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"4228392201"}
+  [1m[36mCuenta Load (21.2ms)[0m  [1mSELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '4228392201' LIMIT 1[0m
+Completed 200 OK in 43ms (Views: 0.7ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 75ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:42:44 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:42:45 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:42:45 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:43:45 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 166ms (Views: 165.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:43:46 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=64565" for 127.0.0.1 at 2014-11-07 14:43:50 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"64565"}
+  [1m[35mCuenta Load (27.5ms)[0m  SELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '64565' LIMIT 1
+Completed 404 Not Found in 52ms (Views: 0.3ms | ActiveRecord: 27.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:43:53 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:43:53 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:43:58 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:43:58 -0300
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 77ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:44:19 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:44:20 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=654654" for 127.0.0.1 at 2014-11-07 14:44:24 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"654654"}
+  [1m[36mCuenta Load (20.2ms)[0m  [1mSELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '654654' LIMIT 1[0m
+Completed 404 Not Found in 45ms (Views: 0.3ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:44:25 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:44:25 -0300
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 103ms (Views: 102.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:45:26 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=" for 127.0.0.1 at 2014-11-07 14:45:28 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>""}
+  [1m[35mCuenta Load (24.0ms)[0m  SELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '' LIMIT 1
+Completed 404 Not Found in 47ms (Views: 0.3ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/api/cuenta?id_propio_empresa=46846846" for 127.0.0.1 at 2014-11-07 14:45:34 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"46846846"}
+  [1m[36mCuenta Load (21.9ms)[0m  [1mSELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '46846846' LIMIT 1[0m
+Completed 404 Not Found in 43ms (Views: 0.3ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:45:35 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:45:35 -0300
+
+
+Started GET "/pay_bill" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"pay_bill"}
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 112ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-07 14:47:00 -0300
+Processing by Devise::SessionsController#create as JSON
+  Parameters: {"user"=>{}, "session"=>{"user"=>{}}}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/api/cuenta?id_propio_empresa=6546546" for 127.0.0.1 at 2014-11-07 14:47:05 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"6546546"}
+  [1m[35mCuenta Load (28.7ms)[0m  SELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '6546546' LIMIT 1
+Completed 404 Not Found in 61ms (Views: 0.3ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/api/cuenta?id_propio_empresa=6546546" for 127.0.0.1 at 2014-11-07 14:47:10 -0300
+Processing by API::CuentaController#index as JSON
+  Parameters: {"id_propio_empresa"=>"6546546"}
+  [1m[36mCuenta Load (22.2ms)[0m  [1mSELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_propio_empresa` = '6546546' LIMIT 1[0m
+Completed 404 Not Found in 52ms (Views: 0.3ms | ActiveRecord: 22.2ms)
