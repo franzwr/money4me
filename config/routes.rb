@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :usuarios
+  devise_for :users, :skip => [:sessions, :registrations]
+
+  devise_scope :user do
+    post '/sign_in' => 'devise/sessions#create'
+    delete '/sign_out' => 'devise/sessions#destroy'
+    post '/sign_up' => 'devise/registrations#create'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

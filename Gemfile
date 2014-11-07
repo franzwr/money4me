@@ -19,12 +19,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # JS engine
 gem 'therubyracer',  platforms: :ruby
-gem 'turbolinks'
 # Use Bower as front-end package manager
 gem 'bower-rails'
 # Makes working with AngularJS templates easier
 gem 'angular-rails-templates'
-gem 'ng-rails-csrf'
+gem 'angular_rails_csrf'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

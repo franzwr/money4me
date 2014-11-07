@@ -19,9 +19,9 @@ class API::PagoController < ApplicationController
 	end
 
 	def create
-    if usuario_signed_in?
-      params[:pago][:rut_cliente] ||= usuario.rut
-      params[:pago][:email]       ||= usuario.email
+    if user_signed_in?
+      params[:pago][:rut_cliente] ||= user.rut
+      params[:pago][:email]       ||= user.email
     end
 
 		@pago = Pago.new(pago_params)
@@ -72,31 +72,10 @@ class API::PagoController < ApplicationController
 	def update
     # Shouldn't be possible.
 		render :json => {}, status: :internal_server_error
-
-		# @pago = Pago.find_by :id_pago => params[:id]
-    #
-    # if @pago.cuentas.any? {|cuenta| cuenta.pagos.count > 1}
-		# 	render :json => {}, status: :internal_server_error
-    # elsif @pago.update(
-    #     cuenta_banco: params[:pago][:cuenta_banco],
-    #     rut_cliente:  params[:pago][:rut_cliente],
-    #     email:        params[:pago][:email],
-    #     detalle:      params[:pago][:detalle])
-    #   render :json => @pago
-		# else
-		# 	render :json => {}, status: :internal_server_error
-		# end
 	end
 
 	def destroy
-    # Impossible
+    # Should'nt be possible.
 		render :json => {}, status: :internal_server_error
-
-		# @pago = Pago.find_by :id_pago => params[:id]
-		# if @pago.destroy
-		# 	render :json => {}
-		# else
-		# 	render :json => {}, status: :internal_server_error
-		# end
 	end
 end

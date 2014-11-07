@@ -9,7 +9,16 @@ class API::CuentaController < ApplicationController
 	end
 
 	def index
-    respond_with Cuenta.all
+    	if params[:id_propio_empresa]
+			@cuenta = Cuenta.find_by :id_propio_empresa => params[:id_propio_empresa]
+		else
+			@cuenta = Cuenta.all
+		end
+		if @cuenta
+			render :json => @cuenta
+		else
+			render :json => {}, status: :not_found
+		end
 	end
 
 	def show
@@ -23,8 +32,8 @@ class API::CuentaController < ApplicationController
 
 	def create
 		@cuenta = Cuenta.new(cuenta_params)
-    @cuenta.id_empresa = current_empresa.id
-    @cuenta.fecha_registro = Date.today
+    	@cuenta.id_empresa = current_empresa.id
+    	@cuenta.fecha_registro = Date.today
 		if @cuenta.save
 			render :json => @cuenta
 		else
