@@ -8,20 +8,49 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="">Money4Me</a>
+      <a class="navbar-brand" href=""> Money4Me </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><span class="glyphicon glyphicon-usd"></span> Pagar Cuenta</a></li>
+        <li><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio </a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="/usuarios/sign_up"><span class="glyphicon glyphicon-pencil"></span> Registrarse</a></li>
-        <li><a href="/usuarios/sign_in"><span class="glyphicon glyphicon-user"></span> Ingresar</a></li>
+        <li><a href="/pay_bill"><span class="glyphicon glyphicon-usd"></span> Pagar Cuenta </a></li>
+        <li ng-if="!signedIn" class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Ingresar </a>
+          <ul class="dropdown-menu" role="menu">
+            <form ng-submit="signIn(user)" role="form" class="login-form">
+              <div class="form-group">
+                <label for="InputEmail">Email</label>
+                <input ng-model="user.email" type="email" class="form-control login-input" id="InputEmail" 
+                placeholder="ejemplo@money4me.cl">
+              </div>
+              <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input ng-model="user.password" type="password" class="form-control login-input" 
+                id="InputPassword" placeholder="Contraseña">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Recordarme
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block"> Ingresar </button>
+            </form>
+          </ul>
+        </li>
+        <li ng-if="signedIn" class="divider-vertical"></li>
+        <li ng-if="signedIn"><a> Usuario: {{currentUser.name}} </a></li>
+        <li ng-if="signedIn" class="divider-vertical"></li>
+        <li ng-if="signedIn"><a ng-click="signOut()"><span class="glyphicon glyphicon-log-out"></span> Salir </a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div><!-- /.container-->
 </nav>
-<div ng-view="" class="yield"</div>
+<div class="container">
+  <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+</div>
+<div ng-view=""></div>

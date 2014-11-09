@@ -1,0 +1,7 @@
+<div class="alert" ng-class="['alert-' + (type || 'warning'), closeable ? 'alert-dismissable' : null]" role="alert">
+    <button style="line-height:0.6;" ng-show="closeable" type="button" class="close" ng-click="close()">
+        <strong aria-hidden="true" >&times;</sstrong>
+        <span class="sr-only">Close</span>
+    </button>
+    <div ng-transclude></div>
+</div>

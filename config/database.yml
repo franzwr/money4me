@@ -12,8 +12,8 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: 5
-  database: local
+  pool: 10
+  database: money4me_dev
   username: root
   password: local
   socket: /var/run/mysqld/mysqld.sock
@@ -37,7 +37,7 @@ remote_development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Money4Me_test
+  database: money4me_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -60,6 +60,5 @@ test:
 #
 production:
   <<: *default
-  database: Money4Me_production
-  username: Money4Me
+  database: money4me_production
   password: <%= ENV['MONEY4ME_DATABASE_PASSWORD'] %>
