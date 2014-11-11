@@ -19,18 +19,19 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/pay_bill"><span class="glyphicon glyphicon-usd"></span> Pagar Cuenta </a></li>
+        <li ng-if="!signedIn"><a href="/sign_up"><span class="glyphicon glyphicon-user"></span> Registrarse </a></li>
         <li ng-if="!signedIn" class="dropdown">
           <a href="" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Ingresar </a>
           <ul class="dropdown-menu" role="menu">
             <form ng-submit="signIn(user)" role="form" class="login-form">
               <div class="form-group">
                 <label for="InputEmail">Email</label>
-                <input ng-model="user.email" type="email" class="form-control login-input" id="InputEmail" 
+                <input required ng-model="user.email" type="email" class="form-control login-input" id="InputEmail" 
                 placeholder="ejemplo@money4me.cl">
               </div>
               <div class="form-group">
                 <label for="InputPassword">Password</label>
-                <input ng-model="user.password" type="password" class="form-control login-input" 
+                <input required ng-model="user.password" type="password" class="form-control login-input" 
                 id="InputPassword" placeholder="Contraseña">
               </div>
               <div class="checkbox">

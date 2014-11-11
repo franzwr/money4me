@@ -11,7 +11,9 @@
       "angular": "latest",
       "angular-route": "latest",
       "bootstrap" : "latest",
-      "angular-devise" : "latest"
+      "angular-devise" : "latest",
+      "spin.js": "latest",
+      "angular-spinner": "latest"
     }
   }
 }

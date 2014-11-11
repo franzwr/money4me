@@ -13,6 +13,7 @@ angular.module('money4me.controllers')
 				type: 'danger',
 				msg: 'Ingrese todos los campos requeridos.'
 			});
+			return;
 		}
 		$http.get("http://localhost:3000/api/cuenta?id_propio_empresa=" + payment.bill)
 		.success(function(data, status) {

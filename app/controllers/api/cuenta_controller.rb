@@ -15,7 +15,7 @@ class API::CuentaController < ApplicationController
 			@cuenta = Cuenta.all
 		end
 		if @cuenta
-			render :json => @cuenta
+			render :json => @cuenta, :include => [:empresa]
 		else
 			render :json => {}, status: :not_found
 		end
@@ -24,7 +24,7 @@ class API::CuentaController < ApplicationController
 	def show
 		@cuenta = Cuenta.find_by :id_cuenta => params[:id]
 		if @cuenta
-			render :json => @cuenta
+			render :json => @cuenta, :include => [:empresa]
 		else
 			render :json => {}, status: :not_found
 		end

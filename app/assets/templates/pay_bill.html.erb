@@ -36,7 +36,12 @@
 				</div>
 				<div class="panel-body" style="height:200px;">
 					<div ng-if="fetched">
-						
+						<span>ID Cuenta : {{bill.id_propio_empresa}}</span>
+						<span>Cliente : {{bill.rut_cliente}}</span>
+						<span>Empresa : {{bill.empresa.nombre}}</span>
+						<span>Vence: {{bill.fecha_limite}}</span>
+						<span>Monto : {{bill.monto}}</span>
+						<button ng-click="pay()" type="button" class="btn btn-success btn-block">Pagar</button>
 					</div>
 					<div ng-if="!fetched" style="margin-top:60px; margin-left:50px; width:70%;">
 						<button ng-click="fetch(payment)" type="button" class="btn btn-success btn-block">Consultar</button>

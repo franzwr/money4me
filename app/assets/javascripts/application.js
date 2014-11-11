@@ -15,6 +15,8 @@
 //= require angular-route
 //= require angular-rails-templates
 //= require angular-devise
+//= require spin
+//= require angular-spinner
 //= require bootstrap
 //= require_tree ../templates
 //= require_tree .

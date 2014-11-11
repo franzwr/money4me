@@ -4,6 +4,7 @@ angular
         'ngRoute',
         'templates',
         'Devise',
+        'angularSpinner',
         'money4me.controllers',
         'money4me.services',
         'money4me.directives'
@@ -33,6 +34,10 @@ angular
         .when('/pay_bill', {
             templateUrl: 'pay_bill.html',
             controller: 'PayBillCtrl'
+        })
+        .when('/sign_up', {
+            templateUrl: 'sign_up.html',
+            controller: 'SignUpCtrl'
         });
 
         $locationProvider.html5Mode(true);
@@ -60,10 +65,11 @@ angular
                 Auth.login(credentials).then(function(user) {
                     $rootScope.currentUser = user;
                     $location.path('/');
+
                 }, function(error) {
                     $rootScope.addAlert({
                         type: 'danger',
-                        msg: 'Email/Password incorrecto(s)'
+                        msg: error.data.error
                     });
                 });
             };
@@ -89,17 +95,19 @@ angular
             $rootScope.alerts = [];
 
             // Global method for displaying alerts.
-            $rootScope.addAlert = function(alert, index) {
-                if($rootScope.alerts.length == 3) {
+            $rootScope.addAlert = function(alert, index, persistent) {
+                if($rootScope.alerts.length == 1) {
                     $rootScope.alerts.splice(0,1);
                 }
                 $rootScope.alerts.push({
                     type: alert.type,
                     msg: alert.msg
                 });
-                $timeout(function() {
-                    $rootScope.closeAlert(index);
-                }, 4000);
+                if(angular.isUndefined(persistent) || !persistent) {
+                    $timeout(function() {
+                        $rootScope.closeAlert(index);
+                    }, 5000);
+                }
             };
 
             // Global method for hiding alerts.
