@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   namespace :api, :defaults => {:format => :json} do
     resources :empresa, :rubro, :cuenta, :pago, :except => [:edit, :new]
+    get 'accounts/:account', to: 'bank_account#show'
+    post 'transfer/', to: 'bank_account#transfer'
   end
 
   # You can have the root of your site routed with "root"

@@ -8,7 +8,7 @@ angular.module('money4me.directives')
   return {
     restrict:'EA',
     controller:'AlertController',
-    templateUrl:'alert.html',
+    templateUrl:'bootstrap/alert.html',
     transclude:true,
     replace:true,
     scope: {

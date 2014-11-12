@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		
+		<!-- Here goes the jumbotron -->
 	</div>
 	<div class="row">
 		<div class="col col-md-4">
@@ -9,9 +9,9 @@
 					<h3 class="panel-title"> Paso 1: Rut </h3>
 				</div>
 				<div class="panel-body" style="height:200px;">
-					<div style="margin-top:30px;">
+					<div style="margin-top:50px;">
 						<p><center>Ingresa tu RUT sin puntos ni guión.</center></p>
-						<input style="margin-top:50px;" class="form-control input-md" type="text" ng-model="payment.rut" placeholder=" Ej: 123456789">
+						<input required style="margin-top:50px;" class="form-control input-md" type="text" ng-model="payment.rut" placeholder=" Ej: 123456789">
 					</div>
 				</div>
 			</div>
@@ -22,32 +22,75 @@
 					<h3 class="panel-title"> Paso 2: ID Cuenta </h3>
 				</div>
 				<div class="panel-body" style="height:200px;">
-					<div style="margin-top:30px;">
+					<div style="margin-top:50px;">
 						<p><center>Ingresa el ID de la cuenta. Por lo general es el número de boleta o folio. Si tiene dudas consulte con la empresa correspondiente.</center></p>
-						<input class="form-control input-md" type="text" ng-model="payment.bill" placeholder=" Ej: 987654321">
+						<input required class="form-control input-md" type="text" ng-model="payment.bill" placeholder=" Ej: 987654321">
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col col-md-4">
 			<div class="panel panel-success">
+				<span us-spinner spinner-key="spinner"></span>
 				<div class="panel-heading">
-					<h3 class="panel-title"> Paso 3: Pagar </h3>
+					<h3 class="panel-title"> Paso 3: Consultar </h3>
 				</div>
 				<div class="panel-body" style="height:200px;">
-					<div ng-if="fetched">
-						<span>ID Cuenta : {{bill.id_propio_empresa}}</span>
-						<span>Cliente : {{bill.rut_cliente}}</span>
-						<span>Empresa : {{bill.empresa.nombre}}</span>
-						<span>Vence: {{bill.fecha_limite}}</span>
-						<span>Monto : {{bill.monto}}</span>
-						<button ng-click="pay()" type="button" class="btn btn-success btn-block">Pagar</button>
-					</div>
-					<div ng-if="!fetched" style="margin-top:60px; margin-left:50px; width:70%;">
+					<div style="margin-top:118px; margin-left:50px; width:70%;">
 						<button ng-click="fetch(payment)" type="button" class="btn btn-success btn-block">Consultar</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/ng-template" id="payModal.html">
+	<div class="modal-header">
+		<h3 class="modal-title"> Paso 4: Pagar
+	</div>
+	<form role="form" ng-submit="pay()">
+		<div class="modal-body">
+			<span us-spinner spinner-key="spinner2"></span>
+			<div class="row"><strong class="col col-sm-4">ID Cuenta: </strong><span class="col col-sm-6 col-md-offset-2">{{bill.id_propio_empresa}}</span></div>
+			<div class="row"><strong class="col col-sm-4">Cliente: </strong><span class="col col-sm-6 col-md-offset-2">{{bill.rut_cliente}}</span></div>
+			<div class="row"><strong class="col col-sm-4">Empresa: </strong><span class="col col-sm-6 col-md-offset-2">{{bill.empresa.nombre}}</span></div>
+			<div class="row"><strong class="col col-sm-4">Vence: </strong><span class="col col-sm-6 col-md-offset-2">{{bill.fecha_limite | date: 'dd-MM-yyyy @ HH:mm:ss'}}</span></div>
+			<div class="row"><strong class="col col-sm-4">Monto: </strong><span class="col col-sm-6 col-md-offset-2">{{(bill.monto | currency:'$':0).split(".")[0].split(",").join(".")}}</span></div>
+			<hr>
+			<div>
+				<span us-spinner spinner-key="spinner1"></span>
+				<div class="row">
+					<div class="col col-md-8"> 
+						<input type="text" required class="form-control input-md" ng-model="user_account"
+						placeholder="Ingrese su número de cuenta sin guión">
+					</div>
+					<div class="col col-md-4">
+						<button ng-click="verify()" type="button" class="btn btn-success">Verificar Saldo</button>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<center><label>{{info}}</label></center>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col col-md-8"> 
+						<input type="text" required class="form-control input-md" ng-model="user_email"
+						placeholder="Ingrese su email">
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col col-md-12"> 
+						<textarea required class="form-control input-md" ng-model="user_comments"
+						placeholder="Ingrese algun comentario o nota"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button ng-disabled="!ready" class="btn btn-primary" style="width:40%;" role="submit">Pagar Cuenta</button>
+	        <button class="btn btn-warning" style="width:40%;	" ng-click="cancel()">Cancelar</button>
+		</div>
+	</form>
+	</script>
 </div>
