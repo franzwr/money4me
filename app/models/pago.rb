@@ -13,7 +13,7 @@ class Pago < RemoteBase
 	has_many :cuentas, through: :detalles
 
   # Many to One relationship with Client.
-  belongs_to :client, primary_key: "rut_cliente", foreign_key: "rut"
+  belongs_to :client
 
   # Model validations. Self-explained.
   validates :cuentas, presence: true, allow_blank: false

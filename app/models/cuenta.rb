@@ -13,7 +13,7 @@ class Cuenta < RemoteBase
 	has_one :detalle, foreign_key: "id_cuenta"
 	has_one :pago, through: :detalle
   # One to many relationship with User.
-  belongs_to :user, primary_key: "rut_cliente", foreign_key: "rut"
+  belongs_to :client, foreign_key: "rut"
 
   # Model validations. Self-explained.
   validate :id_propio_empresa, presence: true, uniqueness: true
@@ -24,18 +24,5 @@ class Cuenta < RemoteBase
   validate :fecha_limite_after_fecha_registro
   def fecha_limite_after_fecha_registro
     errors.add(:fecha_limite, "must sucede fecha_registro") unless fecha_limite >= fecha_registro
-  end
-
-  def unpaid
-    where.not(id_cuenta: Pago.select(:id_cuenta).uniq)
-  end
-
-  def paid
-    where(id_cuenta: Pago.select(:id_cuenta).uniq)
-  end
-
-  def near_expiration
-    # Will this work? Date difference
-    unpaid.where("fecha_limite - ? <= ?", Date.today, 2.days)
   end
 end

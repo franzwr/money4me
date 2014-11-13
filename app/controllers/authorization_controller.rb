@@ -21,7 +21,7 @@ class AuthorizationController < ApplicationController
 			if @user.valid_password?(params[:user][:password])
 				if @user.class.to_s == 'Client'
 					sign_in(:client, @user)
-					render :json => current_client, :include => [:pagos, :accounts, {:cuentas => {:include => [:empresa]}}], status: :ok
+					render :json => current_client, :include => [{:pagos => {:include => [:cuentas]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
 				elsif @user.class.to_s == 'Admin'
 					sign_in(:admin, @user)
 					render :json => current_admin, :include => [:cuentas] ,status: :ok

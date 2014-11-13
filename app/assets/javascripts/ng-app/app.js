@@ -75,6 +75,8 @@ angular
                 };
                 Auth.login(credentials).then(function(user) {
                     $window.localStorage['Session'] = angular.toJson(user);
+                    $rootScope.signedIn = true;
+                    $rootScope.currentUser = user;
                     $rootScope.addAlert({
                         type: 'success',
                         msg: "Sesión iniciada. Bienvenido " + user.name + "."
@@ -99,19 +101,11 @@ angular
                         msg: 'Sesión terminada.'
                     });
                     $window.localStorage.removeItem('Session');
+                    $rootScope.signedIn = false;
+                    $rootScope.currentUser = {};
                     $location.path('/');
                 });
             };
-
-            /** Auth events listeners. Modifies global variables accordingly. **/
-            $rootScope.$on('devise:login', function(event, currentUser) {
-                $rootScope.signedIn = true;
-                $rootScope.currentUser = currentUser;
-            });
-            $rootScope.$on('devise:logout', function(event, currentUser) {
-                $rootScope.signedIn = false;
-                $rootScope.currentUser = {};
-            });
 
             /** Alert FIFO array. **/
             $rootScope.alerts = [];

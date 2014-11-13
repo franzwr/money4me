@@ -4,5 +4,6 @@ angular.module('money4me.controllers')
 .controller('UserDashboardCtrl', ['$rootScope', '$scope', '$http', 'usSpinnerService', '$location',
 	function ($rootScope, $scope, $http, usSpinnerService, $location) {
 
-	var url = "http://localhost:3000/cuenta";
+	$scope.activeBills = $rootScope.currentUser.unpaid_bills;
+
 }]);
