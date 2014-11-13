@@ -1,5 +1,9 @@
+/**
+* Main application module. Defines all dependencies, routes, global methods and variables, configurations
+* and all the code neccesary to bootstrap the application.
+**/
 angular
-    // App dependencies
+    /** App dependencies. **/
     .module('money4me', [
         'ngRoute',
         'templates',
@@ -9,11 +13,11 @@ angular
         'money4me.services',
         'money4me.directives'
     ])
-    // App global configuration
+    /** App global configuration. **/
     .config(['$routeProvider', '$locationProvider', 'AuthProvider', 
     function ($routeProvider, $locationProvider, AuthProvider) {
 
-        // Devise routes
+        /** Devise configuration. **/
         AuthProvider.loginMethod('POST');
         AuthProvider.loginPath('/sign_in.json');
         AuthProvider.logoutMethod('DELETE');
@@ -25,7 +29,7 @@ angular
         });
         AuthProvider.ignoreAuth(true);
 
-        // Routes definition
+        /** Routes definition. **/
         $routeProvider
         .when('/', {
             templateUrl: 'home.html',
@@ -38,50 +42,68 @@ angular
         .when('/sign_up', {
             templateUrl: 'sign_up.html',
             controller: 'SignUpCtrl'
+        })
+        .when('/user_dashboard', {
+            templateUrl: 'user_dashboard.html',
+            controller: 'UserDashboardCtrl'
         });
 
         $locationProvider.html5Mode(true);
 }])
-    // Runs when angular is ready. Contains global variables and methods.
-    .run(['$rootScope', '$http', 'Auth', '$location', '$timeout', 
-        function ($rootScope, $http, Auth, $location, $timeout) {
+    /** Runs when angular is ready. Contains global variables and methods. **/
+    .run(['$rootScope', '$http', 'Auth', '$location', '$timeout', '$window', 'usSpinnerService',
+        function ($rootScope, $http, Auth, $location, $timeout, $window, usSpinnerService) {
         angular.element(document).ready( function() {
 
-            // At start, check if a session exists. If it does, login the user automatically.
-            Auth.currentUser().then( function(user) {
-                $rootScope.currentUser = user;
-                $rootScope.signedIn = true;
-            }, function(error) {
-                $rootScope.currentUser = {};
+            /** At start, check if a session exists. If it does, login the user automatically. **/
+            if(angular.isDefined($window.localStorage['Session'])) {
+                $rootScope.$apply(function () {
+                    $rootScope.signedIn = true;
+                    $rootScope.currentUser = angular.fromJson($window.localStorage['Session']);
+                });
+            } else {
                 $rootScope.signedIn = false;
-            });
+                $rootScope.currentUser = {};
+            }
             
-            // Sign in global method.
+            /** Sign in global method. **/
             $rootScope.signIn= function(user) {
+                usSpinnerService.spin('spinner0');
                 var credentials = {
                     email: user.email,
                     password: user.password
                 };
                 Auth.login(credentials).then(function(user) {
-                    $rootScope.currentUser = user;
-                    $location.path('/');
+                    $window.localStorage['Session'] = angular.toJson(user);
+                    $rootScope.addAlert({
+                        type: 'success',
+                        msg: "Sesión iniciada. Bienvenido " + user.name + "."
+                    });
+                    $location.path('/user_dashboard');
+                    usSpinnerService.stop('spinner0');
 
                 }, function(error) {
                     $rootScope.addAlert({
                         type: 'danger',
-                        msg: error.data.error
+                        msg: 'Email/Password inválido(s). Verifique sus datos.'
                     });
+                    usSpinnerService.stop('spinner0');
                 });
             };
 
-            // Sign out global method.
+            /** Sign out global method. **/
             $rootScope.signOut = function() {
                 Auth.logout().then( function() {
+                    $rootScope.addAlert({
+                        type: 'success',
+                        msg: 'Sesión terminada.'
+                    });
+                    $window.localStorage.removeItem('Session');
                     $location.path('/');
                 });
             };
 
-            // Auth events listeners. Modifies global variables accordingly.
+            /** Auth events listeners. Modifies global variables accordingly. **/
             $rootScope.$on('devise:login', function(event, currentUser) {
                 $rootScope.signedIn = true;
                 $rootScope.currentUser = currentUser;
@@ -91,10 +113,10 @@ angular
                 $rootScope.currentUser = {};
             });
 
-            // Alert FIFO array.
+            /** Alert FIFO array. **/
             $rootScope.alerts = [];
 
-            // Global method for displaying alerts.
+            /** Global method for displaying alerts. **/
             $rootScope.addAlert = function(alert, index, persistent) {
                 if($rootScope.alerts.length == 1) {
                     $rootScope.alerts.splice(0,1);
@@ -110,14 +132,14 @@ angular
                 }
             };
 
-            // Global method for hiding alerts.
+            /** Global method for hiding alerts. **/
             $rootScope.closeAlert = function(index) {
                 $rootScope.alerts.splice(index, 1);
             };
         });
     }]);
 
-// Module definitions.
+/** Module definitions. All AngularJS code can be grouped in these three modules. **/
 angular.module('money4me.controllers', []);
 
 angular.module('money4me.services', []);

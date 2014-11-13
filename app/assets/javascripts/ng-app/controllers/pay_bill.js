@@ -1,3 +1,4 @@
+
 angular.module('money4me.controllers')
 
 // Main controller for the payment view. usSpinnerService provides the spinner.

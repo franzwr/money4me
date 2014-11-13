@@ -28,9 +28,14 @@ gem 'angular_rails_csrf'
 gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+# Job Scheduler
+gem 'whenever', :require => false
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+# DB Graph visualizer
+group :development do
+  gem "rails-erd"
+end
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 

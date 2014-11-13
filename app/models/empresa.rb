@@ -1,5 +1,9 @@
-# Company Class
+# = empresa.rb
+#
+# Company (Empresa) class, inherits from RemoteBase. Abstraction of the 'Empresa' table from the external database.
+# All relationships and validations are defined here.
 class Empresa < RemoteBase
+  # Table properties mapped to ActiveRecord
 	self.table_name = "Empresa"
 	self.primary_key = "id_empresa"
 

@@ -1,3 +1,5 @@
+# = bank_account_controller.rb
+#
 # Controller for all Bank API related actions.
 class API::BankAccountController < ApplicationController
 	respond_to :json

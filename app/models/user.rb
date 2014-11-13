@@ -1,15 +1,13 @@
+# = user.rb
+#
+# Base class for all users. Defines devise modules.
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :timeoutable
+         :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :empresa
+  # Model validations. Self-explained
+  validates :email, presence: true, uniqueness: true
 
-  validates :rut, uniqueness: true
-
-  # how to do has_many over non-primary key?
-  def cuentas
-    Cuenta.where("rut_cliente == ?", rut)
-  end
 end

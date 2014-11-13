@@ -1,23 +1,29 @@
 Rails.application.routes.draw do
-
-  devise_for :users, :skip => [:sessions, :registrations]
-
-  devise_scope :user do
-    post '/sign_in' => 'devise/sessions#create'
-    delete '/sign_out' => 'devise/sessions#destroy'
-    post '/sign_up' => 'devise/registrations#create'
-  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  # Allow devise to map routes to controllers, but skipping the default controllers., :skip => [:sessions, :registrations]
+  devise_for :clients, :skip => [:sessions, :registrations, :confirmations, :passwords]
+  devise_for :admins, :skip => [:sessions, :registrations, :confirmations, :passwords]
+  devise_for :company_users, :skip => [:sessions, :registrations, :confirmations, :passwords]
+  # Maps all authorization custom routes to devise default controllers.
+  devise_scope :user do
+    post '/sign_in' => 'authorization#login'
+    delete '/sign_out' => 'authorization#logout'
+    post '/sign_up' => 'authorization#sign_up'
+  end
+
+  # API defined in its own namespace, so all routes with the '/api/' prefix are handled
+  # outside AngularJS.
   namespace :api, :defaults => {:format => :json} do
     resources :empresa, :rubro, :cuenta, :pago, :except => [:edit, :new]
     get 'accounts/:account', to: 'bank_account#show'
     post 'transfer/', to: 'bank_account#transfer'
   end
 
-  # You can have the root of your site routed with "root"
+  # Root has higher priority than our forwarding route.
   root 'application#index'
+  # This route redirects all unknown paths to the root route. From there, AngularJS uses its own router.
   get '*path' => 'application#index'
 
   # Example of regular route:

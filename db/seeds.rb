@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Default admin user seed.
+
+admin = Admin.create({:name => "Root Admin", :email => "admin@money4me.cl", :password => "admin1234",
+ :password_confirmation => "admin1234", :rut => "123456785"})

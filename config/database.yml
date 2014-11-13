@@ -9,6 +9,8 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
+
+# Defaul database connector. Used as a base to all other.
 default: &default
   adapter: mysql2
   encoding: utf8
@@ -18,9 +20,11 @@ default: &default
   password: local
   socket: /var/run/mysqld/mysqld.sock
 
+# Base connector is used in development
 development:
   <<: *default
 
+# Remote database connector. 
 remote_development:
   adapter: mysql2
   encoding: utf8
