@@ -11,6 +11,6 @@ class CompanyUser < User
 	validates :id_empresa, presence: true, uniqueness: true
 
 	def pagos
-		Pago.select(:id_cuenta_banco => Empresa.find_by_id_empresa(:id_empresa).cuenta_banco)
+		Pago.where(id_cuenta_banco: empresa.cuenta_banco)
 	end
 end

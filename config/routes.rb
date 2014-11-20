@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # Allow devise to map routes to controllers, but skipping the default controllers., :skip => [:sessions, :registrations]
-  devise_for :clients, :skip => [:sessions, :registrations, :confirmations, :passwords]
+  devise_for :clients, :skip => [:sessions, :registrations, :confirmations]
   devise_for :admins, :skip => [:sessions, :registrations, :confirmations, :passwords]
   devise_for :company_users, :skip => [:sessions, :registrations, :confirmations, :passwords]
   # Maps all authorization custom routes to devise default controllers.
@@ -13,12 +13,16 @@ Rails.application.routes.draw do
     post '/sign_up' => 'authorization#sign_up'
   end
 
+  devise_scope :clients do
+  end
+
   # API defined in its own namespace, so all routes with the '/api/' prefix are handled
   # outside AngularJS.
   namespace :api, :defaults => {:format => :json} do
     resources :empresa, :rubro, :cuenta, :pago, :except => [:edit, :new]
     get 'accounts/:account', to: 'bank_account#show'
     post 'transfer/', to: 'bank_account#transfer'
+    post 'recover/' => 'client#recover'
   end
 
   # Root has higher priority than our forwarding route.

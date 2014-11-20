@@ -62,7 +62,7 @@ class API::CuentaController < ApplicationController
 	def destroy
 		@cuenta = Cuenta.find_by(id_cuenta:  params[:id],
                              id_empresa: current_empresa.id)
-		if @cuenta.pago && @cuenta.destroy
+    if @cuenta.pago.nil? && @cuenta.destroy
 			render :json => {}
 		else
 			render :json => {}, status: :internal_server_error
