@@ -5,7 +5,10 @@ class API::ClientController < ApplicationController
 
   def recover
     current_client.send_reset_password_instructions
-    render json: {}
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.json { redirect_to :back }
+    end
   end
 end
 
