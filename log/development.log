@@ -50904,3 +50904,361 @@ Mysql2::Error: Unknown column 'Pago.rut' in 'where clause': SELECT `Pago`.* FROM
   [1m[36mPago Load (28.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 2 LIMIT 1[0m
   [1m[35mDetalle Load (26.3ms)[0m  SELECT  `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 70 LIMIT 1
   [1m[36mCuenta Load (18.1ms)[0m  [1mSELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_cuenta` = 2 LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 20:46:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1639ms (Views: 1615.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-19 20:46:25 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 20:46:26 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 20:46:26 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 20:46:31 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 20:46:47 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+Completed 401 Unauthorized in 135ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 20:46:53 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (15.0ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2014-11-19 23:46:53', `sign_in_count` = 2, `updated_at` = '2014-11-19 23:46:53' WHERE `users`.`id` = 12[0m
+  [1m[35m (43.5ms)[0m  COMMIT
+  [1m[36mPago Load (20.8ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'[0m
+  [1m[35mCuenta Load (23.1ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 71
+  [1m[36mCuenta Load (19.6ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76[0m
+  [1m[35mAccount Load (0.5ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (39.6ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+  [1m[35mEmpresa Load (19.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 1 LIMIT 1
+Completed 200 OK in 731ms (Views: 302.6ms | ActiveRecord: 358.3ms)
+
+
+Started GET "/api/pago" for 127.0.0.1 at 2014-11-19 20:47:44 -0300
+Processing by API::PagoController#index as JSON
+  [1m[36mPago Load (21.7ms)[0m  [1mSELECT `Pago`.* FROM `Pago`[0m
+Completed 200 OK in 130ms (Views: 20.4ms | ActiveRecord: 21.7ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 20:48:06 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 286ms (Views: 277.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 168ms (Views: 167.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:12 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 20:52:13 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 20:52:31 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (20.0ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mCuenta Load (33.7ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 71[0m
+  [1m[35mCuenta Load (27.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+  [1m[35mCuenta Load (27.9ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'
+  [1m[36mEmpresa Load (25.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 1 LIMIT 1[0m
+Completed 200 OK in 622ms (Views: 211.0ms | ActiveRecord: 306.8ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 147ms (Views: 146.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 20:53:17 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 20:53:31 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)

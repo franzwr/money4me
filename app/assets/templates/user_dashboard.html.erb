@@ -18,16 +18,18 @@
 			</accordion>
 		</tab>
 		<tab heading="Historial Pagos">
-			<accordion-group ng-repeat="payment in currentUser.pagos" heading="Pago ID: {{payment.id_pago}}">
-				<div ng-repeat="bill in payment.cuentas">
-					<p>ID Cuenta: {{bill.id_propio_empresa}}</p>
-					<p>Empresa: {{bill.empresa.nombre}}</p>
-					<p>N° Cuenta: {{bill.empresa.cuenta_banco}}</p>
-					<p>Fecha Facturación: {{bill.fecha_registro | date:'dd-MM-yyyy @ HH:mm:ss'}}</p>
-					<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
-					<hr>
-				</div>
-			</accordion-group>
+			<accordion close-others="true">
+				<accordion-group ng-repeat="payment in currentUser.pagos" heading="Pago ID: {{payment.id_pago}}">
+					<div ng-repeat="bill in payment.cuentas">
+						<p>ID Cuenta: {{bill.id_propio_empresa}}</p>
+						<p>Empresa: {{bill.empresa.nombre}}</p>
+						<p>N° Cuenta: {{bill.empresa.cuenta_banco}}</p>
+						<p>Fecha Facturación: {{bill.fecha_registro | date:'dd-MM-yyyy @ HH:mm:ss'}}</p>
+						<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
+						<hr>
+					</div>
+				</accordion-group>
+			</accordion>
 			<div class="well well-sm" ng-if="currentUser.pagos.length==0">
 				<center><h4>No ha realizado pagos</h4><center>
 			</div>
