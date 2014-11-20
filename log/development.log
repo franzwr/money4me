@@ -51262,3 +51262,1879 @@ Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.
 Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 20:53:31 -0300
 Processing by AuthorizationController#logout as JSON
 Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"sign_up"}
+  Rendered application/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 224ms (Views: 215.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 21:50:00 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 21:50:14 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (73.0ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mCuenta Load (21.0ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 71[0m
+  [1m[35mCuenta Load (22.2ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+  [1m[35mCuenta Load (24.7ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'
+Completed 200 OK in 607ms (Views: 177.3ms | ActiveRecord: 272.4ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 197ms (Views: 196.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 21:51:32 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 21:52:05 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 204ms (Views: 203.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 21:52:06 -0300
+  [1m[36mPago Load (18.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 71 LIMIT 1[0m
+  [1m[35mPago Load (30.8ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 71 LIMIT 1
+  [1m[36mCuenta Load (21.7ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 71[0m
+  [1m[35mDetalle Load (20.3ms)[0m  SELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 71
+  [1m[36mPago Load (23.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 72 LIMIT 1[0m
+  [1m[35mDetalle Load (19.0ms)[0m  SELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 72
+  [1m[36mPago Load (20.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 76 LIMIT 1[0m
+  [1m[35mDetalle Load (159.3ms)[0m  SELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 76
+  [1m[36mPago Load (26.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 71 LIMIT 1[0m
+  [1m[35mDetalle Load (45.5ms)[0m  SELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 71
+  [1m[36m (20.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (29.3ms)[0m  DELETE FROM `Pago` WHERE `Pago`.`id_pago` = 71
+  [1m[36m (22.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mPago Load (37.2ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 72 LIMIT 1
+  [1m[36mDetalle Load (21.8ms)[0m  [1mSELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 72[0m
+  [1m[35m (19.0ms)[0m  BEGIN
+  [1m[36mSQL (30.8ms)[0m  [1mDELETE FROM `Pago` WHERE `Pago`.`id_pago` = 72[0m
+  [1m[35m (20.2ms)[0m  COMMIT
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 22:00:08 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:00:21 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (23.7ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mCuenta Load (23.4ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (20.6ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+Completed 200 OK in 477ms (Views: 179.2ms | ActiveRecord: 194.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 22:01:05 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 22:01:05 -0300
+  [1m[36mPago Load (22.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 76 LIMIT 1[0m
+  [1m[35mCuenta Load (19.6ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76
+  [1m[36mDetalle Load (21.8ms)[0m  [1mSELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 76[0m
+  [1m[36mPago Load (18.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 76 LIMIT 1[0m
+  [1m[35mCuenta Load (50.8ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76
+  [1m[36mDetalle Load (24.4ms)[0m  [1mSELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 76[0m
+  [1m[36mPago Load (23.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 76 LIMIT 1[0m
+  [1m[35mCuenta Load (26.6ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76
+  [1m[36mDetalle Load (19.1ms)[0m  [1mSELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 76[0m
+  [1m[36mPago Load (19.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 76 LIMIT 1[0m
+  [1m[35mCuenta Load (21.1ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 76
+  [1m[36mDetalle Load (30.8ms)[0m  [1mSELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 76[0m
+  [1m[35mCuenta Load (28.4ms)[0m  SELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_cuenta` = 97539 LIMIT 1
+  [1m[36mCuenta Load (20.7ms)[0m  [1mSELECT  `Cuenta`.* FROM `Cuenta`  WHERE `Cuenta`.`id_cuenta` = 97539 LIMIT 1[0m
+  [1m[35mPago Load (29.0ms)[0m  SELECT `Pago`.* FROM `Pago`
+  [1m[36m (88.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (31.8ms)[0m  DELETE FROM `Pago` WHERE `Pago`.`id_pago` = 76
+  [1m[36m (45.1ms)[0m  [1mCOMMIT[0m
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 22:11:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:11:41 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (242.3ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+  [1m[35mCuenta Load (131.8ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'
+Completed 200 OK in 2432ms (Views: 677.7ms | ActiveRecord: 1652.3ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 284ms (Views: 283.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 22:13:23 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 22:13:50 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:14:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1
+Completed 401 Unauthorized in 19ms (Views: 0.2ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:14:52 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:14:56 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:01 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:03 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:06 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1[0m
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:11 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:15 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:17 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:15:34 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.cl' LIMIT 1[0m
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:16:03 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+Completed 401 Unauthorized in 91ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:16:05 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2014-11-20 01:16:05', `sign_in_count` = 2, `updated_at` = '2014-11-20 01:16:05' WHERE `users`.`id` = 13
+  [1m[36m (49.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mPago Load (20.4ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mCuenta Load (21.9ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 73[0m
+  [1m[35mCuenta Load (21.2ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13[0m
+  [1m[35mCuenta Load (21.5ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'
+Completed 200 OK in 549ms (Views: 201.1ms | ActiveRecord: 270.1ms)
+  [1m[36mPago Load (27.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`id_pago` = 73 LIMIT 1[0m
+  [1m[35mCuenta Load (24.8ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 73
+  [1m[36mDetalle Load (28.3ms)[0m  [1mSELECT `Detalle`.* FROM `Detalle`  WHERE `Detalle`.`id_pago` = 73[0m
+  [1m[35m (31.2ms)[0m  BEGIN
+  [1m[36mSQL (36.2ms)[0m  [1mDELETE FROM `Pago` WHERE `Pago`.`id_pago` = 73[0m
+  [1m[35m (27.9ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 263ms (Views: 253.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-19 22:18:10 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-19 22:18:18 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-19 22:18:28 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+  [1m[36mClient Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (120.6ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mCuenta Load (22.8ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13
+  [1m[36mCuenta Load (24.7ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'[0m
+Completed 200 OK in 802ms (Views: 179.2ms | ActiveRecord: 468.7ms)
+
+
+Started GET "/api/cuenta" for 127.0.0.1 at 2014-11-20 00:06:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by API::CuentaController#index as JSON
+  [1m[35mCuenta Load (55.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`
+  [1m[36mEmpresa Load (29.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 1 LIMIT 1[0m
+  [1m[35mPago Load (26.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 1 LIMIT 1
+  [1m[36mEmpresa Load (63.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mPago Load (44.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 2 LIMIT 1
+  [1m[36mEmpresa Load (115.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 3 LIMIT 1[0m
+  [1m[35mPago Load (99.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 3 LIMIT 1
+  [1m[36mEmpresa Load (100.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 4 LIMIT 1[0m
+  [1m[35mPago Load (100.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 4 LIMIT 1
+  [1m[36mEmpresa Load (108.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 5 LIMIT 1[0m
+  [1m[35mPago Load (92.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 5 LIMIT 1
+  [1m[36mEmpresa Load (96.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 6 LIMIT 1[0m
+  [1m[35mPago Load (97.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 6 LIMIT 1
+  [1m[36mEmpresa Load (108.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 7 LIMIT 1[0m
+  [1m[35mPago Load (405.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 7 LIMIT 1
+  [1m[36mEmpresa Load (28.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 8 LIMIT 1[0m
+  [1m[35mPago Load (40.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 8 LIMIT 1
+  [1m[36mEmpresa Load (29.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 9 LIMIT 1[0m
+  [1m[35mPago Load (26.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 9 LIMIT 1
+  [1m[36mEmpresa Load (30.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 10 LIMIT 1[0m
+  [1m[35mPago Load (27.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 10 LIMIT 1
+  [1m[36mEmpresa Load (29.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 11 LIMIT 1[0m
+  [1m[35mPago Load (61.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 11 LIMIT 1
+  [1m[36mEmpresa Load (33.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 12 LIMIT 1[0m
+  [1m[35mPago Load (33.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 12 LIMIT 1
+  [1m[36mEmpresa Load (32.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 13 LIMIT 1[0m
+  [1m[35mPago Load (33.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 13 LIMIT 1
+  [1m[36mEmpresa Load (33.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 14 LIMIT 1[0m
+  [1m[35mPago Load (32.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 14 LIMIT 1
+  [1m[36mEmpresa Load (35.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 15 LIMIT 1[0m
+  [1m[35mPago Load (271.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 15 LIMIT 1
+  [1m[36mEmpresa Load (65.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 16 LIMIT 1[0m
+  [1m[35mPago Load (30.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 16 LIMIT 1
+  [1m[36mEmpresa Load (117.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 17 LIMIT 1[0m
+  [1m[35mPago Load (43.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 17 LIMIT 1
+  [1m[36mEmpresa Load (37.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 18 LIMIT 1[0m
+  [1m[35mPago Load (38.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 18 LIMIT 1
+  [1m[36mEmpresa Load (44.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 19 LIMIT 1[0m
+  [1m[35mPago Load (34.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 19 LIMIT 1
+  [1m[36mEmpresa Load (37.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 20 LIMIT 1[0m
+  [1m[35mPago Load (80.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 20 LIMIT 1
+  [1m[36mEmpresa Load (81.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 21 LIMIT 1[0m
+  [1m[35mPago Load (77.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 21 LIMIT 1
+  [1m[36mEmpresa Load (79.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 22 LIMIT 1[0m
+  [1m[35mPago Load (75.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 22 LIMIT 1
+  [1m[36mEmpresa Load (21.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 23 LIMIT 1[0m
+  [1m[35mPago Load (19.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 23 LIMIT 1
+  [1m[36mEmpresa Load (17.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 24 LIMIT 1[0m
+  [1m[35mPago Load (25.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 24 LIMIT 1
+  [1m[36mEmpresa Load (63.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 25 LIMIT 1[0m
+  [1m[35mPago Load (31.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 25 LIMIT 1
+  [1m[36mEmpresa Load (74.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 26 LIMIT 1[0m
+  [1m[35mPago Load (39.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 26 LIMIT 1
+  [1m[36mEmpresa Load (54.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 27 LIMIT 1[0m
+  [1m[35mPago Load (74.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 27 LIMIT 1
+  [1m[36mEmpresa Load (36.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 28 LIMIT 1[0m
+  [1m[35mPago Load (102.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 28 LIMIT 1
+  [1m[36mEmpresa Load (34.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 29 LIMIT 1[0m
+  [1m[35mPago Load (43.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 29 LIMIT 1
+  [1m[36mEmpresa Load (28.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 30 LIMIT 1[0m
+  [1m[35mPago Load (29.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 30 LIMIT 1
+  [1m[36mEmpresa Load (60.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 31 LIMIT 1[0m
+  [1m[35mPago Load (57.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 31 LIMIT 1
+  [1m[36mEmpresa Load (42.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 32 LIMIT 1[0m
+  [1m[35mPago Load (405.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 32 LIMIT 1
+  [1m[36mEmpresa Load (99.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 33 LIMIT 1[0m
+  [1m[35mPago Load (41.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 33 LIMIT 1
+  [1m[36mEmpresa Load (42.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 34 LIMIT 1[0m
+  [1m[35mPago Load (42.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 34 LIMIT 1
+  [1m[36mEmpresa Load (179.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 35 LIMIT 1[0m
+  [1m[35mPago Load (97.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 35 LIMIT 1
+  [1m[36mEmpresa Load (276.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 36 LIMIT 1[0m
+  [1m[35mPago Load (32.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 36 LIMIT 1
+  [1m[36mEmpresa Load (95.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 37 LIMIT 1[0m
+  [1m[35mPago Load (100.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 37 LIMIT 1
+  [1m[36mEmpresa Load (99.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 38 LIMIT 1[0m
+  [1m[35mPago Load (100.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 38 LIMIT 1
+  [1m[36mEmpresa Load (101.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 39 LIMIT 1[0m
+  [1m[35mPago Load (99.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 39 LIMIT 1
+  [1m[36mEmpresa Load (100.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 40 LIMIT 1[0m
+  [1m[35mPago Load (409.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 40 LIMIT 1
+  [1m[36mEmpresa Load (81.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 41 LIMIT 1[0m
+  [1m[35mPago Load (41.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 41 LIMIT 1
+  [1m[36mEmpresa Load (40.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 42 LIMIT 1[0m
+  [1m[35mPago Load (31.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 42 LIMIT 1
+  [1m[36mEmpresa Load (35.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 43 LIMIT 1[0m
+  [1m[35mPago Load (35.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 43 LIMIT 1
+  [1m[36mEmpresa Load (35.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 44 LIMIT 1[0m
+  [1m[35mPago Load (37.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 44 LIMIT 1
+  [1m[36mEmpresa Load (34.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 45 LIMIT 1[0m
+  [1m[35mPago Load (36.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 45 LIMIT 1
+  [1m[36mEmpresa Load (36.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 46 LIMIT 1[0m
+  [1m[35mPago Load (36.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 46 LIMIT 1
+  [1m[36mEmpresa Load (107.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 47 LIMIT 1[0m
+  [1m[35mPago Load (102.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 47 LIMIT 1
+  [1m[36mEmpresa Load (98.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 48 LIMIT 1[0m
+  [1m[35mPago Load (99.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 48 LIMIT 1
+  [1m[36mEmpresa Load (308.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 49 LIMIT 1[0m
+  [1m[35mPago Load (83.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 49 LIMIT 1
+  [1m[36mEmpresa Load (323.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 50 LIMIT 1[0m
+  [1m[35mPago Load (98.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 50 LIMIT 1
+  [1m[36mEmpresa Load (47.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 51 LIMIT 1[0m
+  [1m[35mPago Load (48.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 51 LIMIT 1
+  [1m[36mEmpresa Load (50.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 52 LIMIT 1[0m
+  [1m[35mPago Load (161.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 52 LIMIT 1
+  [1m[36mEmpresa Load (89.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 53 LIMIT 1[0m
+  [1m[35mPago Load (87.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 53 LIMIT 1
+  [1m[36mEmpresa Load (88.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 54 LIMIT 1[0m
+  [1m[35mPago Load (88.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 54 LIMIT 1
+  [1m[36mEmpresa Load (37.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 55 LIMIT 1[0m
+  [1m[35mPago Load (920.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 55 LIMIT 1
+  [1m[36mEmpresa Load (103.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 56 LIMIT 1[0m
+  [1m[35mPago Load (53.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 56 LIMIT 1
+  [1m[36mEmpresa Load (148.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 57 LIMIT 1[0m
+  [1m[35mPago Load (200.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 57 LIMIT 1
+  [1m[36mEmpresa Load (100.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 58 LIMIT 1[0m
+  [1m[35mPago Load (100.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 58 LIMIT 1
+  [1m[36mEmpresa Load (100.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 59 LIMIT 1[0m
+  [1m[35mPago Load (109.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 59 LIMIT 1
+  [1m[36mEmpresa Load (91.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 60 LIMIT 1[0m
+  [1m[35mPago Load (90.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 60 LIMIT 1
+  [1m[36mEmpresa Load (111.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 61 LIMIT 1[0m
+  [1m[35mPago Load (103.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 61 LIMIT 1
+  [1m[36mEmpresa Load (98.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 62 LIMIT 1[0m
+  [1m[35mPago Load (100.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 62 LIMIT 1
+  [1m[36mEmpresa Load (99.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 63 LIMIT 1[0m
+  [1m[35mPago Load (100.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 63 LIMIT 1
+  [1m[36mEmpresa Load (101.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 64 LIMIT 1[0m
+  [1m[35mPago Load (101.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 64 LIMIT 1
+  [1m[36mEmpresa Load (100.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 65 LIMIT 1[0m
+  [1m[35mPago Load (99.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 65 LIMIT 1
+  [1m[36mEmpresa Load (71.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 66 LIMIT 1[0m
+  [1m[35mPago Load (310.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 66 LIMIT 1
+  [1m[36mEmpresa Load (129.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 67 LIMIT 1[0m
+  [1m[35mPago Load (42.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 67 LIMIT 1
+  [1m[36mEmpresa Load (54.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 68 LIMIT 1[0m
+  [1m[35mPago Load (55.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 68 LIMIT 1
+  [1m[36mEmpresa Load (43.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 69 LIMIT 1[0m
+  [1m[35mPago Load (44.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 69 LIMIT 1
+  [1m[36mEmpresa Load (44.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 70 LIMIT 1[0m
+  [1m[35mPago Load (44.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 70 LIMIT 1
+  [1m[36mEmpresa Load (45.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 71 LIMIT 1[0m
+  [1m[35mPago Load (45.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 71 LIMIT 1
+  [1m[36mEmpresa Load (44.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 72 LIMIT 1[0m
+  [1m[35mPago Load (335.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 72 LIMIT 1
+  [1m[36mEmpresa Load (101.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 73 LIMIT 1[0m
+  [1m[35mPago Load (52.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 73 LIMIT 1
+  [1m[36mEmpresa Load (351.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 74 LIMIT 1[0m
+  [1m[35mPago Load (29.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 74 LIMIT 1
+  [1m[36mEmpresa Load (44.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 75 LIMIT 1[0m
+  [1m[35mPago Load (36.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 75 LIMIT 1
+  [1m[36mEmpresa Load (71.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 76 LIMIT 1[0m
+  [1m[35mPago Load (37.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 76 LIMIT 1
+  [1m[36mEmpresa Load (395.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 77 LIMIT 1[0m
+  [1m[35mPago Load (88.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 77 LIMIT 1
+  [1m[36mEmpresa Load (95.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 78 LIMIT 1[0m
+  [1m[35mPago Load (90.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 78 LIMIT 1
+  [1m[36mEmpresa Load (90.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 79 LIMIT 1[0m
+  [1m[35mPago Load (89.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 79 LIMIT 1
+  [1m[36mEmpresa Load (34.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 80 LIMIT 1[0m
+  [1m[35mPago Load (35.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 80 LIMIT 1
+  [1m[36mEmpresa Load (38.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 99 LIMIT 1[0m
+  [1m[35mPago Load (37.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 99 LIMIT 1
+  [1m[36mEmpresa Load (38.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 98 LIMIT 1[0m
+  [1m[35mPago Load (100.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 98 LIMIT 1
+  [1m[36mEmpresa Load (38.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 84 LIMIT 1[0m
+  [1m[35mPago Load (46.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 84 LIMIT 1
+  [1m[36mEmpresa Load (30.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 85 LIMIT 1[0m
+  [1m[35mPago Load (27.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 85 LIMIT 1
+  [1m[36mEmpresa Load (58.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 86 LIMIT 1[0m
+  [1m[35mPago Load (39.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 86 LIMIT 1
+  [1m[36mEmpresa Load (26.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 89 LIMIT 1[0m
+  [1m[35mPago Load (24.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 89 LIMIT 1
+  [1m[36mEmpresa Load (49.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 108 LIMIT 1[0m
+  [1m[35mPago Load (78.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 108 LIMIT 1
+  [1m[36mEmpresa Load (52.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 90 LIMIT 1[0m
+  [1m[35mPago Load (339.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 90 LIMIT 1
+  [1m[36mEmpresa Load (101.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 91 LIMIT 1[0m
+  [1m[35mPago Load (51.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 91 LIMIT 1
+  [1m[36mEmpresa Load (31.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 92 LIMIT 1[0m
+  [1m[35mPago Load (33.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 92 LIMIT 1
+  [1m[36mEmpresa Load (34.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 94 LIMIT 1[0m
+  [1m[35mPago Load (36.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 94 LIMIT 1
+  [1m[36mEmpresa Load (73.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 95 LIMIT 1[0m
+  [1m[35mPago Load (79.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 95 LIMIT 1
+  [1m[36mEmpresa Load (41.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 96 LIMIT 1[0m
+  [1m[35mPago Load (117.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 96 LIMIT 1
+  [1m[36mEmpresa Load (98.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 97 LIMIT 1[0m
+  [1m[35mPago Load (100.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 97 LIMIT 1
+  [1m[36mEmpresa Load (100.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 100 LIMIT 1[0m
+  [1m[35mPago Load (102.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 100 LIMIT 1
+  [1m[36mEmpresa Load (201.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 101 LIMIT 1[0m
+  [1m[35mPago Load (100.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 101 LIMIT 1
+  [1m[36mEmpresa Load (100.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 102 LIMIT 1[0m
+  [1m[35mPago Load (201.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 102 LIMIT 1
+  [1m[36mEmpresa Load (102.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 103 LIMIT 1[0m
+  [1m[35mPago Load (103.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 103 LIMIT 1
+  [1m[36mEmpresa Load (97.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 104 LIMIT 1[0m
+  [1m[35mPago Load (105.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 104 LIMIT 1
+  [1m[36mEmpresa Load (197.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 105 LIMIT 1[0m
+  [1m[35mPago Load (104.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 105 LIMIT 1
+  [1m[36mEmpresa Load (102.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 106 LIMIT 1[0m
+  [1m[35mPago Load (94.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 106 LIMIT 1
+  [1m[36mEmpresa Load (99.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 107 LIMIT 1[0m
+  [1m[35mPago Load (71.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 107 LIMIT 1
+  [1m[36mEmpresa Load (57.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 109 LIMIT 1[0m
+  [1m[35mPago Load (58.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 109 LIMIT 1
+  [1m[36mEmpresa Load (57.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 110 LIMIT 1[0m
+  [1m[35mPago Load (59.1ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 110 LIMIT 1
+  [1m[36mEmpresa Load (42.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 111 LIMIT 1[0m
+  [1m[35mPago Load (153.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 111 LIMIT 1
+  [1m[36mEmpresa Load (53.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 112 LIMIT 1[0m
+  [1m[35mPago Load (51.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 112 LIMIT 1
+  [1m[36mEmpresa Load (52.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 113 LIMIT 1[0m
+  [1m[35mPago Load (39.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 113 LIMIT 1
+  [1m[36mEmpresa Load (42.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 114 LIMIT 1[0m
+  [1m[35mPago Load (42.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 114 LIMIT 1
+  [1m[36mEmpresa Load (42.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 115 LIMIT 1[0m
+  [1m[35mPago Load (52.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 115 LIMIT 1
+Completed 200 OK in 20382ms (Views: 933.9ms | ActiveRecord: 19428.1ms)
+
+
+Started GET "/api/cuenta" for 127.0.0.1 at 2014-11-20 00:06:20 -0300
+Processing by API::CuentaController#index as JSON
+  [1m[36mCuenta Load (546.1ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`[0m
+  [1m[35mEmpresa Load (89.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 1 LIMIT 1
+  [1m[36mPago Load (60.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 1 LIMIT 1[0m
+  [1m[35mEmpresa Load (37.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1
+  [1m[36mPago Load (38.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 2 LIMIT 1[0m
+  [1m[35mEmpresa Load (39.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 3 LIMIT 1
+  [1m[36mPago Load (39.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 3 LIMIT 1[0m
+  [1m[35mEmpresa Load (41.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 4 LIMIT 1
+  [1m[36mPago Load (38.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 4 LIMIT 1[0m
+  [1m[35mEmpresa Load (42.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 5 LIMIT 1
+  [1m[36mPago Load (39.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 5 LIMIT 1[0m
+  [1m[35mEmpresa Load (115.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 6 LIMIT 1
+  [1m[36mPago Load (100.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 6 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 7 LIMIT 1
+  [1m[36mPago Load (100.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 7 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 8 LIMIT 1
+  [1m[36mPago Load (202.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 8 LIMIT 1[0m
+  [1m[35mEmpresa Load (101.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 9 LIMIT 1
+  [1m[36mPago Load (100.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 9 LIMIT 1[0m
+  [1m[35mEmpresa Load (99.4ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 10 LIMIT 1
+  [1m[36mPago Load (100.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 10 LIMIT 1[0m
+  [1m[35mEmpresa Load (101.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 11 LIMIT 1
+  [1m[36mPago Load (307.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 11 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 12 LIMIT 1
+  [1m[36mPago Load (83.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 12 LIMIT 1[0m
+  [1m[35mEmpresa Load (426.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 13 LIMIT 1
+  [1m[36mPago Load (71.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 13 LIMIT 1[0m
+  [1m[35mEmpresa Load (34.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 14 LIMIT 1
+  [1m[36mPago Load (34.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 14 LIMIT 1[0m
+  [1m[35mEmpresa Load (288.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 15 LIMIT 1
+  [1m[36mPago Load (31.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 15 LIMIT 1[0m
+  [1m[35mEmpresa Load (21.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 16 LIMIT 1
+  [1m[36mPago Load (29.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 16 LIMIT 1[0m
+  [1m[35mEmpresa Load (59.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 17 LIMIT 1
+  [1m[36mPago Load (127.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 17 LIMIT 1[0m
+  [1m[35mEmpresa Load (510.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 18 LIMIT 1
+  [1m[36mPago Load (102.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 18 LIMIT 1[0m
+  [1m[35mEmpresa Load (53.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 19 LIMIT 1
+  [1m[36mPago Load (44.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 19 LIMIT 1[0m
+  [1m[35mEmpresa Load (48.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 20 LIMIT 1
+  [1m[36mPago Load (870.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 20 LIMIT 1[0m
+  [1m[35mEmpresa Load (27.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 21 LIMIT 1
+  [1m[36mPago Load (32.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 21 LIMIT 1[0m
+  [1m[35mEmpresa Load (28.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 22 LIMIT 1
+  [1m[36mPago Load (40.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 22 LIMIT 1[0m
+  [1m[35mEmpresa Load (47.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 23 LIMIT 1
+  [1m[36mPago Load (26.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 23 LIMIT 1[0m
+  [1m[35mEmpresa Load (61.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 24 LIMIT 1
+  [1m[36mPago Load (67.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 24 LIMIT 1[0m
+  [1m[35mEmpresa Load (36.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 25 LIMIT 1
+  [1m[36mPago Load (36.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 25 LIMIT 1[0m
+  [1m[35mEmpresa Load (37.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 26 LIMIT 1
+  [1m[36mPago Load (36.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 26 LIMIT 1[0m
+  [1m[35mEmpresa Load (37.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 27 LIMIT 1
+  [1m[36mPago Load (40.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 27 LIMIT 1[0m
+  [1m[35mEmpresa Load (34.4ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 28 LIMIT 1
+  [1m[36mPago Load (401.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 28 LIMIT 1[0m
+  [1m[35mEmpresa Load (84.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 29 LIMIT 1
+  [1m[36mPago Load (35.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 29 LIMIT 1[0m
+  [1m[35mEmpresa Load (35.4ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 30 LIMIT 1
+  [1m[36mPago Load (35.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 30 LIMIT 1[0m
+  [1m[35mEmpresa Load (108.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 31 LIMIT 1
+  [1m[36mPago Load (100.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 31 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 32 LIMIT 1
+  [1m[36mPago Load (101.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 32 LIMIT 1[0m
+  [1m[35mEmpresa Load (99.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 33 LIMIT 1
+  [1m[36mPago Load (286.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 33 LIMIT 1[0m
+  [1m[35mEmpresa Load (123.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 34 LIMIT 1
+  [1m[36mPago Load (38.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 34 LIMIT 1[0m
+  [1m[35mEmpresa Load (38.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 35 LIMIT 1
+  [1m[36mPago Load (37.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 35 LIMIT 1[0m
+  [1m[35mEmpresa Load (38.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 36 LIMIT 1
+  [1m[36mPago Load (38.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 36 LIMIT 1[0m
+  [1m[35mEmpresa Load (42.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 37 LIMIT 1
+  [1m[36mPago Load (42.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 37 LIMIT 1[0m
+  [1m[35mEmpresa Load (114.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 38 LIMIT 1
+  [1m[36mPago Load (99.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 38 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 39 LIMIT 1
+  [1m[36mPago Load (295.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 39 LIMIT 1[0m
+  [1m[35mEmpresa Load (418.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 40 LIMIT 1
+  [1m[36mPago Load (100.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 40 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 41 LIMIT 1
+  [1m[36mPago Load (100.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 41 LIMIT 1[0m
+  [1m[35mEmpresa Load (99.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 42 LIMIT 1
+  [1m[36mPago Load (77.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 42 LIMIT 1[0m
+  [1m[35mEmpresa Load (60.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 43 LIMIT 1
+  [1m[36mPago Load (61.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 43 LIMIT 1[0m
+  [1m[35mEmpresa Load (68.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 44 LIMIT 1
+  [1m[36mPago Load (67.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 44 LIMIT 1[0m
+  [1m[35mEmpresa Load (66.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 45 LIMIT 1
+  [1m[36mPago Load (71.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 45 LIMIT 1[0m
+  [1m[35mEmpresa Load (71.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 46 LIMIT 1
+  [1m[36mPago Load (146.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 46 LIMIT 1[0m
+  [1m[35mEmpresa Load (76.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 47 LIMIT 1
+  [1m[36mPago Load (341.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 47 LIMIT 1[0m
+  [1m[35mEmpresa Load (35.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 48 LIMIT 1
+  [1m[36mPago Load (50.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 48 LIMIT 1[0m
+  [1m[35mEmpresa Load (31.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 49 LIMIT 1
+  [1m[36mPago Load (32.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 49 LIMIT 1[0m
+  [1m[35mEmpresa Load (32.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 50 LIMIT 1
+  [1m[36mPago Load (421.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 50 LIMIT 1[0m
+  [1m[35mEmpresa Load (103.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 51 LIMIT 1
+  [1m[36mPago Load (52.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 51 LIMIT 1[0m
+  [1m[35mEmpresa Load (44.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 52 LIMIT 1
+  [1m[36mPago Load (98.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 52 LIMIT 1[0m
+  [1m[35mEmpresa Load (48.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 53 LIMIT 1
+  [1m[36mPago Load (35.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 53 LIMIT 1[0m
+  [1m[35mEmpresa Load (35.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 54 LIMIT 1
+  [1m[36mPago Load (34.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 54 LIMIT 1[0m
+  [1m[35mEmpresa Load (43.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 55 LIMIT 1
+  [1m[36mPago Load (47.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 55 LIMIT 1[0m
+  [1m[35mEmpresa Load (154.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 56 LIMIT 1
+  [1m[36mPago Load (98.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 56 LIMIT 1[0m
+  [1m[35mEmpresa Load (43.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 57 LIMIT 1
+  [1m[36mPago Load (56.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 57 LIMIT 1[0m
+  [1m[35mEmpresa Load (58.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 58 LIMIT 1
+  [1m[36mPago Load (29.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 58 LIMIT 1[0m
+  [1m[35mEmpresa Load (65.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 59 LIMIT 1
+  [1m[36mPago Load (35.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 59 LIMIT 1[0m
+  [1m[35mEmpresa Load (37.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 60 LIMIT 1
+  [1m[36mPago Load (267.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 60 LIMIT 1[0m
+  [1m[35mEmpresa Load (112.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 61 LIMIT 1
+  [1m[36mPago Load (404.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 61 LIMIT 1[0m
+  [1m[35mEmpresa Load (102.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 62 LIMIT 1
+  [1m[36mPago Load (53.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 62 LIMIT 1[0m
+  [1m[35mEmpresa Load (372.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 63 LIMIT 1
+  [1m[36mPago Load (61.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 63 LIMIT 1[0m
+  [1m[35mEmpresa Load (29.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 64 LIMIT 1
+  [1m[36mPago Load (30.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 64 LIMIT 1[0m
+  [1m[35mEmpresa Load (31.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 65 LIMIT 1
+  [1m[36mPago Load (69.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 65 LIMIT 1[0m
+  [1m[35mEmpresa Load (52.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 66 LIMIT 1
+  [1m[36mPago Load (55.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 66 LIMIT 1[0m
+  [1m[35mEmpresa Load (36.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 67 LIMIT 1
+  [1m[36mPago Load (36.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 67 LIMIT 1[0m
+  [1m[35mEmpresa Load (70.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 68 LIMIT 1
+  [1m[36mPago Load (72.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 68 LIMIT 1[0m
+  [1m[35mEmpresa Load (71.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 69 LIMIT 1
+  [1m[36mPago Load (56.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 69 LIMIT 1[0m
+  [1m[35mEmpresa Load (98.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 70 LIMIT 1
+  [1m[36mPago Load (100.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 70 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 71 LIMIT 1
+  [1m[36mPago Load (101.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 71 LIMIT 1[0m
+  [1m[35mEmpresa Load (102.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 72 LIMIT 1
+  [1m[36mPago Load (100.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 72 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 73 LIMIT 1
+  [1m[36mPago Load (100.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 73 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 74 LIMIT 1
+  [1m[36mPago Load (100.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 74 LIMIT 1[0m
+  [1m[35mEmpresa Load (129.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 75 LIMIT 1
+  [1m[36mPago Load (57.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 75 LIMIT 1[0m
+  [1m[35mEmpresa Load (32.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 76 LIMIT 1
+  [1m[36mPago Load (67.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 76 LIMIT 1[0m
+  [1m[35mEmpresa Load (321.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 77 LIMIT 1
+  [1m[36mPago Load (64.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 77 LIMIT 1[0m
+  [1m[35mEmpresa Load (45.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 78 LIMIT 1
+  [1m[36mPago Load (67.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 78 LIMIT 1[0m
+  [1m[35mEmpresa Load (36.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 79 LIMIT 1
+  [1m[36mPago Load (390.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 79 LIMIT 1[0m
+  [1m[35mEmpresa Load (63.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 80 LIMIT 1
+  [1m[36mPago Load (30.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 80 LIMIT 1[0m
+  [1m[35mEmpresa Load (105.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 99 LIMIT 1
+  [1m[36mPago Load (101.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 99 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 98 LIMIT 1
+  [1m[36mPago Load (101.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 98 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 84 LIMIT 1
+  [1m[36mPago Load (100.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 84 LIMIT 1[0m
+  [1m[35mEmpresa Load (103.3ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 85 LIMIT 1
+  [1m[36mPago Load (95.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 85 LIMIT 1[0m
+  [1m[35mEmpresa Load (67.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 86 LIMIT 1
+  [1m[36mPago Load (61.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 86 LIMIT 1[0m
+  [1m[35mEmpresa Load (56.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 89 LIMIT 1
+  [1m[36mPago Load (325.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 89 LIMIT 1[0m
+  [1m[35mEmpresa Load (29.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 108 LIMIT 1
+  [1m[36mPago Load (21.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 108 LIMIT 1[0m
+  [1m[35mEmpresa Load (19.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 90 LIMIT 1
+  [1m[36mPago Load (36.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 90 LIMIT 1[0m
+  [1m[35mEmpresa Load (25.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 91 LIMIT 1
+  [1m[36mPago Load (43.1ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 91 LIMIT 1[0m
+  [1m[35mEmpresa Load (57.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 92 LIMIT 1
+  [1m[36mPago Load (119.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 92 LIMIT 1[0m
+  [1m[35mEmpresa Load (60.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 94 LIMIT 1
+  [1m[36mPago Load (59.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 94 LIMIT 1[0m
+  [1m[35mEmpresa Load (62.4ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 95 LIMIT 1
+  [1m[36mPago Load (55.5ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 95 LIMIT 1[0m
+  [1m[35mEmpresa Load (56.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 96 LIMIT 1
+  [1m[36mPago Load (42.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 96 LIMIT 1[0m
+  [1m[35mEmpresa Load (47.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 97 LIMIT 1
+  [1m[36mPago Load (46.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 97 LIMIT 1[0m
+  [1m[35mEmpresa Load (46.2ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 100 LIMIT 1
+  [1m[36mPago Load (48.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 100 LIMIT 1[0m
+  [1m[35mEmpresa Load (46.9ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 101 LIMIT 1
+  [1m[36mPago Load (46.3ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 101 LIMIT 1[0m
+  [1m[35mEmpresa Load (47.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 102 LIMIT 1
+  [1m[36mPago Load (46.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 102 LIMIT 1[0m
+  [1m[35mEmpresa Load (123.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 103 LIMIT 1
+  [1m[36mPago Load (105.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 103 LIMIT 1[0m
+  [1m[35mEmpresa Load (96.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 104 LIMIT 1
+  [1m[36mPago Load (100.2ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 104 LIMIT 1[0m
+  [1m[35mEmpresa Load (99.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 105 LIMIT 1
+  [1m[36mPago Load (100.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 105 LIMIT 1[0m
+  [1m[35mEmpresa Load (104.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 106 LIMIT 1
+  [1m[36mPago Load (97.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 106 LIMIT 1[0m
+  [1m[35mEmpresa Load (100.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 107 LIMIT 1
+  [1m[36mPago Load (101.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 107 LIMIT 1[0m
+  [1m[35mEmpresa Load (74.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 109 LIMIT 1
+  [1m[36mPago Load (54.9ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 109 LIMIT 1[0m
+  [1m[35mEmpresa Load (60.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 110 LIMIT 1
+  [1m[36mPago Load (69.4ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 110 LIMIT 1[0m
+  [1m[35mEmpresa Load (48.7ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 111 LIMIT 1
+  [1m[36mPago Load (101.8ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 111 LIMIT 1[0m
+  [1m[35mEmpresa Load (91.4ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 112 LIMIT 1
+  [1m[36mPago Load (412.6ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 112 LIMIT 1[0m
+  [1m[35mEmpresa Load (81.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 113 LIMIT 1
+  [1m[36mPago Load (120.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 113 LIMIT 1[0m
+  [1m[35mEmpresa Load (147.5ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 114 LIMIT 1
+  [1m[36mPago Load (360.7ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 114 LIMIT 1[0m
+  [1m[35mEmpresa Load (402.6ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 115 LIMIT 1
+  [1m[36mPago Load (100.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 115 LIMIT 1[0m
+Completed 200 OK in 22426ms (Views: 468.9ms | ActiveRecord: 21956.1ms)
+
+
+Started GET "/api/cuenta" for 127.0.0.1 at 2014-11-20 00:06:43 -0300
+Processing by API::CuentaController#index as JSON
+  [1m[35mCuenta Load (292.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`
+  [1m[36mEmpresa Load (111.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 1 LIMIT 1[0m
+  [1m[35mPago Load (99.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 1 LIMIT 1
+  [1m[36mEmpresa Load (101.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mPago Load (99.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 2 LIMIT 1
+  [1m[36mEmpresa Load (101.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 3 LIMIT 1[0m
+  [1m[35mPago Load (100.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 3 LIMIT 1
+  [1m[36mEmpresa Load (101.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 4 LIMIT 1[0m
+  [1m[35mPago Load (100.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 4 LIMIT 1
+  [1m[36mEmpresa Load (531.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 5 LIMIT 1[0m
+  [1m[35mPago Load (38.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 5 LIMIT 1
+  [1m[36mEmpresa Load (36.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 6 LIMIT 1[0m
+  [1m[35mPago Load (59.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 6 LIMIT 1
+  [1m[36mEmpresa Load (318.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 7 LIMIT 1[0m
+  [1m[35mPago Load (128.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 7 LIMIT 1
+  [1m[36mEmpresa Load (100.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 8 LIMIT 1[0m
+  [1m[35mPago Load (100.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 8 LIMIT 1
+  [1m[36mEmpresa Load (100.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 9 LIMIT 1[0m
+  [1m[35mPago Load (100.6ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 9 LIMIT 1
+  [1m[36mEmpresa Load (100.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 10 LIMIT 1[0m
+  [1m[35mPago Load (101.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 10 LIMIT 1
+  [1m[36mEmpresa Load (101.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 11 LIMIT 1[0m
+  [1m[35mPago Load (72.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 11 LIMIT 1
+  [1m[36mEmpresa Load (58.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 12 LIMIT 1[0m
+  [1m[35mPago Load (59.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 12 LIMIT 1
+  [1m[36mEmpresa Load (58.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 13 LIMIT 1[0m
+  [1m[35mPago Load (49.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 13 LIMIT 1
+  [1m[36mEmpresa Load (56.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 14 LIMIT 1[0m
+  [1m[35mPago Load (43.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 14 LIMIT 1
+  [1m[36mEmpresa Load (45.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 15 LIMIT 1[0m
+  [1m[35mPago Load (45.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 15 LIMIT 1
+  [1m[36mEmpresa Load (313.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 16 LIMIT 1[0m
+  [1m[35mPago Load (88.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 16 LIMIT 1
+  [1m[36mEmpresa Load (46.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 17 LIMIT 1[0m
+  [1m[35mPago Load (62.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 17 LIMIT 1
+  [1m[36mEmpresa Load (28.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 18 LIMIT 1[0m
+  [1m[35mPago Load (42.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 18 LIMIT 1
+  [1m[36mEmpresa Load (25.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 19 LIMIT 1[0m
+  [1m[35mPago Load (22.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 19 LIMIT 1
+  [1m[36mEmpresa Load (24.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 20 LIMIT 1[0m
+  [1m[35mPago Load (50.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 20 LIMIT 1
+  [1m[36mEmpresa Load (33.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 21 LIMIT 1[0m
+  [1m[35mPago Load (375.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 21 LIMIT 1
+  [1m[36mEmpresa Load (100.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 22 LIMIT 1[0m
+  [1m[35mPago Load (52.3ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 22 LIMIT 1
+  [1m[36mEmpresa Load (44.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 23 LIMIT 1[0m
+  [1m[35mPago Load (45.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 23 LIMIT 1
+  [1m[36mEmpresa Load (48.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 24 LIMIT 1[0m
+  [1m[35mPago Load (46.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 24 LIMIT 1
+  [1m[36mEmpresa Load (50.1ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 25 LIMIT 1[0m
+  [1m[35mPago Load (110.2ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 25 LIMIT 1
+  [1m[36mEmpresa Load (101.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 26 LIMIT 1[0m
+  [1m[35mPago Load (99.8ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 26 LIMIT 1
+  [1m[36mEmpresa Load (101.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 27 LIMIT 1[0m
+  [1m[35mPago Load (100.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 27 LIMIT 1
+  [1m[36mEmpresa Load (58.2ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 28 LIMIT 1[0m
+  [1m[35mPago Load (39.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 28 LIMIT 1
+  [1m[36mEmpresa Load (362.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 29 LIMIT 1[0m
+  [1m[35mPago Load (149.5ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 29 LIMIT 1
+  [1m[36mEmpresa Load (97.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 30 LIMIT 1[0m
+  [1m[35mPago Load (101.0ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 30 LIMIT 1
+  [1m[36mEmpresa Load (101.0ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 31 LIMIT 1[0m
+  [1m[35mPago Load (53.9ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 31 LIMIT 1
+  [1m[36mEmpresa Load (53.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 32 LIMIT 1[0m
+  [1m[35mPago Load (54.4ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 32 LIMIT 1
+  [1m[36mEmpresa Load (137.7ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 33 LIMIT 1[0m
+  [1m[35mPago Load (1887.7ms)[0m  SELECT  `Pago`.* FROM `Pago` INNER JOIN `Detalle` ON `Pago`.`id_pago` = `Detalle`.`id_pago` WHERE `Detalle`.`id_cuenta` = 33 LIMIT 1
+Completed 401 Unauthorized in 8724ms
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 295ms (Views: 283.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:07:09 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:07:17 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-20 00:07:28 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (493.4ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mCuenta Load (662.9ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13
+  [1m[36mCuenta Load (94.4ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'[0m
+Completed 200 OK in 6219ms (Views: 2271.0ms | ActiveRecord: 3815.2ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:13:57 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:13:58 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:13:59 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:02 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:09 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.2ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:10 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:10 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:10 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:11 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:11 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:11 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:12 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.4ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-20 00:14:13 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 154ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:14:14 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:17 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:18 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:18 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:18 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:14:23 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:14:23 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:27 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.5ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:14:29 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+...as => {:include => [:empresa]}]}}, :accounts, {:unpaid_bills...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting '}'
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:15:54 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-20 00:16:04 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (136.8ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mCuenta Load (57.2ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70[0m
+  [1m[35mEmpresa Load (54.1ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13[0m
+  [1m[35mCuenta Load (46.8ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'
+Completed 200 OK in 1267ms (Views: 514.1ms | ActiveRecord: 635.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 251ms (Views: 250.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:18:59 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:19:01 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-20 00:19:10 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mPago Load (70.3ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'[0m
+  [1m[35mCuenta Load (63.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70
+  [1m[36mEmpresa Load (34.8ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13
+  [1m[36mCuenta Load (331.7ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'[0m
+Completed 200 OK in 1092ms (Views: 501.4ms | ActiveRecord: 500.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 257ms (Views: 256.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:25:55 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:26:00 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:26:00 -0300
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 281ms (Views: 280.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:26:27 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:26:38 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-20 00:26:53 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 11928ms
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:27:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-20 00:27:20 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (100.1ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mCuenta Load (94.5ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70[0m
+  [1m[35mEmpresa Load (98.0ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13[0m
+  [1m[35mCuenta Load (41.5ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'
+Completed 200 OK in 1563ms (Views: 558.4ms | ActiveRecord: 876.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 337ms (Views: 336.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:27:44 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:27:45 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 226ms (Views: 225.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:42 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:32:43 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-20 00:32:49 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 295ms (Views: 283.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:58 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:32:59 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-20 00:33:07 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (59.1ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mCuenta Load (318.6ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70[0m
+  [1m[35mEmpresa Load (22.8ms)[0m  SELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13[0m
+  [1m[35mCuenta Load (34.8ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'
+Completed 200 OK in 1740ms (Views: 483.2ms | ActiveRecord: 1130.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:33:58 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 254ms (Views: 253.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:33:59 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 272ms (Views: 271.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-20 00:37:49 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-20 00:37:49 -0300

@@ -12,10 +12,10 @@
 					<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
 					<button class="btn btn-success" ng-click="addBill()">Pagar Cuenta</button>
 				</accordion-group>
-				<div class="well well-sm" ng-if="activeBills.length==0">
-					<center><h4>No tiene cuentas sin pagar</h4><center>
-				</div>
 			</accordion>
+			<div class="well well-sm" ng-if="activeBills.length==0">
+				<center><h4>No tiene cuentas sin pagar.</h4><center>
+			</div>
 		</tab>
 		<tab heading="Historial Pagos">
 			<accordion close-others="true">
@@ -28,10 +28,14 @@
 						<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
 						<hr>
 					</div>
+					<div>
+						<h4>N° Cuentas: {{payment.cuentas.length}}</h4>
+						<h4>Total: {{(getTotal(payment.cuentas) | currency:'$ ':0).split('.')[0].split(',').join('.')}}</h4>
+					</div>
 				</accordion-group>
 			</accordion>
 			<div class="well well-sm" ng-if="currentUser.pagos.length==0">
-				<center><h4>No ha realizado pagos</h4><center>
+				<center><h4>No ha realizado pagos.</h4><center>
 			</div>
 		</tab>
 		<tab heading="Pagar Cuentas">
