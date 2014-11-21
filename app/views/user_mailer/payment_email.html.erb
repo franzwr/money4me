@@ -1,0 +1,12 @@
+Este comprobante indica que el día <%= Date.today %> se realizó la siguiente transacción en Money4Me:
+
+<% for cuenta in @pago.cuentas %>
+	* ID Cuenta: <%= cuenta.id_propio_empresa %>
+	* Cliente: <%= cuenta.pago.rut_cliente %>
+	* Empresa: <%= cuenta.empresa.nombre %>
+	* Fecha vencimiento: <%= cuenta.fecha_limite %>
+	* Monto: $ <%= cuenta.monto %>
+
+<% end %>
+Atentamente,
+El Equipo Money4Me

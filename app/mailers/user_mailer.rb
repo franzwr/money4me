@@ -20,4 +20,9 @@ class UserMailer < ActionMailer::Base
 
 		mail(to: @user.email, subject: 'Bienvenido a Money4Me', template_name: @layout) 
 	end
+
+  def payment_email(pago, email)
+    @pago = pago
+		mail(to: email, subject: 'Transferencia en Money4Me') 
+  end
 end
