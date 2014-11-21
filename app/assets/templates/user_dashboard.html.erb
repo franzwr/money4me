@@ -10,7 +10,7 @@
 					<p>Fecha Expiración: {{bill.fecha_limite | date:'dd-MM-yyyy @ HH:mm:ss'}}</p>
 					<hr>
 					<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
-					<button class="btn btn-success" ng-click="addBill()">Pagar Cuenta</button>
+					<button class="btn btn-success" ng-click="addBillToPayment($index)">Pagar Cuenta</button>
 				</accordion-group>
 			</accordion>
 			<div class="well well-sm" ng-if="activeBills.length==0">
@@ -39,7 +39,79 @@
 			</div>
 		</tab>
 		<tab heading="Pagar Cuentas">
-
+			<accordion close-others="true">
+				<accordion-group ng-repeat="bill in payment" heading="Cuenta ID: {{bill.id_propio_empresa}}">
+					<p>Empresa: {{bill.empresa.nombre}}</p>
+					<p>N° Cuenta: {{bill.empresa.cuenta_banco}}</p>
+					<hr>
+					<p>Fecha Facturación: {{bill.fecha_registro | date:'dd-MM-yyyy @ HH:mm:ss'}}</p>
+					<p>Fecha Expiración: {{bill.fecha_limite | date:'dd-MM-yyyy @ HH:mm:ss'}}</p>
+					<hr>
+					<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
+					<button class="btn btn-success" ng-click="removeBillFromPayment($index)">No Pagar</button>
+				</accordion-group>
+				<div ng-if="payment.length!=0">
+					<h4>N° Cuentas: {{payment.length}}</h4>
+					<h4>Total: {{(getTotal(payment) | currency:'$ ':0).split('.')[0].split(',').join('.')}}</h4>
+				</div>
+			</accordion>
+			<div class="well well-sm" ng-if="payment.length==0">
+				<center><h4>No ha agregado cuentas sin pagar.</h4><center>
+			</div>
+		</tab>
+		<tab heading="Perfil">
+			<div class="row" style="margin-top:20px;">
+				<div class="col col-md-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title"> Info </h3>
+						</div>
+						<div class="panel-body" style="height:200px;">
+							<center style="margin-top:10px;">
+								<p><strong>Nombre:</strong> {{currentUser.name}}</p>
+								<p><strong>Email:</strong> {{currentUser.email}}</p>
+								<p><strong>RUT:</strong> {{currentUser.rut}}</p>
+								<p><strong>Pagos realizados:</strong> {{currentUser.pagos.length}}</p>
+								<p><strong>Cuentas sin pagar:</strong> {{currentUser.unpaid_bills.length}}</p>
+							</center>
+						</div>
+					</div>
+				</div>
+				<div class="col col-md-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title"> Cuentas </h3>
+						</div>
+						<div class="panel-body" style="height:200px;">
+							<label>Cuentas Asociadas</label>
+							<select class="form-control" ng-model="" ng-options="account.id_cuenta_banco for account in currentUser.accounts"><option value="">-- Seleccione una Cuenta --</option></select>
+							<form submit="addAccount(new_account)" role="form" style="margin-top:30px;">
+								<label>Agregar Cuenta</label>
+								<div class="row">
+									<div class="col col-sm-6">
+										<input class="form-control input-sm" type="text" required ng-model="new_account">
+									</div>
+									<div class="col col-sm-6">
+										<button class="btn btn-primary btn-block" role="submit"> Agregar</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col col-md-4">
+					<div class="panel panel-success">
+						<span us-spinner spinner-key="spinner"></span>
+						<div class="panel-heading">
+							<h3 class="panel-title"> Acceso </h3>
+						</div>
+						<div class="panel-body" style="height:200px;">
+							<center><button class="btn btn-primary" style="margin-top:20px;margin-bottom:40px;"> Cambiar Contraseña </button></center>
+							<center><button class="btn btn-primary"> Asociar cuenta Facebook </button></center>
+						</div>
+					</div>
+				</div>
+			</div>
 		</tab>
 	</tabset>
 </div>

@@ -50,6 +50,7 @@ class AuthorizationController < ApplicationController
 			@client = Client.new(client_params)
 			if @client.save
 				sign_in(:client, @client)
+				UserMailer.welcome_email(@client, nil).deliver
 				render :json => @client, status: :ok
 			else
 				render :json => {:errors => @client.errors}, status: :unprocessable_entity
@@ -62,6 +63,7 @@ class AuthorizationController < ApplicationController
 					@admin = Admin.new(admin_params)
 					if @admin.save
 						render :json => @admin, status: :ok
+						UserMailer.welcome_email(@admin, admin_params.password).deliver
 					else
 						render :json => {:errors => @admin.errors}, status: :unprocessable_entity
 					end
@@ -69,6 +71,7 @@ class AuthorizationController < ApplicationController
 				elsif params[:user][:type] == 'CompanyUser'
 					@company_user = CompanyUser.new(company_user_params)
 					if @company_user.save
+						UserMailer.welcome_email(@company_user, company_user_params.password).deliver
 						render :json => @company_user, status: :ok
 					else
 						render :json => {:errors => @company_user.errors}, status: :unprocessable_entity
@@ -78,5 +81,9 @@ class AuthorizationController < ApplicationController
 				render :json => {}, status: :unauthorized
 			end
 		end
+	end
+
+	def recover
+
 	end
 end

@@ -40,13 +40,12 @@
                 </label>
               </div>
               <button type="submit" class="btn btn-primary btn-block"> Ingresar </button>
+              <center><a href="/password_recovery">Recuperar contraseña</a></center>
             </form>
           </ul>
         </li>
         <li ng-if="signedIn" class="divider-vertical"></li>
         <li ng-if="signedIn"><a href="/user_dashboard"> Usuario: {{currentUser.name}} </a></li>
-        <li ng-if="signedIn" class="divider-vertical"></li>
-        <li ng-if="signedIn"><a href="/api/recover" data-method="post">Recuperar contraseña</a></li>
         <li ng-if="signedIn" class="divider-vertical"></li>
         <li ng-if="signedIn"><a ng-click="signOut()"><span class="glyphicon glyphicon-log-out"></span> Salir </a></li>
       </ul>

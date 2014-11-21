@@ -46,6 +46,10 @@ angular
         .when('/user_dashboard', {
             templateUrl: 'user_dashboard.html',
             controller: 'UserDashboardCtrl'
+        })
+        .when('/password_recovery', {
+            templateUrl: 'password_recovery.html',
+            controller: 'PasswordRecoveryCtrl'
         });
 
         $locationProvider.html5Mode(true);
@@ -81,6 +85,12 @@ angular
                         type: 'success',
                         msg: "Sesión iniciada. Bienvenido " + user.name + "."
                     });
+                    if(user.accounts.length == 0) {
+                        $rootScope.addAlert({
+                            type: 'danger',
+                            msg: 'Debe agregar al menos una cuenta bancaria para realizar pagos. Puede hacerlo desde su Perfil.'
+                        }, true);
+                    }
                     $location.path('/user_dashboard');
                     usSpinnerService.stop('spinner0');
 
@@ -112,7 +122,7 @@ angular
 
             /** Global method for displaying alerts. **/
             $rootScope.addAlert = function(alert, index, persistent) {
-                if($rootScope.alerts.length == 1) {
+                if($rootScope.alerts.length == 2) {
                     $rootScope.alerts.splice(0,1);
                 }
                 $rootScope.alerts.push({

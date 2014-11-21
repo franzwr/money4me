@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bienvenido a Money4me, <%= @user.name %></h1>
+    <p>
+      Se ha creado una cuenta de Empresa para el email
+      <%= @user.email %>. Su constraseña temporal es: <%= @password %>.
+      Recuerde cambiarla en su primer ingreso.<br>
+    </p>
+    <p>
+      La empresa asociada a esta cuenta es
+      <ul>
+        <li>Nombre: <%= @user.empresa.nombre %></li>
+        <li>RUT Empresa: <%= @user.empresa.rut_empresa %></li>
+        <li>Cuenta: <%= @user.empresa.cuenta_banco %></li>
+      </ul>
+    </p>
+    <p>
+      Su cuenta se encuentra activa. Para ingresar al sitio como empresa, sigue el siguiente link: <%= @url + "company" %>.
+    </p>
+    <p>Gracias por preferirnos.</p>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Bienvenido a Money4me, <%= @user.name %></h1>
+    <p>
+      Se ha creado una cuenta de administrador para el email
+      <%= @user.email %>. Tu constraseña temporal es: <%= @password %>.
+      Recuerda cambiarla en tu primer ingreso.<br>
+    </p>
+    <p>
+      Para ingresar al sitio como administrador, sigue el siguiente link: <%= @url + "admin" %>.
+    </p>
+    <p>Gracias por preferirnos.</p>
+  </body>
+</html>
