@@ -13,7 +13,8 @@
       "bootstrap" : "latest",
       "angular-devise" : "latest",
       "spin.js": "latest",
-      "angular-spinner": "latest"
+      "angular-spinner": "latest",
+      "angular-recaptcha": "latest"
     }
   }
 }

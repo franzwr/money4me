@@ -59413,3 +59413,3829 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-21 01:38:54
 
 
 Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-21 01:38:54 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 09:44:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 670ms
+
+ActionView::Template::Error (couldn't find file 'spin'
+  (in /home/diego/Documents/dev/money4me/app/assets/javascripts/application.js:18)):
+    4:   <title>Money4Me</title>
+    5:   <base href="/">
+    6:   <%= stylesheet_link_tag    'application', media: 'all'%>
+    7:   <%= javascript_include_tag 'application' %>
+    8:   <%= javascript_include_tag 'https://www.google.com/recaptcha/api/js/recaptcha_ajax.js' %>
+    9: </head>
+   10: <body ng-app="money4me">
+  app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1761812301337270865_55089560'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.8ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 09:45:17 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 797ms (Views: 795.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 09:45:18 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 09:45:20 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 09:45:41 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 09:46:45 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 190ms (Views: 189.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 09:46:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 09:46:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 09:46:46 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 292ms (Views: 291.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 09:48:31 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 09:49:54 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up.json" for 127.0.0.1 at 2014-11-26 09:50:29 -0300
+Processing by AuthorizationController#sign_up as JSON
+  Parameters: {"user"=>{"type"=>"Client", "email"=>"diego.perez.11@alumnos.usm.cl", "rut"=>"175597859", "name"=>"Diego", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "authorization"=>{"user"=>{"type"=>"Client", "email"=>"diego.perez.11@alumnos.usm.cl", "rut"=>"175597859", "name"=>"Diego", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+Unpermitted parameters: type
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `users`  WHERE `users`.`email` = BINARY 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM `users`  WHERE `users`.`email` = BINARY 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`rut` = BINARY '175597859' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 245ms (Views: 0.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/sign_up.json" for 127.0.0.1 at 2014-11-26 09:50:36 -0300
+Processing by AuthorizationController#sign_up as JSON
+  Parameters: {"user"=>{"type"=>"Client", "email"=>"diego.perez.11@alumnos.usm.cl", "rut"=>"175597859", "name"=>"Diego", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "authorization"=>{"user"=>{"type"=>"Client", "email"=>"diego.perez.11@alumnos.usm.cl", "rut"=>"175597859", "name"=>"Diego", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+Unpermitted parameters: type
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM `users`  WHERE `users`.`email` = BINARY 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM `users`  WHERE `users`.`email` = BINARY 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mClient Exists (0.2ms)[0m  SELECT  1 AS one FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`rut` = BINARY '175597859' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Completed 422 Unprocessable Entity in 97ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sign_up.json" for 127.0.0.1 at 2014-11-26 09:50:48 -0300
+Processing by AuthorizationController#sign_up as JSON
+  Parameters: {"user"=>{"type"=>"Client", "email"=>"diego.perez.11@alumnos.usm.cl", "rut"=>"175597859", "name"=>"Diego", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "authorization"=>{"user"=>{"type"=>"Client", "email"=>"diego.perez.11@alumnos.usm.cl", "rut"=>"175597859", "name"=>"Diego", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+Unpermitted parameters: type
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users`  WHERE `users`.`email` = BINARY 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM `users`  WHERE `users`.`email` = BINARY 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`rut` = BINARY '175597859' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 422 Unprocessable Entity in 95ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 09:51:41 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"darkaim@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'darkaim@hotmail.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (15.2ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2014-11-26 12:51:41', `last_sign_in_at` = '2014-11-20 21:01:28', `sign_in_count` = 6, `updated_at` = '2014-11-26 12:51:41' WHERE `users`.`id` = 13[0m
+  [1m[35m (38.7ms)[0m  COMMIT
+  [1m[36mPago Load (102.0ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'[0m
+  [1m[35mCuenta Load (99.4ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 117
+  [1m[36mEmpresa Load (72.4ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mCuenta Load (51.6ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 70
+  [1m[36mEmpresa Load (70.6ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mCuenta Load (46.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 119
+  [1m[36mEmpresa Load (33.5ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mCuenta Load (31.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 118
+  [1m[36mEmpresa Load (34.3ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mCuenta Load (33.7ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 121
+  [1m[36mEmpresa Load (33.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mCuenta Load (33.9ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 120
+  [1m[36mEmpresa Load (32.9ms)[0m  [1mSELECT  `Empresa`.* FROM `Empresa`  WHERE `Empresa`.`id_empresa` = 2 LIMIT 1[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 13
+  [1m[36mCuenta Load (41.2ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '868524305'[0m
+Completed 200 OK in 2150ms (Views: 715.7ms | ActiveRecord: 1287.0ms)
+  [1m[36mClient Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mPago Load (23.9ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'
+  [1m[36mClient Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mPago Load (98.3ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'  ORDER BY `Pago`.`id_pago` ASC LIMIT 1
+  [1m[36mClient Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mPago Load (91.0ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'  ORDER BY `Pago`.`id_pago` DESC LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mPago Load (81.9ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'  ORDER BY `Pago`.`id_pago` DESC LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mPago Load (93.6ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'  ORDER BY `Pago`.`id_pago` DESC LIMIT 1
+  [1m[36mCuenta Load (72.0ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 121[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1
+  [1m[36mPago Load (42.0ms)[0m  [1mSELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'  ORDER BY `Pago`.`id_pago` ASC LIMIT 1 OFFSET 2[0m
+  [1m[35mCuenta Load (98.9ms)[0m  SELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 118
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1 OFFSET 1[0m
+  [1m[35mPago Load (30.5ms)[0m  SELECT  `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '868524305'  ORDER BY `Pago`.`id_pago` ASC LIMIT 1 OFFSET 3
+  [1m[36mCuenta Load (100.4ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta` INNER JOIN `Detalle` ON `Cuenta`.`id_cuenta` = `Detalle`.`id_cuenta` WHERE `Detalle`.`id_pago` = 119[0m
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 09:53:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 09:54:42 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 13  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2014-11-26 12:54:42', `last_sign_in_at` = '2014-11-21 04:04:26', `sign_in_count` = 5, `updated_at` = '2014-11-26 12:54:42' WHERE `users`.`id` = 12[0m
+  [1m[35m (62.0ms)[0m  COMMIT
+  [1m[36mPago Load (49.9ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'[0m
+  [1m[35mAccount Load (0.4ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (46.9ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+Completed 200 OK in 1275ms (Views: 707.0ms | ActiveRecord: 433.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 09:58:25 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 597ms (Views: 596.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 09:58:26 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 09:58:28 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:04:33 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 289ms (Views: 288.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:04:34 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:36 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:36 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:39 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:39 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:04:46 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 229ms (Views: 228.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:04:47 -0300
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 204ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:04:52 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:54 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:04:54 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 378ms (Views: 377.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:06:43 -0300
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 210ms (Views: 209.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:06:49 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1[0m
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 283ms (Views: 282.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:08:40 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 222ms (Views: 221.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:45 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:08:46 -0300
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 207ms (Views: 206.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:08:51 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 288ms (Views: 287.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:28 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:09:29 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:09:39 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mClient Load (0.6ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1
+Completed 401 Unauthorized in 13297ms
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 10:09:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:10:05 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (50.5ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+  [1m[35mCuenta Load (110.0ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'
+Completed 200 OK in 919ms (Views: 402.5ms | ActiveRecord: 384.2ms)
+  [1m[36mClient Load (0.5ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client')  ORDER BY `users`.`id` ASC LIMIT 1
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:11:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 390ms (Views: 377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:11:40 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:11:40 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:40 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:11:41 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:11:42 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 7ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:11:46 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1[0m
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:11:48 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:11:56 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1[0m
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:11:58 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 10:12:15 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:12:31 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mPago Load (37.9ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (108.1ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+Completed 200 OK in 923ms (Views: 412.0ms | ActiveRecord: 385.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 310ms (Views: 309.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:16:12 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:16:13 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 10:16:15 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 236ms (Views: 235.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 10:16:18 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 10:16:35 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mClient Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mPago Load (101.4ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (98.4ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+Completed 200 OK in 401ms (Views: 111.0ms | ActiveRecord: 200.5ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 10:16:40 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 10:16:40 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 15:53:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1618ms (Views: 1593.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:44 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 15:53:45 -0300
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 15:53:54 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 140ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 15:53:59 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:54:00 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 42ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 157ms (Views: 156.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:54:02 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1[0m
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:54:17 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.7ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (19.2ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mAccount Load (0.6ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+  [1m[35mCuenta Load (19.5ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'
+Completed 200 OK in 795ms (Views: 343.5ms | ActiveRecord: 355.0ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 15:54:50 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 226ms (Views: 225.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 15:54:51 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:55:06 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mClient Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mPago Load (21.1ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (21.4ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+Completed 200 OK in 139ms (Views: 26.8ms | ActiveRecord: 43.1ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 15:56:15 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 156ms (Views: 155.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 15:56:17 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 152ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 15:57:17 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:57:30 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (21.7ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mAccount Load (0.4ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+Completed 500 Internal Server Error in 250ms
+
+NoMethodError (undefined method `serializable_hash' for "Client":String):
+  app/controllers/authorization_controller.rb:24:in `login'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:58:21 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 95ms
+
+NoMethodError (undefined method `serializable_hash' for "Client":String):
+  app/controllers/authorization_controller.rb:24:in `login'
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 15:58:44 -0300
+
+SyntaxError (/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected '}', expecting =>
+...nt_client, :include => [{:type}, {:pagos => {:include => [{:...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ',', expecting keyword_end
+...> {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills =>...
+...                               ^
+/home/diego/Documents/dev/money4me/app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+...s => {:include => [:empresa]}}], status: :ok
+...                               ^):
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected '}', expecting =>
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/authorization_controller.rb:24: syntax error, unexpected ']', expecting keyword_end
+
+
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/diego/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 16:06:50 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 156ms (Views: 154.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 16:06:51 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 16:07:02 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1
+  [1m[36mClient Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mPago Load (17.6ms)[0m  SELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12[0m
+  [1m[35mCuenta Load (24.9ms)[0m  SELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'
+Completed 200 OK in 379ms (Views: 124.6ms | ActiveRecord: 160.2ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 16:07:41 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 160ms (Views: 159.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 16:07:46 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 16:07:56 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}, "authorization"=>{"user"=>{"email"=>"diego.perez.11@alumnos.usm.cl", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`email` = 'diego.perez.11@alumnos.usm.cl' LIMIT 1[0m
+  [1m[35mClient Load (0.1ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`type` IN ('Client') AND `users`.`id` = 12  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mPago Load (25.7ms)[0m  [1mSELECT `Pago`.* FROM `Pago`  WHERE `Pago`.`rut_cliente` = '65663892'[0m
+  [1m[35mAccount Load (0.3ms)[0m  SELECT `accounts`.* FROM `accounts`  WHERE `accounts`.`rut` = 12
+  [1m[36mCuenta Load (20.7ms)[0m  [1mSELECT `Cuenta`.* FROM `Cuenta`  WHERE (`Cuenta`.`id_cuenta` NOT IN (SELECT `Detalle`.`id_cuenta` FROM `Detalle`  WHERE `Detalle`.`id_pago` IN (SELECT `Pago`.`id_pago` FROM `Pago`))) AND `Cuenta`.`rut_cliente` = '65663892'[0m
+Completed 200 OK in 144ms (Views: 24.5ms | ActiveRecord: 47.0ms)
+
+
+Started DELETE "/sign_out.json" for 127.0.0.1 at 2014-11-26 16:08:06 -0300
+Processing by AuthorizationController#logout as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_dashboard" for 127.0.0.1 at 2014-11-26 16:08:09 -0300
+Processing by ApplicationController#index as HTML
+  Parameters: {"path"=>"user_dashboard"}
+  Rendered application/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 163ms (Views: 162.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+
+
+Started POST "/sign_in.json" for 127.0.0.1 at 2014-11-26 16:08:10 -0300
+Processing by AuthorizationController#login as JSON
+  Parameters: {"user"=>{}, "authorization"=>{"user"=>{}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  `users`.* FROM `users`  WHERE `users`.`email` IS NULL LIMIT 1
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 16:08:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 16:08:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-26 16:08:14 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-26 16:08:14 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-27 14:16:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1739ms (Views: 1716.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/angular-route/angular-route.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/less/bootstrap.css?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/angular/angular.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/angular-recaptcha/release/angular-recaptcha.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/angular-rails-templates.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/spin/spin.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/angular-spinner/angular-spinner.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/backdrop.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/angular-devise/lib/devise.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/admin_dashboard.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/accordion-group.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/accordion.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/password_recovery.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/window.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/user_dashboard.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/admin_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/home.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/password_recovery_controller.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/sign_up.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/controllers/user_dashboard_controller.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/directives/accordion.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/directives/alert.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/pay_bill.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/directives/modal.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/directives/tabs.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/sign_up.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/directives/transitions.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/app.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/ng-app/directives/collapse.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/tabset.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
+
+
+Started GET "/assets/bootstrap/fonts/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-11-27 14:16:02 -0300
