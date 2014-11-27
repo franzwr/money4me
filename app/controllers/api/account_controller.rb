@@ -19,9 +19,9 @@ class API::AccountController < ApplicationController
     	render :json => {}, status: :internal_server_error
 	end
 
-	# Not necessary
+  # Mirror external API for same-origin policy purposes.
 	def show
-    	render :json => {}, status: :internal_server_error
+      render `curl -w %{http_code} http://204.87.169.110/accounts/#{cuenta_origen}`
 	end
 
 	# Creates a bill.
