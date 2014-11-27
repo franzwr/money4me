@@ -18,6 +18,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <li ng-if="!signedIn"><a href="/empresa_sign_up"><span class="glyphicon glyphicon-stats"></span> Registrar empresa</a></li>
         <li ng-if="!signedIn"><a href="/pay_bill"><span class="glyphicon glyphicon-usd"></span> Pagar Cuenta </a></li>
         <li ng-if="!signedIn"><a href="/sign_up"><span class="glyphicon glyphicon-user"></span> Registrarse </a></li>
         <li ng-if="!signedIn" class="dropdown">

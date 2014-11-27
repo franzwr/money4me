@@ -50,7 +50,12 @@ angular
         .when('/password_recovery', {
             templateUrl: 'password_recovery.html',
             controller: 'PasswordRecoveryCtrl'
-        });
+        })
+        .when('/empresa_sign_up', {
+            templateUrl: 'empresa_sign_up.html',
+            controller: 'EmpresaSignUpCtrl'
+        })
+        ;
 
         $locationProvider.html5Mode(true);
 }])
