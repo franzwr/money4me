@@ -94,6 +94,12 @@ angular.module('money4me.controllers')
 	// Checks if the accounts exists, and if it has enough money to make the transaction
 	$scope.verify = function () {
 		usSpinnerService.spin('spinner1');
+		if(angular.isUndefined($scope.user_account)) {
+			$scope.info = "Ingrese una cuenta válida.";
+			usSpinnerService.stop('spinner1');
+			return false;
+		}
+
 		var url = "http://localhost:3000/api/accounts/" + $scope.user_account;
 		$http.get(url)
 		.success(function (data, status) {
@@ -116,7 +122,11 @@ angular.module('money4me.controllers')
 		})
 		.error(function (data, status) {
 			// Account does not exists
-			$scope.info = "La cuenta no existe o no se encuentra activa.";
+			if(status >= 500) {
+				$scope.info = "Las transferencias se han deshabilitado. Intente más tarde.";
+			} else {
+				$scope.info = "La cuenta no existe o no se encuentra activa.";	
+			}
 			usSpinnerService.stop('spinner1');
 		});
 	}

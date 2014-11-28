@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/"><span class="glyphicon glyphicon-home"></span> Inicio </a></li>
-        <li><a href="/"><span class="glyphicon glyphicon-briefcase"></span> Empresas </a></li>
+        <li ng-if="!signedIn"><a href="/company_sign_up"><span class="glyphicon glyphicon-stats"></span> Empresas </a></li>
         <li ng-if="!signedIn"><a href="/pay_bill"><span class="glyphicon glyphicon-usd"></span> Pagar Cuenta </a></li>
       </ul>
 

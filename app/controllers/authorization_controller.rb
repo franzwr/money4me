@@ -17,29 +17,43 @@ class AuthorizationController < ApplicationController
 
 	# Signs In a user. Renders JSON containing the signed in resource.
 	def login
-		if @user = User.find_by_email(params[:user][:email])
-			if @user.valid_password?(params[:user][:password])
-				if @user.class.to_s == 'Client'
-					sign_in(:client, @user)
-					render :json => current_client, :include => [{:pagos => {:include => [{:cuentas => {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
-				elsif @user.class.to_s == 'Admin'
-					sign_in(:admin, @user)
-					render :json => current_admin, :include => [:bills, :companies] ,status: :ok
+		if client_signed_in?
+			render :json => current_client, :include => [{:pagos => {:include => [{:cuentas => {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
+		elsif admin_signed_in?
+			render :json => current_admin, :include => [:bills, :companies] ,status: :ok
+		elsif company_user_signed_in?
+			render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok
+		else
+			if @user = User.find_by_email(params[:user][:email])
+				if @user.valid_password?(params[:user][:password])
+					if @user.class.to_s == 'Client'
+						sign_in(:client, @user)
+						render :json => current_client, :include => [{:pagos => {:include => [{:cuentas => {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
+					elsif @user.class.to_s == 'Admin'
+						sign_in(:admin, @user)
+						render :json => current_admin, :include => [:bills, :companies] ,status: :ok
+					else
+						sign_in(:company_user, @user)
+						render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok
+					end
 				else
-					sign_in(:company_user, @user)
-					render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok
+					render :json => {}, status: :unauthorized
 				end
 			else
 				render :json => {}, status: :unauthorized
 			end
-		else
-			render :json => {}, status: :unauthorized
 		end
 	end
 
 	# Signs out any kind of user.
 	def logout
-		sign_out :user
+		if client_signed_in?
+			sign_out :client 
+		elsif admin_signed_in?
+			sign_out :admin
+		elsif company_user_signed_in?
+			sign_out :company_user
+		end
 		render :json => {}, status: :ok
 	end
 

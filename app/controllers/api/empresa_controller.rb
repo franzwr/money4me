@@ -2,10 +2,10 @@ class API::EmpresaController < ApplicationController
   before_action :authenticate_admin!, only: [:update, :destroy]
   before_action :authenticate_empresa!, only: [:clientes_morosos, :clientes_con_cuentas_acumuladas, :clientes_preventivos]
 
-	respond_to :json
+	respond_to :html, :json
 
 	def empresa_params
-		params.require(:empresa).permit(:nombre, :cuenta_banco, :rut_empresa, :activa)
+		params.permit(:empresa => [:nombre, :cuenta_banco, :rut_empresa, :activa], :company_user => [:email, :rut, :password, :password_confirmation])
 	end
 
 	def index
@@ -15,7 +15,7 @@ class API::EmpresaController < ApplicationController
 	def show
 		@empresa = Empresa.find_by :id_empresa => params[:id]
 		if @empresa
-			render :json => @empresa
+			render :json => {empresa: @empresa}
 		else
 			render :json => {}, status: :not_found
 		end
@@ -23,10 +23,30 @@ class API::EmpresaController < ApplicationController
 
   # TODO Devise
 	def create
-		@empresa = Empresa.new(empresa_params)
+    p empresa_params
+    p empresa_params[:empresa]
+		@empresa = Empresa.new(empresa_params[:empresa])
 		@empresa.activa = false
 		if @empresa.save
-			render :json => @empresa
+      @company_user = CompanyUser.new(empresa_params[:company_user])
+      @company_user.id_empresa = @empresa.id_empresa
+
+      # ignore password params
+      @company_user.password = Devise.friendly_token
+
+      if @company_user.save
+        redirect_to :back, notice: "Formulario enviado con éxito." 
+
+        # respond_to do |format|
+        #   format.html { redirect_to :back, notice: "Formulario enviado con éxito." }
+        #   format.json { render :json => {empresa: @empresa, company_user: @company_user} }
+        # end
+      else
+        respond_to do |format|
+          format.html { redirect_to :back, alert: "Ha ocurrido un error." }
+          format.json { render :json => {}, :status => :internal_server_error }
+        end
+      end
 		else
 			render :json => {}, :status => :internal_server_error
 		end

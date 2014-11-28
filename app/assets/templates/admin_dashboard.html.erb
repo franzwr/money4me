@@ -1,7 +1,22 @@
 <div class="container">
 	<tabset>
 		<tab heading="Empresas">
-			
+			<ul class="list-group">
+				<li class="list-group-item" align="right">
+				Filtros: <label class="checkbox-inline"><input type="checkbox" ng-model="activeOption" ng-true-value="true" ng-false-value="" ng-change="currentPage=0;"> Empresas Activas </label>
+				<label class="checkbox-inline"><input type="checkbox" ng-model="activeOption" ng-true-value="false" ng-false-value="" ng-change="currentPage=0;"> Empresas Inactivas </label>
+				<center>Página {{currentPage+1}} de {{lastPage+1}}</center>
+				</li>
+				<li ng-repeat="company in ((filteredCompanies = (currentUser.companies | filter:{activa: activeOption}) | startFrom:currentPage*pageSize | limitTo: pageSize))" class="list-group-item list-group-item-{{company.activa ? 'success' : 'danger'}}">
+					<label>{{company.nombre}}</label><label style="float:right;"><button ng-disabled="company.activa" class="btn btn-primary btn-small" ng-click="" style="margin-top:-4px;">Activar</button></label>
+				</li>
+				<li class="list-group-item"> 
+					<button class="btn btn-link" ng-disabled="currentPage==0" ng-click="currentPage=currentPage-1">
+					<icon class="glyphicon glyphicon-chevron-left"></icon> Atras</button>
+					<button class="btn btn-link" style="float:right;" ng-disabled="currentPage==lastPage" ng-click="currentPage=currentPage+1">Siguiente 
+					<icon class="glyphicon glyphicon-chevron-right"></icon></button>
+				</li>
+			</ul>
 		</tab>
 		<tab heading="Acceso Usuarios">
 

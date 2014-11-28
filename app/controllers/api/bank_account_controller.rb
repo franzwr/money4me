@@ -19,7 +19,7 @@ class API::BankAccountController < ApplicationController
 		if res.code == '200'
 			render :json => JSON.parse(res.body)
 		else
-			render :json => {}, status: :not_found
+			render :json => {}, status: res.code
 		end
 	end
 

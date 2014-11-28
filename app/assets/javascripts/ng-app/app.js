@@ -52,10 +52,15 @@ angular
             templateUrl: 'password_recovery.html',
             controller: 'PasswordRecoveryCtrl'
         })
+        .when('/company_sign_up', {
+            templateUrl: 'company_sign_up.html',
+            controller: 'CompanySignUpCtrl'
+        })
         .when('/admin_dashboard', {
             templateUrl: 'admin_dashboard.html',
             controller: 'AdminDashboardCtrl'
-        });
+        })
+        ;
 
         $locationProvider.html5Mode(true);
 }])
