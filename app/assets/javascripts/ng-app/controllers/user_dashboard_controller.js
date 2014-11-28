@@ -14,10 +14,10 @@ angular.module('money4me.controllers')
 		}
 	} , function (error) {
 		$rootScope.addAlert({
-				type: 'danger',
-				msg: 'Debe identificarse como cliente para ingresar a esta página.'
-			});
-			$location.path('/');
+			type: 'danger',
+			msg: 'Debe identificarse como cliente para ingresar a esta página.'
+		});
+		$location.path('/');
 	});
 
 	$scope.activeBills = $rootScope.currentUser.unpaid_bills;

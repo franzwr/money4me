@@ -35,8 +35,8 @@ class API::BankAccountController < ApplicationController
 			@cuentas = Cuenta.find_by :id_cuenta => params[:bill]
 			@pago.cuentas << @cuentas
 			if @pago.save
-        # Send email
-        UserMailer.payment_email(@pago, params[:payment][:email] ).deliver
+        		# Send email
+        		UserMailer.payment_email(@pago, params[:payment][:email] ).deliver
 				# Returns JSON
 				render :json => @pago, status: :ok
 			else

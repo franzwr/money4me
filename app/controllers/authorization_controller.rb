@@ -24,7 +24,7 @@ class AuthorizationController < ApplicationController
 					render :json => current_client, :include => [{:pagos => {:include => [{:cuentas => {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
 				elsif @user.class.to_s == 'Admin'
 					sign_in(:admin, @user)
-					render :json => current_admin, :include => [:cuentas] ,status: :ok
+					render :json => current_admin, :include => [:bills, :companies] ,status: :ok
 				else
 					sign_in(:company_user, @user)
 					render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok

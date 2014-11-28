@@ -10,18 +10,3 @@
 
 Admin.create({:name => "Root Admin", :email => "admin@money4me.cl", :password => "admin1234",
  :password_confirmation => "admin1234", :rut => "123456785"})
-
-CompanyUser.create(
-  rut: "697262024",
-  name: "Victor",
-  id_empresa: 1, # VTR
-  email: "victor@vtr.cl",
-  password: "asdfasdf",
-)
-
-Client.create(
-  rut: "868524305",
-  name: "Hola",
-  email: "usuario@money4me.cl",
-  password: "asdfasdf",
-)

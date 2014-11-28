@@ -4,8 +4,12 @@
 class Admin < User
 
 	# Admin can see all bills.
-	def cuentas
+	def bills
 		Cuenta.all 
+	end
+
+	def companies
+		Empresa.all
 	end
 
 	# Includes type field in JSON response.

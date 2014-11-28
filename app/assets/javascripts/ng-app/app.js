@@ -90,13 +90,19 @@ angular
                         type: 'success',
                         msg: "Sesión iniciada. Bienvenido " + user.name + "."
                     });
-                    if(user.accounts.length == 0) {
-                        $rootScope.addAlert({
-                            type: 'danger',
-                            msg: 'Debe agregar al menos una cuenta bancaria para realizar pagos. Puede hacerlo desde su Perfil.'
-                        }, true);
+                    if(user['type'] == 'Client') {
+                        if(user.accounts.length == 0) {
+                            $rootScope.addAlert({
+                                type: 'danger',
+                                msg: 'Debe agregar al menos una cuenta bancaria para realizar pagos. Puede hacerlo desde su Perfil.'
+                            }, true);
+                        }
+                        $location.path('/user_dashboard');
                     }
-                    $location.path('/user_dashboard');
+                    if(user['type'] == 'Admin') {
+                        $location.path('admin_dashboard');
+                    }
+                    
                     usSpinnerService.stop('spinner0');
 
                 }, function(error) {
