@@ -9,6 +9,7 @@ angular
         'templates',
         'Devise',
         'angularSpinner',
+        'vcRecaptcha',
         'money4me.controllers',
         'money4me.services',
         'money4me.directives'
@@ -54,6 +55,10 @@ angular
         .when('/empresa_sign_up', {
             templateUrl: 'empresa_sign_up.html',
             controller: 'EmpresaSignUpCtrl'
+        })
+        .when('/admin_dashboard', {
+            templateUrl: 'admin_dashboard.html',
+            controller: 'AdminDashboardCtrl'
         })
         ;
 
@@ -127,7 +132,7 @@ angular
 
             /** Global method for displaying alerts. **/
             $rootScope.addAlert = function(alert, index, persistent) {
-                if($rootScope.alerts.length == 2) {
+                if($rootScope.alerts.length == 1) {
                     $rootScope.alerts.splice(0,1);
                 }
                 $rootScope.alerts.push({

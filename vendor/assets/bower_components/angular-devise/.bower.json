@@ -1,6 +1,6 @@
 {
   "name": "AngularDevise",
-  "version": "0.6.1",
+  "version": "1.0.0",
   "main": "lib/devise.js",
   "ignore": [
     "**/.*",
@@ -21,11 +21,11 @@
     "angular-scenario": ">=1.2.0 <1.4.0"
   },
   "homepage": "https://github.com/cloudspace/angular_devise",
-  "_release": "0.6.1",
+  "_release": "1.0.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.6.1",
-    "commit": "57866411797fd1768aeb36c46f7462cfa392658e"
+    "tag": "v1.0.0",
+    "commit": "c594ca2b8b4ec6bc819892fb3ef96e5f44eecbc8"
   },
   "_source": "git://github.com/cloudspace/angular_devise.git",
   "_target": "*",

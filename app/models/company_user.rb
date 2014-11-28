@@ -13,4 +13,9 @@ class CompanyUser < User
 	def pagos
 		Pago.where(id_cuenta_banco: empresa.cuenta_banco)
 	end
+
+	# Includes type field in JSON response.
+	def serializable_hash options=nil
+  		super.merge "type" => type
+	end
 end

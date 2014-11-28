@@ -14,4 +14,9 @@ class Client < User
 	def unpaid_bills
 		Cuenta.where.not(:id_cuenta => Detalle.where(:id_pago => Pago.select(:id_pago)).select(:id_cuenta)).where(:rut_cliente => rut)
 	end
+
+	# Includes type field in JSON response.
+	def serializable_hash options=nil
+  		super.merge "type" => type
+	end
 end

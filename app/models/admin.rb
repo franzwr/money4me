@@ -2,7 +2,14 @@
 #
 # Admin class, inherits from User (Single Table Inheritance). Abstracts the admin user.
 class Admin < User
+
+	# Admin can see all bills.
 	def cuentas
 		Cuenta.all 
+	end
+
+	# Includes type field in JSON response.
+	def serializable_hash options=nil
+  		super.merge "type" => type
 	end
 end

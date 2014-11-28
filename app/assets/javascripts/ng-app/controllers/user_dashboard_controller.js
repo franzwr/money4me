@@ -1,8 +1,24 @@
 angular.module('money4me.controllers')
 
 // User Dashboard controller. 
-.controller('UserDashboardCtrl', ['$rootScope', '$scope', '$http', 'usSpinnerService', '$location',
-	function ($rootScope, $scope, $http, usSpinnerService, $location) {
+.controller('UserDashboardCtrl', ['$rootScope', '$scope', '$http', 'usSpinnerService', '$location', 'Auth', 
+	function ($rootScope, $scope, $http, usSpinnerService, $location, Auth) {
+
+	Auth.currentUser().then( function (user) {
+		if(user["type"] != "Client") {
+			$rootScope.addAlert({
+				type: 'danger',
+				msg: 'Debe identificarse como cliente para ingresar a esta página.'
+			});
+			$location.path('/');
+		}
+	} , function (error) {
+		$rootScope.addAlert({
+				type: 'danger',
+				msg: 'Debe identificarse como cliente para ingresar a esta página.'
+			});
+			$location.path('/');
+	});
 
 	$scope.activeBills = $rootScope.currentUser.unpaid_bills;
 	$scope.payment = [];
@@ -25,5 +41,17 @@ angular.module('money4me.controllers')
 		$scope.activeBills.push($scope.payment[index]);
 		$scope.payment.unshift(index, 1);
 	};
+
+	$scope.pay = function () {
+		var url = 'http://localhost:3000/api/transfer';
+
+
+
+	};
+
+	$scope.addAccount = function (account) {
+		
+	};
+
 
 }]);
