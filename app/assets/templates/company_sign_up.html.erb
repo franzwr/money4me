@@ -3,44 +3,32 @@
 		<div class="col col-md-4 col-md-offset-4">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"> Ingresa tus Datos </h3>
+					<h3 class="panel-title"> Ingresa los Datos</h3>
 				</div>
 				<div class="panel-body">
 					<span us-spinner spinner-key="spinner"></span>
+					<form role="form" ng-submit="signUpCompany(empresa, company_user)">
 
-					<form role="form" action="/api/empresa" method="POST">
-						<input id="bababa" name="authenticity_token" type="hidden" value="" />
+						<label for="name">Nombre Empresa</label>
+						<input required id="name" class="form-control" ng-model="empresa.nombre" type="text" placeholder="Ejemplo S.A.">
 
-						<label for="name">Nombre</label>
-						<input required class="form-control" name="empresa[nombre]" type="text" placeholder="Ejemplo S.A.">
-
-						<label for="rut">RUT empresa (sin puntos ni guión)</label>
-						<input required id="rut_empresa" class="form-control" name="empresa[rut_empresa]" type="text"  placeholder="132456789">
+						<label for="rut_empresa">RUT empresa (sin puntos ni guión)</label>
+						<input required id="rut_empresa" class="form-control" ng-model="empresa.rut_empresa" type="text"  placeholder="132456789">
 
 						<label for="cuenta">Cuenta Banco</label>
-						<input required id="cuenta" class="form-control" name="empresa[cuenta_banco]" type="number">
+						<input required id="cuenta" class="form-control" ng-model="empresa.cuenta_banco" type="number">
 
-						<label for="email">RUT Administrador</label>
-						<input required id="rut" name="company_user[rut]" class="form-control" type="text" placeholder="12341234">
+						<label for="rut">RUT Administrador</label>
+						<input required id="rut" ng-model="company_user.rut" class="form-control" type="text" placeholder="12341234">
 
 						<label for="email">Email Administrador</label>
-						<input required id="email" name="company_user[email]" class="form-control" type="text" placeholder="ejemplo@money4me.cl">
+						<input required id="email" ng-model="company_user.email" class="form-control" type="text" placeholder="ejemplo@money4me.cl">
 
-						<label for="password">Contraseña (mínimo 8 caracteres)</label>
-						<input required id="password" name="company_user[password]" class="form-control" type="password">
+						<label for="cname">Nombre Administrador</label>
+						<input required id="cname" ng-model="company_user.name" class="form-control" type="text">
 
-						<label for="password_confirmation">Repetir Contraseña</label>
-						<input required id="password_confirmation" name="company_user[password_confirmation]" class="form-control" type="password">
-
-						<button role="submit" class="btn btn-block btn-primary" style="margin-top:20px;">Registrarse</button>
+						<button role="submit" class="btn btn-block btn-primary" style="margin-top:20px;">Enviar</button>
 					</form>
-
-					<script>
-						// hue
-						$(function(){
-							$('#bababa').val($("meta[name=csrf-token]").attr("content"));
-						});
-					</script>
 				</div>
 			</div>
 		</div>

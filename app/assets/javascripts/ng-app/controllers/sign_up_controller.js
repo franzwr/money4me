@@ -23,7 +23,7 @@ angular.module('money4me.controllers')
 			$location.path('/'); 
 		}, function(error) {
 			// Unsuccessfull sign up. Shows all errors throwed by the server.
-			var err = "No se logró completar el registro. "
+			var err = "No se logró completar el registro. ";
 			if(error.data.errors.email) {err += "El correo se encuentra en uso. ";}
 			if(error.data.errors.rut) {err += "El RUT se encuentra en uso. ";}
 			if(error.data.errors.password) {err += "La contraseña es muy corta (8 mínimo). ";}

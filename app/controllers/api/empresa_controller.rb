@@ -1,17 +1,23 @@
+# = empresa_controller.rb
+#
+# Defines all Company related API tasks.
 class API::EmpresaController < ApplicationController
-  before_action :authenticate_admin!, only: [:update, :destroy]
-  before_action :authenticate_empresa!, only: [:clientes_morosos, :clientes_con_cuentas_acumuladas, :clientes_preventivos]
+  before_action :authenticate_admin!, only: [:destroy]
+  before_action :authenticate_company_user!, only: [:update]
 
-	respond_to :html, :json
+	respond_to :json
 
+	# Required and permitted HTTP params.
 	def empresa_params
-		params.permit(:empresa => [:nombre, :cuenta_banco, :rut_empresa, :activa], :company_user => [:email, :rut, :password, :password_confirmation])
+		params.require(:empresa).permit(:nombre, :cuenta_banco, :rut_empresa, :activa)
 	end
 
+	# Returns a JSON hash with all companies.
 	def index
 		respond_with Empresa.all
 	end
 
+	# Returns a JSON hash with the specified company.
 	def show
 		@empresa = Empresa.find_by :id_empresa => params[:id]
 		if @empresa
@@ -21,37 +27,17 @@ class API::EmpresaController < ApplicationController
 		end
 	end
 
-  # TODO Devise
+  # Creates a company and returns a JSON object with the new company.
 	def create
-    p empresa_params
-    p empresa_params[:empresa]
-		@empresa = Empresa.new(empresa_params[:empresa])
-		@empresa.activa = false
-		if @empresa.save
-      @company_user = CompanyUser.new(empresa_params[:company_user])
-      @company_user.id_empresa = @empresa.id_empresa
-
-      # ignore password params
-      @company_user.password = Devise.friendly_token
-
-      if @company_user.save
-        redirect_to :back, notice: "Formulario enviado con éxito." 
-
-        # respond_to do |format|
-        #   format.html { redirect_to :back, notice: "Formulario enviado con éxito." }
-        #   format.json { render :json => {empresa: @empresa, company_user: @company_user} }
-        # end
-      else
-        respond_to do |format|
-          format.html { redirect_to :back, alert: "Ha ocurrido un error." }
-          format.json { render :json => {}, :status => :internal_server_error }
-        end
-      end
-		else
-			render :json => {}, :status => :internal_server_error
-		end
+    	@company = Empresa.new(empresa_params)
+    	if @company.save
+    		render :json => @company, status: :ok
+    	else
+    		render :json => {:errors => @company.errors}, status: :unprocessable_entity
+    	end
 	end
 
+	# Updates a company and returns a JSON object with the updated company.
 	def update
     @empresa = Empresa.find_by :id_empresa => params[:id]
     @empresa.update({
@@ -64,6 +50,7 @@ class API::EmpresaController < ApplicationController
     render :json => @empresa
 	end
 
+	# Eliminates a company and returns an empty JSON object.
 	def destroy
 		@empresa = Empresa.find_by :id_empresa => params[:id]
 		if @empresa.destroy
@@ -72,32 +59,4 @@ class API::EmpresaController < ApplicationController
 			render :json => {}, status: :internal_server_error
 		end
 	end
-
-  # ---
-  def clientes_morosos
-    rut_impagos = current_empresa.cuentas.impagas.select(:rut_cliente)
-
-    render json: {
-      rut_clientes_impagos: rut_impagos,
-      clientes_impagos:     Usuario.where(rut_cliente: rut_impagos),
-    }
-  end
-
-  def clientes_con_cuentas_acumuladas
-    rut_acumulados = current_empresa.cuentas.pagadas.joins(:pagos).where("pagos.fecha_pago > cuentas.fecha_limite").select(:rut_cliente)
-
-    render json: {
-      rut_clientes_acumulados: rut_acumulados,
-      clientes_acumulados:     Usuario.where(rut_cliente: rut_acumulados),
-    }
-  end
-
-  def clientes_preventivos
-    rut_preventivos = current_empresa.cuentas.pagadas.joins(:pagos).where("pagos.fecha_pago < cuentas.fecha_limite").select(:rut_cliente)
-
-    render json: {
-      rut_clientes_preventivos: rut_preventivos,
-      clientes_preventivos:     Usuario.where(rut_cliente: rut_preventivos),
-    }
-  end
 end
