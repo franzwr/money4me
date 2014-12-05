@@ -1,5 +1,6 @@
 angular.module('money4me.controllers')
 
+/** Defines all Password Change related tasks. */
 .controller('PasswordChangeCtrl', ['$rootScope', '$scope', '$routeParams', '$http', '$location', 'usSpinnerService', 'Auth',
 	function ($rootScope, $scope, $routeParams, $http, $location, usSpinnerService, Auth) {
 		if(angular.isUndefined($routeParams.reset_password_token)) {
@@ -10,6 +11,7 @@ angular.module('money4me.controllers')
 			$location.path('/');
 		}
 
+		/** Changes the user passwordd using the unique token and the user RUT for verification. */
 		$scope.passwordChange = function (user) {
 			usSpinnerService.spin('spinner1');
 			var url = 'http://localhost:3000/password_reset';

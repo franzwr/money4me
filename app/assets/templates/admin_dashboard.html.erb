@@ -10,7 +10,7 @@
 				</li>
 				<li ng-repeat="company in ((filteredCompanies = (currentUser.companies | filter:{activa: activeOption}) | startFrom:currentPage*pageSize | limitTo: pageSize))" class="list-group-item list-group-item-{{company.activa ? 'success' : 'danger'}}">
 					<label>{{company.nombre}}</label>
-					<label style="float:right;"><button ng-disabled="company.activa && !company.company_user" class="btn btn-primary btn-small" ng-click="activate(company)" style="margin-top:-4px;">Activar</button></label>
+					<label style="float:right;"><button ng-disabled="company.activa" class="btn btn-primary btn-small" ng-click="activate(company)" style="margin-top:-4px;">Activar</button></label>
 					<label style="float:right;margin-right:5px;"><button class="btn btn-primary btn-small" ng-click="details(company)" style="margin-top:-4px;">Detalles</button></label>
 				</li>
 				<li class="list-group-item"> 
@@ -28,6 +28,9 @@
 					<label style="width:40%;">Petición: {{(user.recovery ? 'Recuperar Contraseña' : 'Cambiar Contraseña')}} </label>
 					<label>Estado: {{(user.reset_password_sent_at != null ? 'Validada' : 'Pendiente')}}</label>
 					<label style="float:right;margin-right:5px;"><button class="btn btn-primary btn-small" ng-click="validateUserRequest(user)" style="margin-top:-4px;" ng-disabled="user.reset_password_sent_at != null">Validar</button></label>
+				</li>
+				<li ng-if="userRequests.length == 0" class="list-group-item list-group-item-info">
+					<center><h4>No existen peticiones de acceso...</h4></center>
 				</li>
 			</ul>
 		</tab>

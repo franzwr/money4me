@@ -81,6 +81,7 @@ angular.module('money4me.controllers')
 			});
 	};
 
+	/** Sends the notification email to the user with the reset token, validating the request. */
 	$scope.validateUserRequest = function (user) {
 		usSpinnerService.spin('spinner1');
 		var url = "http://localhost:3000/validate_password_reset/";
