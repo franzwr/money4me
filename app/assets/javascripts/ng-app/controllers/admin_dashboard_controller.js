@@ -23,7 +23,7 @@ angular.module('money4me.controllers')
 	});
 
 	$scope.filteredCompanies = $rootScope.currentUser.companies;
-	
+	$scope.userRequests = $rootScope.currentUser.users;
 	$scope.currentPage = 0;
 	$scope.pageSize = 10;
 	$scope.lastPage = Math.ceil($scope.filteredCompanies.length/$scope.pageSize) - 1;
@@ -77,6 +77,27 @@ angular.module('money4me.controllers')
 				$rootScope.addAlert({
 					type: 'danger',
 					msg: 'Ha ocurrido un error. Intente más tarde.'
+				});
+			});
+	};
+
+	$scope.validateUserRequest = function (user) {
+		usSpinnerService.spin('spinner1');
+		var url = "http://localhost:3000/validate_password_reset/";
+		$http.get(url + user.id.toString())
+			.success(function (data, status) {
+				usSpinnerService.stop('spinner1');
+				$scope.userRequests = data;
+				$rootScope.addAlert({
+					type: 'success',
+					msg: 'La petición fue validada. Se envió un correo notificando al usuario.'
+				});
+			})
+			.error(function (data, status) {
+				usSpinnerService.stop('spinner1');
+				$rootScope.addAlert({
+					type: 'danger',
+					msg: 'La petición no puede ser validada en este momento. Intente más tarde.'
 				});
 			});
 	};

@@ -67,7 +67,10 @@ angular
             templateUrl: 'admin_dashboard.html',
             controller: 'AdminDashboardCtrl'
         })
-        ;
+        .when('/password_change', {
+            templateUrl: 'password_change.html',
+            controller: 'PasswordChangeCtrl'
+        });
 
         $locationProvider.html5Mode(true);
 }])

@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     delete '/sign_out' => 'authorization#logout'
     post '/sign_up' => 'authorization#sign_up'
     post '/recover' => 'authorization#recover'
+    get '/request_password_change' => 'authorization#set_reset_password_token'
+    get '/validate_password_reset/:id' => 'authorization#validate_password_reset'
+    post '/password_reset' => 'authorization#password_reset'
   end
 
   # API defined in its own namespace, so all routes with the '/api/' prefix are handled

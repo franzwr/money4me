@@ -21,14 +21,22 @@ class UserMailer < ActionMailer::Base
 		mail(to: @user.email, subject: 'Bienvenido a Money4Me', template_name: @layout) 
 	end
 
-  def payment_email(pago, email)
-    @pago = pago
+	# Payment receipt email. 
+	def payment_email(pago, email)
+		@pago = pago
 		mail(to: email, subject: 'Transferencia en Money4Me') 
-  end
+	end
 
-  def activation_email(user)
-  	@user = user
-  	@url = 'http://localhost:3000/'
-  	mail(to: @user.email, subject: 'Cuenta Activada')
-  end
+	# Notifies company activation and gives instructions.
+  	def activation_email(user)
+  		@user = user
+  		@url = 'http://localhost:3000/'
+  		mail(to: @user.email, subject: 'Cuenta Activada')
+  	end
+
+  	def password_reset_email(user)
+  		@user = user
+  		@url = 'http://localhost:3000/password_change?reset_password_token='
+  		mail(to: @user.email, subject: 'Recuperación de Contraseña')
+  	end 
 end

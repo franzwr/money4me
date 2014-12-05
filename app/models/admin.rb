@@ -5,7 +5,7 @@ class Admin < User
 
 	# Admin sees users asking for password recovery.
 	def users
-		User.where(:recovery => true)
+		User.where.not(:reset_password_token => nil)
 	end
 	
 	# Admin sees all companies.

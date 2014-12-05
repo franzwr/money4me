@@ -2,8 +2,10 @@
 #
 # Controller class for all devise related actions.
 class AuthorizationController < ApplicationController
-	respond_to :json
 	skip_before_filter :verify_authenticity_token, only: [:recover]
+	before_filter :authenticate_admin!, only: [:validate_password_reset]
+
+	respond_to :json
 
 	require 'net/http'
 
@@ -126,6 +128,7 @@ class AuthorizationController < ApplicationController
 			# Verifies that this client is not already asking for a password reset. 
 			if @user && !@user.recovery
 				@user.recovery = true
+				@user.reset_password_token = Devise.friendly_token[0,20]
 				@user.save
 				render :json => {}, status: :ok
 			else
@@ -136,4 +139,58 @@ class AuthorizationController < ApplicationController
 		end
 	end
 
+	# Sets the reset password token field so it becomes visible to admins. 
+	def set_reset_password_token
+		if client_signed_in?
+			@user = current_client
+		elsif admin_signed_in?
+			@user = current_admin
+		elsif company_user_signed_in?
+			@user = current_company_user
+		else
+			render :json => {}, status: :unauthorized
+		end
+				
+		if !@user.reset_password_token
+			@user.reset_password_token = Devise.friendly_token[0,20]
+			if @user.save
+				render :json => {}, status: :ok
+			else
+				render :json => {}, status: :internal_server_error
+			end
+		else
+			render :json => {}, status: :precondition_failed
+		end
+	end
+
+	# Sends instruction emails with the unique token for password reset.
+	def validate_password_reset
+		@user = User.find_by(:id => params[:id])
+		if @user && @user.reset_password_token
+			@user.reset_password_sent_at = DateTime.now
+			if @user.save
+				UserMailer.password_reset_email(@user).deliver
+				render :json => current_admin.users, status: :ok
+			else
+				render :json => {}, status: :internal_server_error
+			end
+		else
+			render :json => {}, status: :precondition_failed
+		end
+	end
+
+	# Changes the password and clears tokens.
+	def password_reset
+		@user = User.find_by(:reset_password_token => params[:reset_password_token], :rut => params[:rut])
+		if @user
+			@user.recovery = false
+			if @user.reset_password!(params[:password], params[:password_confirmation])
+				render :json => {}, status: :ok
+			else
+				render :json => {}, status: :internal_server_error
+			end
+		else
+			render :json => {}, status: :not_found
+		end
+	end
 end

@@ -152,6 +152,28 @@ angular.module('money4me.controllers')
 			});
 	};
 
-	
+	/** Request a password change, making it visible to admins. */
+	$scope.requestPasswordChange = function () {
+		usSpinnerService.spin('spinner1');
+		var url = 'http://localhost:3000/request_password_change';
+
+		$http.get(url)
+			.success(function (data, status) {
+				usSpinnerService.stop('spinner1');
+				if(status == 200) {
+					$rootScope.addAlert({
+						type: 'success',
+						msg: 'La petición ha sido enviada. Un administrador debe validar la petición. Se le enviará un correo cuando esto ocurra.'
+					}, true);
+				}
+			})
+			.error(function (data, status) {
+				usSpinnerService.stop('spinner1');
+				$rootScope.addAlert({
+					type: 'danger',
+					msg: 'Una petición ya se encuentra en proceso. Revise su correo.'
+				}, true);		
+			});
+	};
 
 }]);
