@@ -16,6 +16,9 @@
 //= require angular-rails-templates
 //= require angular-devise
 //= require spin
+//= require SHA-1
+//= require jquery-waypoints
+//= require angulartics
 //= require angular-spinner
 //= require angular-grecaptcha
 //= require bootstrap

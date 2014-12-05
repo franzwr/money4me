@@ -10,13 +10,15 @@ angular
         'Devise',
         'angularSpinner',
         'grecaptcha',
+        'angulartics',
+        'angulartics.google.analytics',
         'money4me.controllers',
         'money4me.services',
         'money4me.directives'
     ])
     /** App global configuration. **/
-    .config(['$routeProvider', '$locationProvider', 'AuthProvider', 'grecaptchaProvider', 
-    function ($routeProvider, $locationProvider, AuthProvider, grecaptchaProvider) {
+    .config(['$routeProvider', '$locationProvider', 'AuthProvider', 'grecaptchaProvider', '$analyticsProvider', 
+    function ($routeProvider, $locationProvider, AuthProvider, grecaptchaProvider, $analyticsProvider) {
 
         /** Devise configuration. **/
         AuthProvider.loginMethod('POST');
