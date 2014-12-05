@@ -34,7 +34,7 @@ gem 'whenever', :require => false
 gem 'sdoc', '~> 0.4.0',          group: :doc
 # DB Graph visualizer
 group :development do
-  gem "rails-erd"
+  gem "railroady"
 end
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
