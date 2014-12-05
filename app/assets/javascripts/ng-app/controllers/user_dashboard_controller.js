@@ -20,7 +20,7 @@ angular.module('money4me.controllers')
 		$location.path('/');
 	});
 
-	$scope.activeBills = $rootScope.currentUser.unpaid_bills;
+	$scope.activeBills = angular.copy($rootScope.currentUser.unpaid_bills);
 	$scope.payment = [];
 
 	$scope.getTotal = function (bills) {
@@ -34,12 +34,12 @@ angular.module('money4me.controllers')
 
 	$scope.addBillToPayment = function (index) {
 		$scope.payment.push($scope.activeBills[index]);
-		$scope.activeBills.unshift(index, 1);
+		$scope.activeBills.splice(index, 1);
 	};
 
 	$scope.removeBillFromPayment = function (index) {
 		$scope.activeBills.push($scope.payment[index]);
-		$scope.payment.unshift(index, 1);
+		$scope.payment.splice(index, 1);
 	};
 
 	$scope.pay = function () {
@@ -50,7 +50,7 @@ angular.module('money4me.controllers')
 	};
 
 	$scope.addAccount = function (account) {
-		
+		$
 	};
 
 

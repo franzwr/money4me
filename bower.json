@@ -14,7 +14,7 @@
       "angular-devise" : "latest",
       "spin.js": "latest",
       "angular-spinner": "latest",
-      "angular-recaptcha": "latest"
+      "angular-grecaptcha": "latest"
     }
   }
 }

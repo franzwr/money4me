@@ -1,0 +1,32 @@
+{
+  "name": "angular-grecaptcha",
+  "version": "1.0.0",
+  "homepage": "https://github.com/emorvillez/angular-grecaptcha",
+  "authors": [
+    "emorvillez"
+  ],
+  "description": "Angular implementation of Google recaptcha",
+  "main": "grecaptcha.js",
+  "keywords": [
+    "recaptcha",
+    "angular",
+    "captcha",
+    "google"
+  ],
+  "ignore": [
+    "**/.*"
+  ],
+  "dependencies": {
+    "angular": "1.3.0"
+  },
+  "license": "MIT",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "ab2f6a8597731f7a0eb37b56010dff7ee7eadfa7"
+  },
+  "_source": "git://github.com/emorvillez/angular-grecaptcha.git",
+  "_target": "*",
+  "_originalSource": "angular-grecaptcha"
+}

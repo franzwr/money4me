@@ -17,7 +17,7 @@
 //= require angular-devise
 //= require spin
 //= require angular-spinner
-//= require angular-recaptcha
+//= require angular-grecaptcha
 //= require bootstrap
 //= require_tree ../templates
 //= require_tree .

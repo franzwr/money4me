@@ -9,14 +9,14 @@ angular
         'templates',
         'Devise',
         'angularSpinner',
-        'vcRecaptcha',
+        'grecaptcha',
         'money4me.controllers',
         'money4me.services',
         'money4me.directives'
     ])
     /** App global configuration. **/
-    .config(['$routeProvider', '$locationProvider', 'AuthProvider', 
-    function ($routeProvider, $locationProvider, AuthProvider) {
+    .config(['$routeProvider', '$locationProvider', 'AuthProvider', 'grecaptchaProvider', 
+    function ($routeProvider, $locationProvider, AuthProvider, grecaptchaProvider) {
 
         /** Devise configuration. **/
         AuthProvider.loginMethod('POST');
@@ -24,11 +24,18 @@ angular
         AuthProvider.logoutMethod('DELETE');
         AuthProvider.logoutPath('/sign_out.json');
         AuthProvider.registerMethod('POST');
-        AuthProvider.registerPath('/sign_up.json');
+        AuthProvider.registerPath('/sign_up.json');0
         AuthProvider.parse(function(response) {
             return response.data;
         });
         AuthProvider.ignoreAuth(true);
+
+        /** Recaptcha config */
+        grecaptchaProvider.setLanguage('es-419');
+        grecaptchaProvider.setParameters({
+            sitekey: '6LeCzP4SAAAAACX3MyeiRBM05_2U1DQibewo96aT',
+            theme: 'light'
+        });
 
         /** Routes definition. **/
         $routeProvider

@@ -3,6 +3,9 @@
 # Controller class for all devise related actions.
 class AuthorizationController < ApplicationController
 	respond_to :json
+	skip_before_filter :verify_authenticity_token, only: [:recover]
+
+	require 'net/http'
 
 	# Permitted params for all user roles.
 	def client_params
@@ -106,6 +109,21 @@ class AuthorizationController < ApplicationController
 	end
 
 	def recover
+		uri = URI.parse("https://www.google.com/recaptcha/api/siteverify?secret=6LeCzP4SAAAAACVmD51J75GBQRP_aGX0C8ESaAU1&response=" + params[:response])
+		res = Net::HTTP.get_response(uri)
+		data = JSON.parse(res.body)
 
+		if res.code == '200' && data["success"]
+			@user = Client.where(:rut => params[:rut], :email => params[:email]).first
+			if @user && !@user.recovery
+				@user.recovery = true
+				@user.save
+				render :json => {}, status: :ok
+			else
+				render :json => {success: true}, status: :unprocessable_entity
+			end
+		else
+			render :json => {success: false}, status: :unprocessable_entity
+		end
 	end
 end
