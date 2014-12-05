@@ -25,4 +25,10 @@ class UserMailer < ActionMailer::Base
     @pago = pago
 		mail(to: email, subject: 'Transferencia en Money4Me') 
   end
+
+  def activation_email(user)
+  	@user = user
+  	@url = 'http://localhost:3000/'
+  	mail(to: @user.email, subject: 'Cuenta Activada')
+  end
 end

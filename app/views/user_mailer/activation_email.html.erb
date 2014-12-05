@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Estimado <%= @user.name %>: </h1>
+    <p>
+      Su cuenta ha sido validada por un administrador. Ya puede acceder al sistema. Utilize 
+      su email y contraseña para ingresar en <%= @url %>. La contraseña se le envió en el correo
+      de confirmación. Si por alguna razón no logra recuperarla, siga el siguiente enlace: <%= @url +
+      "password_recovery" %>.
+    <p>Gracias por preferirnos.</p>
+  </body>
+</html>

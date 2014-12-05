@@ -23,7 +23,7 @@ class AuthorizationController < ApplicationController
 		if client_signed_in?
 			render :json => current_client, :include => [{:pagos => {:include => [{:cuentas => {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
 		elsif admin_signed_in?
-			render :json => current_admin, :include => [:bills, :companies] ,status: :ok
+			render :json => current_admin, :include => [:users, {:companies => {:include => [:company_user]}}] ,status: :ok
 		elsif company_user_signed_in?
 			render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok
 		else
@@ -34,11 +34,15 @@ class AuthorizationController < ApplicationController
 						render :json => current_client, :include => [{:pagos => {:include => [{:cuentas => {:include => [:empresa]}}]}}, :accounts, {:unpaid_bills => {:include => [:empresa]}}], status: :ok
 					elsif @user.class.to_s == 'Admin'
 						sign_in(:admin, @user)
-						render :json => current_admin, :include => [:bills, :companies] ,status: :ok
+						render :json => current_admin, :include => [:users, {:companies => {:include => [:company_user]}}] ,status: :ok
 					else
-
-						sign_in(:company_user, @user)
-						render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok
+						@empresa = Empresa.find_by(:id_empresa => @user.id_empresa)
+						if @empresa && @empresa.activa
+							sign_in(:company_user, @user)
+							render :json => current_company_user, :include => [:cuentas, :pagos] ,status: :ok
+						else
+							render :json => {}, status: :unauthorized
+						end
 					end
 				else
 					render :json => {}, status: :unauthorized
@@ -76,8 +80,10 @@ class AuthorizationController < ApplicationController
 		# Company User registration. Does not follows up with a sign in.
 		elsif params[:user][:type] == 'CompanyUser'
 			@company_user = CompanyUser.new(company_user_params)
+			@company_user.password = Devise.friendly_token[0,10]
+			@company_user.password_confirmation = @company_user.password
 			if @company_user.save
-				UserMailer.welcome_email(@company_user, company_user_params.password).deliver
+				UserMailer.welcome_email(@company_user, @company_user.password).deliver
 				render :json => @company_user, status: :ok
 			else
 				@company  = Empresa.find_by(:id_empresa => params[:user][:id_empresa])
@@ -129,4 +135,5 @@ class AuthorizationController < ApplicationController
 			render :json => {success: false}, status: :unprocessable_entity
 		end
 	end
+
 end

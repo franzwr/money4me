@@ -14,8 +14,8 @@ class Empresa < RemoteBase
   # One to many relationship with bills.
 	has_many :cuentas, foreign_key: "id_empresa"
 
-  # One to one relationship with user.
-  has_one :user, foreign_key: "id_empresa" 
+  # One to one relationship with company user.
+  has_one :company_user, foreign_key: "id_empresa" 
 
   # Model validations. Self-explained.
   validates :rubros, presence: true, allow_blank: true

@@ -3,11 +3,12 @@
 # Admin class, inherits from User (Single Table Inheritance). Abstracts the admin user.
 class Admin < User
 
-	# Admin can see all bills.
-	def bills
-		Cuenta.all 
+	# Admin sees users asking for password recovery.
+	def users
+		User.where(:recovery => true)
 	end
-
+	
+	# Admin sees all companies.
 	def companies
 		Empresa.all
 	end

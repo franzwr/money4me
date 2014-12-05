@@ -1,4 +1,5 @@
 <div class="container">
+	<span us-spinner spinner-key="spinner"></span>
 	<tabset>
 		<tab heading="Empresas">
 			<ul class="list-group">
@@ -8,7 +9,9 @@
 				<center>Página {{currentPage+1}} de {{lastPage+1}}</center>
 				</li>
 				<li ng-repeat="company in ((filteredCompanies = (currentUser.companies | filter:{activa: activeOption}) | startFrom:currentPage*pageSize | limitTo: pageSize))" class="list-group-item list-group-item-{{company.activa ? 'success' : 'danger'}}">
-					<label>{{company.nombre}}</label><label style="float:right;"><button ng-disabled="company.activa" class="btn btn-primary btn-small" ng-click="" style="margin-top:-4px;">Activar</button></label>
+					<label>{{company.nombre}}</label>
+					<label style="float:right;"><button ng-disabled="company.activa && !company.company_user" class="btn btn-primary btn-small" ng-click="activate(company)" style="margin-top:-4px;">Activar</button></label>
+					<label style="float:right;margin-right:5px;"><button class="btn btn-primary btn-small" ng-click="details(company)" style="margin-top:-4px;">Detalles</button></label>
 				</li>
 				<li class="list-group-item"> 
 					<button class="btn btn-link" ng-disabled="currentPage==0" ng-click="currentPage=currentPage-1">
@@ -25,4 +28,21 @@
 
 		</tab>
 	</tabset>
+	<script type="text/ng-template" id="detailsModal.html">
+		<div class="modal-header">
+			<h4 class="modal-title">Detalles Empresa</h4>
+		</div>
+		<div class="modal-body">
+			<p class="bg-info">Nombre Empresa: {{company.nombre}}</p>
+			<p class="bg-info">RUT Empresa: {{company.rut_empresa}}</p>
+			<p class="bg-info">Cuenta Bancaria: {{company.cuenta_banco}}</p>
+			<p ng-if="!company.company_user" class="bg-danger"> No existe un usuario asociado a esta Empresa. </p>
+			<p ng-if="company.company_user" class="bg-success">Nombre Admin: {{company.company_user.name}}</p>
+			<p ng-if="company.company_user" class="bg-success">Email Admin: {{company.company_user.email}}</p>
+			<p ng-if="company.company_user" class="bg-success">Rut Admin: {{company.company_user.rut}}</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-warning" style="width:40%;" ng-click="close()">Cerrar</button>
+		</div>
+	</script>
 </div>
