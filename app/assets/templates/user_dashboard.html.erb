@@ -1,5 +1,6 @@
 <div class="container">
 	<tabset>
+	<span us-spinner spinner-key="spinner1"></span>
 		<tab heading="Cuentas Activas">
 			<accordion close-others="true">
 				<accordion-group ng-repeat="bill in activeBills" heading="Cuenta ID: {{bill.id_propio_empresa}}">
@@ -50,9 +51,14 @@
 					<p>Monto: {{(bill.monto | currency:'$ ':0).split('.')[0].split(',').join('.')}}</p>
 					<button class="btn btn-success" ng-click="removeBillFromPayment($index)">No Pagar</button>
 				</accordion-group>
-				<div ng-if="payment.length!=0">
-					<h4>N° Cuentas: {{payment.length}}</h4>
-					<h4>Total: {{(getTotal(payment) | currency:'$ ':0).split('.')[0].split(',').join('.')}}</h4>
+				<div ng-if="payment.length!=0" class="well" style="margin-top:5px;">
+					<h3>N° Cuentas: {{payment.length}}</h3>
+					<h3>Total: {{(getTotal(payment) | currency:'$ ':0).split('.')[0].split(',').join('.')}}</h3>
+					<label>Cuenta Bancaria: </label>
+					<select class="form-control" ng-model="currentAccount" ng-options="account.id_cuenta_banco for account in accounts" style="width:30%;">
+					<option value="">-- Seleccione una Cuenta --</option>
+					</select><br>
+					<button class="btn btn-primary" ng-click="pay()">Pagar Cuentas</button>
 				</div>
 			</accordion>
 			<div class="well well-sm" ng-if="payment.length==0">
@@ -84,8 +90,10 @@
 						</div>
 						<div class="panel-body" style="height:200px;">
 							<label>Cuentas Asociadas</label>
-							<select class="form-control" ng-options="account.id_cuenta_banco for account in currentUser.accounts"><option value="">-- Seleccione una Cuenta --</option></select>
-							<form submit="addAccount(new_account)" role="form" style="margin-top:30px;">
+							<select class="form-control" ng-model="currentAccount" ng-options="account.id_cuenta_banco for account in accounts">
+							<option value="">-- Seleccione una Cuenta --</option>
+							</select>
+							<form ng-submit="addAccount(new_account)" role="form" style="margin-top:30px;">
 								<label>Agregar Cuenta</label>
 								<div class="row">
 									<div class="col col-sm-6">
@@ -106,8 +114,8 @@
 							<h3 class="panel-title"> Acceso </h3>
 						</div>
 						<div class="panel-body" style="height:200px;">
-							<center><button class="btn btn-primary" style="margin-top:20px;margin-bottom:40px;"> Cambiar Contraseña </button></center>
-							<center><button class="btn btn-primary"> Asociar cuenta Facebook </button></center>
+							<center><button disabled class="btn btn-primary" style="margin-top:20px;margin-bottom:40px;"> Cambiar Contraseña </button></center>
+							<center><button disabled class="btn btn-primary"> Asociar cuenta Facebook </button></center>
 						</div>
 					</div>
 				</div>

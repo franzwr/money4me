@@ -108,13 +108,16 @@ class AuthorizationController < ApplicationController
 		end
 	end
 
+	# Updates the client recovery status, so its visible for admins. Performs the recaptcha and other verifications.
 	def recover
+		# Recaptcha verification
 		uri = URI.parse("https://www.google.com/recaptcha/api/siteverify?secret=6LeCzP4SAAAAACVmD51J75GBQRP_aGX0C8ESaAU1&response=" + params[:response])
 		res = Net::HTTP.get_response(uri)
 		data = JSON.parse(res.body)
 
 		if res.code == '200' && data["success"]
 			@user = Client.where(:rut => params[:rut], :email => params[:email]).first
+			# Verifies that this client is not already asking for a password reset. 
 			if @user && !@user.recovery
 				@user.recovery = true
 				@user.save

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :empresa, :rubro, :cuenta, :pago, :account, :except => [:edit, :new]
     get 'accounts/:account', to: 'bank_account#show', as: 'accounts'
     post 'transfer/', to: 'bank_account#transfer'
+    post 'multi_transfer/', to: 'bank_account#multi_transfer'
   end
 
   # Root has higher priority than our forwarding route.

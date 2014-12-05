@@ -4,7 +4,7 @@
 class Client < User
 	# Many to one relationship with Bill (Cuenta)
 	has_many :cuentas, primary_key: "rut", foreign_key: "rut_cliente"
-	has_many :accounts, foreign_key: "rut"
+	has_many :accounts, primary_key: "rut", foreign_key: "rut"
 	has_many :pagos, primary_key: "rut", foreign_key: "rut_cliente"
 
 	# Model validations. Self-explained.
