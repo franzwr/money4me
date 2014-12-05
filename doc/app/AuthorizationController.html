@@ -83,7 +83,15 @@
     
     <li ><a href="#method-i-logout">#logout</a>
     
+    <li ><a href="#method-i-password_reset">#password_reset</a>
+    
+    <li ><a href="#method-i-recover">#recover</a>
+    
+    <li ><a href="#method-i-set_reset_password_token">#set_reset_password_token</a>
+    
     <li ><a href="#method-i-sign_up">#sign_up</a>
+    
+    <li ><a href="#method-i-validate_password_reset">#validate_password_reset</a>
     
   </ul>
 </div>
@@ -142,9 +150,9 @@
 
           
           <div class="method-source-code" id="admin_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 16</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">admin_params</span>
-        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:password_confirmation</span>)
+        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:password_confirmation</span>, <span class="ruby-value">:type</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -175,9 +183,9 @@
 
           
           <div class="method-source-code" id="client_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 8</span>
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">client_params</span>
-        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>, <span class="ruby-value">:rut</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:password_confirmation</span>, <span class="ruby-value">:uid</span>)
+        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>, <span class="ruby-value">:rut</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:password_confirmation</span>, <span class="ruby-value">:uid</span>, <span class="ruby-value">:type</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -208,9 +216,9 @@
 
           
           <div class="method-source-code" id="company_user_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 14</span>
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 19</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">company_user_params</span>
-        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>, <span class="ruby-value">:rut</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:password</span>, <span class="ruby-value">:password_confirmation</span>, <span class="ruby-value">:id_empresa</span>)
+        <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:user</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:email</span>, <span class="ruby-value">:rut</span>, <span class="ruby-value">:name</span>, <span class="ruby-value">:id_empresa</span>, <span class="ruby-value">:type</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -241,25 +249,38 @@
 
           
           <div class="method-source-code" id="login-source">
-            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 19</span>
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">login</span>
-        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_email</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:email</span>])
-                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">valid_password?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:password</span>])
-                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Client&#39;</span>
-                                <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:client</span>, <span class="ruby-ivar">@user</span>)
-                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_client</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:pagos</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:cuentas</span>]}}, <span class="ruby-value">:accounts</span>, {<span class="ruby-value">:unpaid_bills</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}], <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
-                        <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Admin&#39;</span>
-                                <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:admin</span>, <span class="ruby-ivar">@user</span>)
-                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_admin</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:cuentas</span>] ,<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">client_signed_in?</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_client</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:pagos</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:cuentas</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}]}}, <span class="ruby-value">:accounts</span>, {<span class="ruby-value">:unpaid_bills</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}], <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">admin_signed_in?</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_admin</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:users</span>, {<span class="ruby-value">:companies</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:company_user</span>]}}] ,<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">company_user_signed_in?</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_company_user</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:cuentas</span>, <span class="ruby-value">:pagos</span>] ,<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by_email</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:email</span>])
+                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">valid_password?</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:password</span>])
+                                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Client&#39;</span>
+                                        <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:client</span>, <span class="ruby-ivar">@user</span>)
+                                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_client</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:pagos</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:cuentas</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}]}}, <span class="ruby-value">:accounts</span>, {<span class="ruby-value">:unpaid_bills</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}], <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                                <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Admin&#39;</span>
+                                        <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:admin</span>, <span class="ruby-ivar">@user</span>)
+                                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_admin</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:users</span>, {<span class="ruby-value">:companies</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:company_user</span>]}}] ,<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                                <span class="ruby-keyword">else</span>
+                                        <span class="ruby-ivar">@empresa</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:id_empresa</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">id_empresa</span>)
+                                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@empresa</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">activa</span>
+                                                <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:company_user</span>, <span class="ruby-ivar">@user</span>)
+                                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_company_user</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:cuentas</span>, <span class="ruby-value">:pagos</span>] ,<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                                        <span class="ruby-keyword">else</span>
+                                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unauthorized</span>
+                                        <span class="ruby-keyword">end</span>
+                                <span class="ruby-keyword">end</span>
                         <span class="ruby-keyword">else</span>
-                                <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:company_user</span>, <span class="ruby-ivar">@user</span>)
-                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_company_user</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:cuentas</span>, <span class="ruby-value">:pagos</span>] ,<span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unauthorized</span>
                         <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">else</span>
                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unauthorized</span>
                 <span class="ruby-keyword">end</span>
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unauthorized</span>
         <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -291,10 +312,163 @@
 
           
           <div class="method-source-code" id="logout-source">
-            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 41</span>
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 59</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">logout</span>
-        <span class="ruby-identifier">sign_out</span> <span class="ruby-value">:user</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">client_signed_in?</span>
+                <span class="ruby-identifier">sign_out</span> <span class="ruby-value">:client</span> 
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">admin_signed_in?</span>
+                <span class="ruby-identifier">sign_out</span> <span class="ruby-value">:admin</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">company_user_signed_in?</span>
+                <span class="ruby-identifier">sign_out</span> <span class="ruby-value">:company_user</span>
+        <span class="ruby-keyword">end</span>
         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-password_reset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">password_reset</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Changes the password and clears tokens.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="password_reset-source">
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">password_reset</span>
+        <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:reset_password_token</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:reset_password_token</span>], <span class="ruby-value">:rut</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rut</span>])
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>
+                <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">recovery</span> = <span class="ruby-keyword">false</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">reset_password!</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:password</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:password_confirmation</span>])
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_found</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-recover" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">recover</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Updates the client recovery status, so its visible for admins. Performs the
+recaptcha and other verifications.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="recover-source">
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 120</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">recover</span>
+        <span class="ruby-comment"># Recaptcha verification</span>
+        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;https://www.google.com/recaptcha/api/siteverify?secret=6LeCzP4SAAAAACVmD51J75GBQRP_aGX0C8ESaAU1&amp;response=&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:response</span>])
+        <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
+        <span class="ruby-identifier">data</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">res</span>.<span class="ruby-identifier">body</span>)
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;200&#39;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">data</span>[<span class="ruby-string">&quot;success&quot;</span>]
+                <span class="ruby-ivar">@user</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:rut</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rut</span>], <span class="ruby-value">:email</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:email</span>]).<span class="ruby-identifier">first</span>
+                <span class="ruby-comment"># Verifies that this client is not already asking for a password reset. </span>
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@user</span>.<span class="ruby-identifier">recovery</span>
+                        <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">recovery</span> = <span class="ruby-keyword">true</span>
+                        <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">reset_password_token</span> = <span class="ruby-constant">Devise</span>.<span class="ruby-identifier">friendly_token</span>[<span class="ruby-value">0</span>,<span class="ruby-value">20</span>]
+                        <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">success</span><span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">success</span><span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-set_reset_password_token" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_reset_password_token</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sets the reset password token field so it becomes visible to admins.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_reset_password_token-source">
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_reset_password_token</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">client_signed_in?</span>
+                <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">current_client</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">admin_signed_in?</span>
+                <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">current_admin</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">company_user_signed_in?</span>
+                <span class="ruby-ivar">@user</span> = <span class="ruby-identifier">current_company_user</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unauthorized</span>
+        <span class="ruby-keyword">end</span>
+                        
+        <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@user</span>.<span class="ruby-identifier">reset_password_token</span>
+                <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">reset_password_token</span> = <span class="ruby-constant">Devise</span>.<span class="ruby-identifier">friendly_token</span>[<span class="ruby-value">0</span>,<span class="ruby-value">20</span>]
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:precondition_failed</span>
+        <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -325,16 +499,35 @@
 
           
           <div class="method-source-code" id="sign_up-source">
-            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 47</span>
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 71</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sign_up</span>
         <span class="ruby-comment"># Normal client registration. </span>
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;Client&#39;</span>
                 <span class="ruby-ivar">@client</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">client_params</span>)
                 <span class="ruby-keyword">if</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">save</span>
                         <span class="ruby-identifier">sign_in</span>(<span class="ruby-value">:client</span>, <span class="ruby-ivar">@client</span>)
+                        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">welcome_email</span>(<span class="ruby-ivar">@client</span>, <span class="ruby-keyword">nil</span>).<span class="ruby-identifier">deliver</span>
                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@client</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
                 <span class="ruby-keyword">else</span>
                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@client</span>.<span class="ruby-identifier">errors</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-comment"># Company User registration. Does not follows up with a sign in.</span>
+        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;CompanyUser&#39;</span>
+                <span class="ruby-ivar">@company_user</span> = <span class="ruby-constant">CompanyUser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">company_user_params</span>)
+                <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">password</span> = <span class="ruby-constant">Devise</span>.<span class="ruby-identifier">friendly_token</span>[<span class="ruby-value">0</span>,<span class="ruby-value">10</span>]
+                <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">password_confirmation</span> = <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">password</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">welcome_email</span>(<span class="ruby-ivar">@company_user</span>, <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">password</span>).<span class="ruby-identifier">deliver</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company_user</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-ivar">@company</span>  = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:id_empresa</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:id_empresa</span>])
+                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@company</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@company</span>.<span class="ruby-identifier">cuentas</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+                                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@company</span>.<span class="ruby-identifier">destroy</span>
+                                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">errors</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+                                <span class="ruby-keyword">end</span>
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">errors</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
+                        <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">end</span>
         <span class="ruby-keyword">else</span>
                 <span class="ruby-comment"># Admin must be authenticated</span>
@@ -344,21 +537,58 @@
                                 <span class="ruby-ivar">@admin</span> = <span class="ruby-constant">Admin</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">admin_params</span>)
                                 <span class="ruby-keyword">if</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">save</span>
                                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@admin</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                                        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">welcome_email</span>(<span class="ruby-ivar">@admin</span>, <span class="ruby-identifier">admin_params</span>.<span class="ruby-identifier">password</span>).<span class="ruby-identifier">deliver</span>
                                 <span class="ruby-keyword">else</span>
                                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@admin</span>.<span class="ruby-identifier">errors</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
-                                <span class="ruby-keyword">end</span>
-                        <span class="ruby-comment"># Company User registration. Does not follows up with a sign in.</span>
-                        <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:user</span>][<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&#39;CompanyUser&#39;</span>
-                                <span class="ruby-ivar">@company_user</span> = <span class="ruby-constant">CompanyUser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">company_user_params</span>)
-                                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">save</span>
-                                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company_user</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
-                                <span class="ruby-keyword">else</span>
-                                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company_user</span>.<span class="ruby-identifier">errors</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
                                 <span class="ruby-keyword">end</span>
                         <span class="ruby-keyword">end</span>
                 <span class="ruby-keyword">else</span>
                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unauthorized</span>
                 <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-validate_password_reset" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">validate_password_reset</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Sends instruction emails with the unique token for password reset.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="validate_password_reset-source">
+            <pre><span class="ruby-comment"># File app/controllers/authorization_controller.rb, line 167</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">validate_password_reset</span>
+        <span class="ruby-ivar">@user</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">reset_password_token</span>
+                <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">reset_password_sent_at</span> = <span class="ruby-constant">DateTime</span>.<span class="ruby-identifier">now</span>
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@user</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">password_reset_email</span>(<span class="ruby-ivar">@user</span>).<span class="ruby-identifier">deliver</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_admin</span>.<span class="ruby-identifier">users</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:precondition_failed</span>
         <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>

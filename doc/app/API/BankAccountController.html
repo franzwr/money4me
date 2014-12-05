@@ -73,7 +73,11 @@
 
   <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-multi_transfer">#multi_transfer</a>
+    
     <li ><a href="#method-i-pago_params">#pago_params</a>
+    
+    <li ><a href="#method-i-rollback_transfer">#rollback_transfer</a>
     
     <li ><a href="#method-i-show">#show</a>
     
@@ -117,6 +121,76 @@
        </header>
 
     
+      <div id="method-i-multi_transfer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">multi_transfer</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Performs multiple money transfer and stores the details as a <a
+href="../Pago.html">Pago</a> instance.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="multi_transfer-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multi_transfer</span>
+        <span class="ruby-ivar">@account</span> = <span class="ruby-constant">Account</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-value">:id_cuenta_banco</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:account</span>])
+        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@account</span>.<span class="ruby-identifier">funds</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:total</span>])
+                <span class="ruby-identifier">rollback_uris</span> = []
+                <span class="ruby-ivar">@pago</span> = <span class="ruby-constant">Pago</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pago_params</span>)
+                <span class="ruby-identifier">params</span>[<span class="ruby-value">:bills</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bill</span><span class="ruby-operator">|</span>
+                        <span class="ruby-ivar">@cuenta</span> = <span class="ruby-constant">Cuenta</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_cuenta</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">bill</span>[<span class="ruby-string">&quot;id_cuenta&quot;</span>]
+                        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cuenta</span>.<span class="ruby-identifier">pago</span>
+                                <span class="ruby-identifier">rollback_transfer</span>(<span class="ruby-identifier">rollback_uris</span>)
+                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Una de las cuentas ya se encuentra pagada.&quot;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:precondition_failed</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+                        <span class="ruby-keyword">end</span>
+
+                        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/transfer/&quot;</span><span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:account</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span> <span class="ruby-identifier">bill</span>[<span class="ruby-string">&quot;empresa&quot;</span>][<span class="ruby-string">&quot;cuenta_banco&quot;</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bill</span>[<span class="ruby-string">&quot;monto&quot;</span>].<span class="ruby-identifier">to_s</span>)
+                        <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
+
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;200&#39;</span>
+                                <span class="ruby-ivar">@pago</span>.<span class="ruby-identifier">cuentas</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@cuenta</span>
+                                <span class="ruby-identifier">rollback_uris</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/transfer/&quot;</span><span class="ruby-operator">+</span> <span class="ruby-identifier">bill</span>[<span class="ruby-string">&quot;empresa&quot;</span>][<span class="ruby-string">&quot;cuenta_banco&quot;</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:account</span>].<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bill</span>[<span class="ruby-string">&quot;monto&quot;</span>].<span class="ruby-identifier">to_s</span>)
+                        <span class="ruby-keyword">else</span>
+                                <span class="ruby-comment"># Rollback money transfers</span>
+                                <span class="ruby-identifier">rollback_transfer</span>(<span class="ruby-identifier">rollback_uris</span>)
+                                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;La transacción con el banco no se pudo realizar.&quot;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+                        <span class="ruby-keyword">end</span>
+                <span class="ruby-keyword">end</span>
+
+                <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pago</span>.<span class="ruby-identifier">save</span>
+                        <span class="ruby-comment"># Send email</span>
+               <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">payment_email</span>(<span class="ruby-ivar">@pago</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:payment</span>][<span class="ruby-value">:email</span>] ).<span class="ruby-identifier">deliver</span>
+                        <span class="ruby-comment"># Returns JSON</span>
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">current_client</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:pagos</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [{<span class="ruby-value">:cuentas</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}]}}, <span class="ruby-value">:accounts</span>, {<span class="ruby-value">:unpaid_bills</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:empresa</span>]}}], <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+                <span class="ruby-keyword">else</span>
+                        <span class="ruby-comment"># Rollback money transfers</span>
+                        <span class="ruby-identifier">rollback_transfer</span>(<span class="ruby-identifier">rollback_uris</span>)
+                        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Ha ocurrido un error. Intente más tarde.&quot;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">error</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;Los fondos de la cuenta seleccionada son insuficientes.&quot;</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:precondition_failed</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
       <div id="method-i-pago_params" class="method-detail ">
         
         <div class="method-heading">
@@ -136,9 +210,54 @@
 
           
           <div class="method-source-code" id="pago_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 10</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pago_params</span>
         <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:payment</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:id_cuenta_banco</span>, <span class="ruby-value">:detalle</span>, <span class="ruby-value">:fecha_pago</span>, <span class="ruby-value">:rut_cliente</span>, <span class="ruby-value">:email</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rollback_transfer" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rollback_transfer</span><span
+            class="method-args">(uris)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Recursive method that performs a money transfer for each bill in
+&#39;uris&#39;, canceling the payment.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rollback_transfer-source">
+            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rollback_transfer</span>(<span class="ruby-identifier">uris</span>)
+        <span class="ruby-identifier">failed_transfers</span> = []
+        <span class="ruby-identifier">uris</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">uri</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
+                <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">!=</span> <span class="ruby-string">&#39;200&#39;</span>
+                        <span class="ruby-identifier">failed_transfers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">uri</span>
+                <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">failed_transfers</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-identifier">rollback_transfer</span>(<span class="ruby-identifier">failed_transfers</span>)
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -170,7 +289,7 @@ application as JSON.</p>
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
         <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/accounts/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:account</span>])
         <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
@@ -178,7 +297,7 @@ application as JSON.</p>
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;200&#39;</span>
                 <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">res</span>.<span class="ruby-identifier">body</span>)
         <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_found</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span>
         <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -212,9 +331,9 @@ payment as JSON to the client.</p>
 
           
           <div class="method-source-code" id="transfer-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 28</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/bank_account_controller.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">transfer</span>
-        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/transfer/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:origin</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:destination</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:amount</span>].<span class="ruby-identifier">to_s</span>)
+       <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/transfer/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:origin</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:destination</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:amount</span>].<span class="ruby-identifier">to_s</span>)
         <span class="ruby-identifier">rollback_uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/transfer/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:destination</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:origin</span>].<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-string">&quot;/&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">params</span>[<span class="ruby-value">:amount</span>].<span class="ruby-identifier">to_s</span>)
         <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;200&#39;</span>
@@ -223,6 +342,8 @@ payment as JSON to the client.</p>
                 <span class="ruby-ivar">@cuentas</span> = <span class="ruby-constant">Cuenta</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_cuenta</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:bill</span>]
                 <span class="ruby-ivar">@pago</span>.<span class="ruby-identifier">cuentas</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@cuentas</span>
                 <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pago</span>.<span class="ruby-identifier">save</span>
+                <span class="ruby-comment"># Send email</span>
+                <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">payment_email</span>(<span class="ruby-ivar">@pago</span>, <span class="ruby-identifier">params</span>[<span class="ruby-value">:payment</span>][<span class="ruby-value">:email</span>] ).<span class="ruby-identifier">deliver</span>
                         <span class="ruby-comment"># Returns JSON</span>
                         <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@pago</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
                 <span class="ruby-keyword">else</span>

@@ -67,7 +67,17 @@
 
     
     
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
     
+    <li class="calls-super" ><a href="#method-i-serializable_hash">#serializable_hash</a>
+    
+  </ul>
+</div>
+
   </div>
 </nav>
 
@@ -97,6 +107,52 @@
     
 
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-serializable_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">serializable_hash</span><span
+            class="method-args">(options=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Includes type field in JSON response.</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              
+            </div>
+          
+
+          
+          <div class="method-source-code" id="serializable_hash-source">
+            <pre><span class="ruby-comment"># File app/models/user.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">serializable_hash</span> <span class="ruby-identifier">options</span>=<span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">super</span>.<span class="ruby-identifier">merge</span> <span class="ruby-string">&quot;reset_password_sent_at&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">reset_password_sent_at</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
   </section>
 </main>
 

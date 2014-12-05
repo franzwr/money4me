@@ -73,7 +73,11 @@
 
   <ul class="link-list" role="directory">
     
-    <li ><a href="#method-i-cuentas">#cuentas</a>
+    <li ><a href="#method-i-companies">#companies</a>
+    
+    <li class="calls-super" ><a href="#method-i-serializable_hash">#serializable_hash</a>
+    
+    <li ><a href="#method-i-users">#users</a>
     
   </ul>
 </div>
@@ -115,10 +119,10 @@ user.</p>
        </header>
 
     
-      <div id="method-i-cuentas" class="method-detail ">
+      <div id="method-i-companies" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">cuentas</span><span
+          <span class="method-name">companies</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -128,15 +132,86 @@ user.</p>
 
         <div class="method-description">
           
-          
+          <p><a href="Admin.html">Admin</a> sees all companies.</p>
           
           
 
           
-          <div class="method-source-code" id="cuentas-source">
-            <pre><span class="ruby-comment"># File app/models/admin.rb, line 5</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">cuentas</span>
-        <span class="ruby-constant">Cuenta</span>.<span class="ruby-identifier">all</span> 
+          <div class="method-source-code" id="companies-source">
+            <pre><span class="ruby-comment"># File app/models/admin.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">companies</span>
+        <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">all</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-serializable_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">serializable_hash</span><span
+            class="method-args">(options=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Includes type field in JSON response.</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="User.html#method-i-serializable_hash">User#serializable_hash</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="serializable_hash-source">
+            <pre><span class="ruby-comment"># File app/models/admin.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">serializable_hash</span> <span class="ruby-identifier">options</span>=<span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">super</span>.<span class="ruby-identifier">merge</span> <span class="ruby-string">&quot;type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">type</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-users" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">users</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p><a href="Admin.html">Admin</a> sees users asking for password recovery.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="users-source">
+            <pre><span class="ruby-comment"># File app/models/admin.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">users</span>
+        <span class="ruby-constant">User</span>.<span class="ruby-identifier">where</span>.<span class="ruby-identifier">not</span>(<span class="ruby-value">:reset_password_token</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
