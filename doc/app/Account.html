@@ -67,7 +67,17 @@
 
     
     
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
     
+    <li ><a href="#method-i-funds">#funds</a>
+    
+  </ul>
+</div>
+
   </div>
 </nav>
 
@@ -98,6 +108,54 @@ Abstraction of the bank accounts.</p>
     
 
     
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-funds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">funds</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Retrieves available funds from the bank <a href="API.html">API</a>.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="funds-source">
+            <pre><span class="ruby-comment"># File app/models/account.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">funds</span>
+        <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-string">&quot;http://204.87.169.110/accounts/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id_cuenta_banco</span>.<span class="ruby-identifier">to_s</span>)
+        <span class="ruby-identifier">res</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">get_response</span>(<span class="ruby-identifier">uri</span>)
+
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">code</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;200&#39;</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">res</span>.<span class="ruby-identifier">body</span>)[<span class="ruby-string">&quot;fondo&quot;</span>]
+        <span class="ruby-keyword">else</span>
+                <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+        <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
   </section>
 </main>
 

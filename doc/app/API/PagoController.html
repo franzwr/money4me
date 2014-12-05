@@ -98,6 +98,11 @@
 
   <section class="description">
     
+<h1 id="class-API::PagoController-label-pago_controller.rb">pago_controller.rb<span><a href="#class-API::PagoController-label-pago_controller.rb">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>Defines al <a href="../Pago.html">Pago</a> related <a
+href="../API.html">API</a> tasks.</p>
+
   </section>
 
   
@@ -132,21 +137,21 @@
 
         <div class="method-description">
           
-          
+          <p>Creates a new <a href="../Pago.html">Pago</a> and returns it.</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 21</span>
-    <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-            <span class="ruby-ivar">@pago</span> = <span class="ruby-constant">Pago</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pago_params</span>)
-<span class="ruby-keyword">if</span> <span class="ruby-ivar">@pago</span>.<span class="ruby-identifier">save</span>
-  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@pago</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
-<span class="ruby-keyword">else</span>
-  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
-<span class="ruby-keyword">end</span>
-    <span class="ruby-keyword">end</span></pre>
+            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+        <span class="ruby-ivar">@pago</span> = <span class="ruby-constant">Pago</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pago_params</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pago</span>.<span class="ruby-identifier">save</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@pago</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+    <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
@@ -176,10 +181,10 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 35</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 41</span>
     <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
 <span class="ruby-comment"># Should&#39;nt be possible.</span>
-            <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+            <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:method_not_allowed</span>
     <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -204,13 +209,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns all Pagos.</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 8</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
         <span class="ruby-identifier">respond_with</span> <span class="ruby-constant">Pago</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -243,7 +248,7 @@
 
           
           <div class="method-source-code" id="pago_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 4</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 7</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">pago_params</span>
         <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:pago</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:id_cuenta_banco</span>, <span class="ruby-value">:rut_cliente</span>, <span class="ruby-value">:email</span>, <span class="ruby-value">:detalle</span>, <span class="ruby-value">:fecha_pago</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -270,13 +275,14 @@
 
         <div class="method-description">
           
-          
+          <p>Recieves a GET :id param, and returns a <a href="../Pago.html">Pago</a> if
+found.</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 12</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
         <span class="ruby-ivar">@pago</span> = <span class="ruby-constant">Pago</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_pago</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@pago</span>
@@ -314,10 +320,10 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 30</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/pago_controller.rb, line 36</span>
     <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
 <span class="ruby-comment"># Shouldn&#39;t be possible.</span>
-            <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+            <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:method_not_allowed</span>
     <span class="ruby-keyword">end</span></pre>
           </div>
           

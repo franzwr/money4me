@@ -73,12 +73,6 @@
 
   <ul class="link-list" role="directory">
     
-    <li ><a href="#method-i-clientes_con_cuentas_acumuladas">#clientes_con_cuentas_acumuladas</a>
-    
-    <li ><a href="#method-i-clientes_morosos">#clientes_morosos</a>
-    
-    <li ><a href="#method-i-clientes_preventivos">#clientes_preventivos</a>
-    
     <li ><a href="#method-i-create">#create</a>
     
     <li ><a href="#method-i-destroy">#destroy</a>
@@ -104,6 +98,10 @@
 
   <section class="description">
     
+<h1 id="class-API::EmpresaController-label-empresa_controller.rb">empresa_controller.rb<span><a href="#class-API::EmpresaController-label-empresa_controller.rb">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>Defines all Company related <a href="../API.html">API</a> tasks.</p>
+
   </section>
 
   
@@ -125,120 +123,6 @@
        </header>
 
     
-      <div id="method-i-clientes_con_cuentas_acumuladas" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">clientes_con_cuentas_acumuladas</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="clientes_con_cuentas_acumuladas-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 66</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">clientes_con_cuentas_acumuladas</span>
-  <span class="ruby-identifier">rut_acumulados</span> = <span class="ruby-identifier">current_empresa</span>.<span class="ruby-identifier">cuentas</span>.<span class="ruby-identifier">pagadas</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:pagos</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;pagos.fecha_pago &gt; cuentas.fecha_limite&quot;</span>).<span class="ruby-identifier">select</span>(<span class="ruby-value">:rut_cliente</span>)
-
-  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
-    <span class="ruby-identifier">rut_clientes_acumulados</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rut_acumulados</span>,
-    <span class="ruby-identifier">clientes_acumulados</span><span class="ruby-operator">:</span>     <span class="ruby-constant">Usuario</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">rut_cliente</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rut_acumulados</span>),
-  }
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-clientes_morosos" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">clientes_morosos</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          <hr>
-          
-          
-
-          
-          <div class="method-source-code" id="clientes_morosos-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 57</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">clientes_morosos</span>
-  <span class="ruby-identifier">rut_impagos</span> = <span class="ruby-identifier">current_empresa</span>.<span class="ruby-identifier">cuentas</span>.<span class="ruby-identifier">impagas</span>.<span class="ruby-identifier">select</span>(<span class="ruby-value">:rut_cliente</span>)
-
-  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
-    <span class="ruby-identifier">rut_clientes_impagos</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rut_impagos</span>,
-    <span class="ruby-identifier">clientes_impagos</span><span class="ruby-operator">:</span>     <span class="ruby-constant">Usuario</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">rut_cliente</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rut_impagos</span>),
-  }
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-clientes_preventivos" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">clientes_preventivos</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="clientes_preventivos-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 75</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">clientes_preventivos</span>
-  <span class="ruby-identifier">rut_preventivos</span> = <span class="ruby-identifier">current_empresa</span>.<span class="ruby-identifier">cuentas</span>.<span class="ruby-identifier">pagadas</span>.<span class="ruby-identifier">joins</span>(<span class="ruby-value">:pagos</span>).<span class="ruby-identifier">where</span>(<span class="ruby-string">&quot;pagos.fecha_pago &lt; cuentas.fecha_limite&quot;</span>).<span class="ruby-identifier">select</span>(<span class="ruby-value">:rut_cliente</span>)
-
-  <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> {
-    <span class="ruby-identifier">rut_clientes_preventivos</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rut_preventivos</span>,
-    <span class="ruby-identifier">clientes_preventivos</span><span class="ruby-operator">:</span>     <span class="ruby-constant">Usuario</span>.<span class="ruby-identifier">where</span>(<span class="ruby-identifier">rut_cliente</span><span class="ruby-operator">:</span> <span class="ruby-identifier">rut_preventivos</span>),
-  }
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
       <div id="method-i-create" class="method-detail ">
         
         <div class="method-heading">
@@ -252,21 +136,23 @@
 
         <div class="method-description">
           
-          <p>TODO Devise</p>
+          <p>Creates a company and returns a JSON object with the new company.</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 25</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
-        <span class="ruby-ivar">@empresa</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">empresa_params</span>)
-        <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">activa</span> = <span class="ruby-keyword">false</span>
-        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">save</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@empresa</span>
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-value">:status</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:internal_server_error</span>
-        <span class="ruby-keyword">end</span>
+<span class="ruby-ivar">@company</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">empresa_params</span>)
+<span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rubros</span>]
+        <span class="ruby-ivar">@company</span>.<span class="ruby-identifier">rubros</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rubros</span>]
+<span class="ruby-keyword">end</span>
+<span class="ruby-keyword">if</span> <span class="ruby-ivar">@company</span>.<span class="ruby-identifier">save</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+<span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:errors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@company</span>.<span class="ruby-identifier">errors</span>}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span>
+<span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -291,13 +177,13 @@
 
         <div class="method-description">
           
-          
+          <p>Eliminates a company and returns an empty JSON object.</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 47</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
         <span class="ruby-ivar">@empresa</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_empresa</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">destroy</span>
@@ -329,13 +215,13 @@
 
         <div class="method-description">
           
-          
+          <p>Required and permitted HTTP params.</p>
           
           
 
           
           <div class="method-source-code" id="empresa_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 7</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">empresa_params</span>
         <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:empresa</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:nombre</span>, <span class="ruby-value">:cuenta_banco</span>, <span class="ruby-value">:rut_empresa</span>, <span class="ruby-value">:activa</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -362,13 +248,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns a JSON hash with all companies.</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 11</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
         <span class="ruby-identifier">respond_with</span> <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -395,17 +281,17 @@
 
         <div class="method-description">
           
-          
+          <p>Returns a JSON hash with the specified company.</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 15</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
         <span class="ruby-ivar">@empresa</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_empresa</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@empresa</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@empresa</span>
+                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-identifier">empresa</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@empresa</span>}
         <span class="ruby-keyword">else</span>
                 <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:not_found</span>
         <span class="ruby-keyword">end</span>
@@ -433,24 +319,35 @@
 
         <div class="method-description">
           
-          
+          <p>Updates a company and returns a JSON object with the updated company.</p>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 35</span>
-    <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/empresa_controller.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
 <span class="ruby-ivar">@empresa</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_empresa</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
-<span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">update</span>({
-  <span class="ruby-identifier">nombre</span><span class="ruby-operator">:</span>        <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:nombre</span>],
-  <span class="ruby-identifier">cuenta_banco</span><span class="ruby-operator">:</span>  <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:cuenta_banco</span>],
-  <span class="ruby-identifier">rut_empresa</span><span class="ruby-operator">:</span>   <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:rut_empresa</span>],
-  <span class="ruby-identifier">activa</span><span class="ruby-operator">:</span>        <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:activa</span>],
-  <span class="ruby-identifier">rubro_ids</span><span class="ruby-operator">:</span>     <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:rubro_ids</span>]),
-}.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>} )
-<span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@empresa</span>
-    <span class="ruby-keyword">end</span></pre>
+<span class="ruby-comment"># Rubro updating</span>
+<span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rubros</span>] 
+        <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">rubros</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rubros</span>]
+<span class="ruby-keyword">end</span>
+<span class="ruby-comment"># If activating a company, send the activation email to the user.</span>
+<span class="ruby-keyword">if</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">activa</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:activa</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">company_user</span>
+        <span class="ruby-constant">UserMailer</span>.<span class="ruby-identifier">activation_email</span>(<span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">company_user</span>).<span class="ruby-identifier">deliver</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">if</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">update</span>({
+       <span class="ruby-identifier">nombre</span><span class="ruby-operator">:</span>        <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:nombre</span>],
+       <span class="ruby-identifier">cuenta_banco</span><span class="ruby-operator">:</span>  <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:cuenta_banco</span>],
+       <span class="ruby-identifier">rut_empresa</span><span class="ruby-operator">:</span>   <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:rut_empresa</span>],
+       <span class="ruby-identifier">activa</span><span class="ruby-operator">:</span>        <span class="ruby-identifier">params</span>[<span class="ruby-value">:empresa</span>][<span class="ruby-value">:activa</span>]
+    })
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@empresa</span>, <span class="ruby-value">:include</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:company_user</span>], <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:ok</span>
+<span class="ruby-keyword">else</span>
+        <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>

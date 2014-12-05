@@ -98,6 +98,11 @@
 
   <section class="description">
     
+<h1 id="class-API::RubroController-label-rubro_controller.rb">rubro_controller.rb<span><a href="#class-API::RubroController-label-rubro_controller.rb">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+
+<p>Defines all <a href="../Rubro.html">Rubro</a> related <a
+href="../API.html">API</a> tasks.</p>
+
   </section>
 
   
@@ -132,13 +137,13 @@
 
         <div class="method-description">
           
-          
+          <p>Creates a new <a href="../Rubro.html">Rubro</a> and returns it.</p>
           
           
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 31</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
         <span class="ruby-ivar">@rubro</span> = <span class="ruby-constant">Rubro</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">rubro_params</span>)
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rubro</span>.<span class="ruby-identifier">save</span>
@@ -170,13 +175,13 @@
 
         <div class="method-description">
           
-          
+          <p>Destroys a <a href="../Rubro.html">Rubro</a>.</p>
           
           
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 40</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
         <span class="ruby-ivar">@rubro</span> = <span class="ruby-constant">Rubro</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_rubro</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rubro</span>.<span class="ruby-identifier">destroy</span>
@@ -208,13 +213,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns all Rubros</p>
           
           
 
           
           <div class="method-source-code" id="index-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 9</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 13</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
         <span class="ruby-identifier">respond_with</span> <span class="ruby-constant">Rubro</span>.<span class="ruby-identifier">all</span>
 <span class="ruby-keyword">end</span></pre>
@@ -247,7 +252,7 @@
 
           
           <div class="method-source-code" id="rubro_params-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 5</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 8</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">rubro_params</span>
         <span class="ruby-identifier">params</span>.<span class="ruby-identifier">require</span>(<span class="ruby-value">:rubro</span>).<span class="ruby-identifier">permit</span>(<span class="ruby-value">:nombre</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -274,13 +279,13 @@
 
         <div class="method-description">
           
-          
+          <p>Returns the specified <a href="../Rubro.html">Rubro</a>.</p>
           
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 13</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 18</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
         <span class="ruby-ivar">@rubro</span> = <span class="ruby-constant">Rubro</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_rubro</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rubro</span>
@@ -312,13 +317,13 @@
 
         <div class="method-description">
           
-          
+          <p>Modifies the specified <a href="../Rubro.html">Rubro</a> and returns it.</p>
           
           
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/api/rubro_controller.rb, line 28</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
         <span class="ruby-ivar">@rubro</span> = <span class="ruby-constant">Rubro</span>.<span class="ruby-identifier">find_by</span> <span class="ruby-value">:id_rubro</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
         <span class="ruby-keyword">if</span> <span class="ruby-ivar">@rubro</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">nombre</span><span class="ruby-operator">:</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:rubro</span>][<span class="ruby-value">:nombre</span>])

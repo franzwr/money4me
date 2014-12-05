@@ -218,15 +218,15 @@ payment associated.</p>
           
           <div class="method-source-code" id="destroy-source">
             <pre><span class="ruby-comment"># File app/controllers/api/cuenta_controller.rb, line 62</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
-        <span class="ruby-ivar">@cuenta</span> = <span class="ruby-constant">Cuenta</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id_cuenta</span><span class="ruby-operator">:</span>  <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>],
-                     <span class="ruby-identifier">id_empresa</span><span class="ruby-operator">:</span> <span class="ruby-identifier">current_empresa</span>.<span class="ruby-identifier">id</span>)
-        <span class="ruby-keyword">if</span> <span class="ruby-ivar">@cuenta</span>.<span class="ruby-identifier">pago</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@cuenta</span>.<span class="ruby-identifier">destroy</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}
-        <span class="ruby-keyword">else</span>
-                <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
-        <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+            <span class="ruby-ivar">@cuenta</span> = <span class="ruby-constant">Cuenta</span>.<span class="ruby-identifier">find_by</span>(<span class="ruby-identifier">id_cuenta</span><span class="ruby-operator">:</span>  <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>],
+                         <span class="ruby-identifier">id_empresa</span><span class="ruby-operator">:</span> <span class="ruby-identifier">current_empresa</span>.<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">if</span> <span class="ruby-ivar">@cuenta</span>.<span class="ruby-identifier">pago</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@cuenta</span>.<span class="ruby-identifier">destroy</span>
+                    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}
+            <span class="ruby-keyword">else</span>
+                    <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {}, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:internal_server_error</span>
+            <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span></pre>
           </div>
           
         </div>
